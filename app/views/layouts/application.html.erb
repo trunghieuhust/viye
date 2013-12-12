@@ -8,12 +8,11 @@
 
 </head>
 <body>
-
 	<div id="MY-HEADER">
 		<div id="MY-LOGO">
-			<li><%=link_to 'logo', home_index_path, :class=>"header-logo"%></li>
-			<li><span>slogan go vao day</span></li>
-		</div>
+			<li><a class="header-logo" href=<%=home_index_path%> >ベトナム旅行</a></li>
+			<li><span>Vietnam in your eye</span></li>
+		</div>	
 		<div id="MY-SEARCH">
 			<input type="text" placeholder="hãy gõ từ khóa vào đây!">
 			<button type="button" class="search-button">Tìm kiếm</button>
@@ -22,7 +21,14 @@
 		<div id="MY-LOGIN">
 			<div id="user_nav">
 				<% if user_signed_in? %>
-				Signed in as <%= current_user.email %>. Not you?
+				<div class="wrap-ava">
+					<a class="one" href="#">
+						<span class="glyphicon glyphicon-user"></span>
+						<!-- <img class="my-ava" src="images/user.png" width="30px" height="30px"> -->
+						<span class="my-username"><%= current_user.email %></span>
+					</a>
+					<a href="#"><span class="glyphicon glyphicon-cog"></span></a>
+				</div>
 				<%= link_to "Sign out", destroy_user_session_path %>
 				<% else %>
 				<!-- day la phan dang ki -->				

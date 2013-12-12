@@ -7710,3 +7710,2593 @@ Processing by PostsController#show as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
   Rendered posts/show.html.erb within layouts/application (4.5ms)
 Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 341ms (Views: 315.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:57 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:58 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:58 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-12 23:02:58 +0700
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2013-12-12 23:08:23 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 00:33:10 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 600ms (Views: 568.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:11 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 00:33:12 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 00:33:12 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 00:33:12 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 00:33:12 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (80.6ms)
+
+
+Started GET "/fonts/Caviar.ttf" for 127.0.0.1 at 2013-12-13 00:33:12 +0700
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Caviar.ttf"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.0ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-13 00:33:12 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 00:33:16 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 158ms (Views: 155.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (39.3ms)
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-13 00:36:34 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 00:42:27 +0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xWPl3adj1QHqczBjudhR0CtNFPH/HiU1qKd99jcurW4=", "user"=>{"email"=>"tuan@g.m", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'tuan@g.m' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["current_sign_in_at", Thu, 12 Dec 2013 17:42:41 UTC +00:00], ["sign_in_count", 2], ["updated_at", Thu, 12 Dec 2013 17:42:41 UTC +00:00]]
+  [1m[36m (144.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 147.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 00:42:41 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:25:31 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:25:31 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:25:31 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:25:31 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:26:13 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:28:35 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:28:35 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:28:35 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:28:35 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 153ms (Views: 150.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:45:51 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 01:45:52 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.7ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-13 01:45:52 +0700
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-13 01:45:52 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 166ms (Views: 163.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (44.9ms)
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-13 01:46:33 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:39 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:39 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:39 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:39 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:41 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:41 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:41 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:41 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:44 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:44 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:44 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:44 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:46 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:46 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:46 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:46 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:52 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:52 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:52 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:52 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:46:54 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:46:54 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:46:54 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:46:54 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:47:27 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 159ms (Views: 156.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:27 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:27 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:27 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:27 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:27 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (28.4ms)
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-13 01:47:28 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 156ms (Views: 153.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 01:47:55 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.2ms)
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-13 01:47:56 +0700
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-12-13 01:47:58 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:47:58 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:47:58 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:47:58 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:47:58 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:48:06 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:48:06 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:48:06 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:48:06 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-13 01:48:18 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:18 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:18 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:18 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:18 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:48:19 +0700
+
+
+Started POST "/users" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"59o8Z3JTYuU9mSug5ujnAs/g4L9rPdVVVoWcWF44NeQ=", "user"=>{"email"=>"tuan@g.m", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'tuan@g.m' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/devise-3.2.2/app/views/devise/shared/_links.erb (1.7ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/devise-3.2.2/app/views/devise/registrations/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 139ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:48:49 +0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-13 01:49:16 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"59o8Z3JTYuU9mSug5ujnAs/g4L9rPdVVVoWcWF44NeQ=", "user"=>{"email"=>"tuan@g.m", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'tuan@g.m' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["last_sign_in_at", Thu, 12 Dec 2013 17:42:41 UTC +00:00], ["current_sign_in_at", Thu, 12 Dec 2013 18:49:16 UTC +00:00], ["sign_in_count", 3], ["updated_at", Thu, 12 Dec 2013 18:49:16 UTC +00:00]]
+  [1m[35m (140.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 233ms (ActiveRecord: 141.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:49:17 +0700
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:49:42 +0700
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/_form.html.erb (6.0ms)
+  Rendered posts/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/tinymce/themes/modern/theme.js" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+
+
+Started GET "/assets/tinymce/plugins/table/plugin.js" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+
+
+Started GET "/assets/tinymce/plugins/fullscreen/plugin.js" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+
+
+Started GET "/assets/tinymce/skins/lightgray/fonts/tinymce.woff" for 127.0.0.1 at 2013-12-13 01:49:49 +0700
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-12-13 01:50:36 +0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7PSQALyLA1I0VzmqZjIzkEPBb0a911VxA4DklGr0kbM=", "post"=>{"title"=>"Nha Trang", "content"=>"<p><strong style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">Nha Trang</strong><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;l&agrave; một th&agrave;nh phố ven&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Biển\" href=\"http://vi.wikipedia.org/wiki/Bi%E1%BB%83n\">biển</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;v&agrave; l&agrave; trung t&acirc;m ch&iacute;nh trị, kinh tế, văn h&oacute;a, khoa học kỹ thuật v&agrave; du lịch của tỉnh&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Kh&aacute;nh H&ograve;a\" href=\"http://vi.wikipedia.org/wiki/Kh%C3%A1nh_H%C3%B2a\">Kh&aacute;nh H&ograve;a</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">,</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Việt Nam\" href=\"http://vi.wikipedia.org/wiki/Vi%E1%BB%87t_Nam\">Việt Nam</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">. Trước khi trở th&agrave;nh phần đất của Việt Nam, Nha Trang thuộc về&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Chi&ecirc;m Th&agrave;nh\" href=\"http://vi.wikipedia.org/wiki/Chi%C3%AAm_Th%C3%A0nh\">Chi&ecirc;m Th&agrave;nh</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">. C&aacute;c di t&iacute;ch của&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Người Chăm\" href=\"http://vi.wikipedia.org/wiki/Ng%C6%B0%E1%BB%9Di_Ch%C4%83m\">người Chăm</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;vẫn c&ograve;n tại nhiều nơi ở Nha Trang. Nha Trang được Thủ tướng ch&iacute;nh phủ Việt Nam c&ocirc;ng nhận l&agrave; đ&ocirc; thị loại 1 v&agrave;o ng&agrave;y 22 th&aacute;ng 4 năm 2009. Đ&acirc;y l&agrave; một trong c&aacute;c&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Đ&ocirc; thị loại I\" href=\"http://vi.wikipedia.org/wiki/%C4%90%C3%B4_th%E1%BB%8B_lo%E1%BA%A1i_I\">đ&ocirc; thị loại 1</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;trực thuộc tỉnh của Việt Nam. Nha Trang được mệnh danh l&agrave; h&ograve;n ngọc của&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Biển Đ&ocirc;ng\" href=\"http://vi.wikipedia.org/wiki/Bi%E1%BB%83n_%C4%90%C3%B4ng\">biển Đ&ocirc;ng</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">, Vi&ecirc;n ngọc xanh&nbsp;</span><sup id=\"cite_ref-1\" class=\"reference\" style=\"line-height: 1em; font-size: 10px; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><a style=\"text-decoration: none; color: #0b0080; background-image: none;\" href=\"http://vi.wikipedia.org/wiki/Nha_Trang#cite_note-1\">[1]</a></sup><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;v&igrave; gi&aacute; trị thi&ecirc;n nhi&ecirc;n, sắc đẹp cũng như kh&iacute; hậu của n&oacute;.</span><sup id=\"cite_ref-2\" class=\"reference\" style=\"line-height: 1em; font-size: 10px; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><a style=\"text-decoration: none; color: #0b0080; background-image: none;\" href=\"http://vi.wikipedia.org/wiki/Nha_Trang#cite_note-2\">[2]</a></sup><sup id=\"cite_ref-3\" class=\"reference\" style=\"line-height: 1em; font-size: 10px; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><a style=\"text-decoration: none; color: #0b0080; background-image: none;\" href=\"http://vi.wikipedia.org/wiki/Nha_Trang#cite_note-3\">[3]</a></sup></p>"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("content", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["content", "<p><strong style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">Nha Trang</strong><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;l&agrave; một th&agrave;nh phố ven&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Biển\" href=\"http://vi.wikipedia.org/wiki/Bi%E1%BB%83n\">biển</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;v&agrave; l&agrave; trung t&acirc;m ch&iacute;nh trị, kinh tế, văn h&oacute;a, khoa học kỹ thuật v&agrave; du lịch của tỉnh&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Kh&aacute;nh H&ograve;a\" href=\"http://vi.wikipedia.org/wiki/Kh%C3%A1nh_H%C3%B2a\">Kh&aacute;nh H&ograve;a</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">,</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Việt Nam\" href=\"http://vi.wikipedia.org/wiki/Vi%E1%BB%87t_Nam\">Việt Nam</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">. Trước khi trở th&agrave;nh phần đất của Việt Nam, Nha Trang thuộc về&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Chi&ecirc;m Th&agrave;nh\" href=\"http://vi.wikipedia.org/wiki/Chi%C3%AAm_Th%C3%A0nh\">Chi&ecirc;m Th&agrave;nh</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">. C&aacute;c di t&iacute;ch của&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Người Chăm\" href=\"http://vi.wikipedia.org/wiki/Ng%C6%B0%E1%BB%9Di_Ch%C4%83m\">người Chăm</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;vẫn c&ograve;n tại nhiều nơi ở Nha Trang. Nha Trang được Thủ tướng ch&iacute;nh phủ Việt Nam c&ocirc;ng nhận l&agrave; đ&ocirc; thị loại 1 v&agrave;o ng&agrave;y 22 th&aacute;ng 4 năm 2009. Đ&acirc;y l&agrave; một trong c&aacute;c&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Đ&ocirc; thị loại I\" href=\"http://vi.wikipedia.org/wiki/%C4%90%C3%B4_th%E1%BB%8B_lo%E1%BA%A1i_I\">đ&ocirc; thị loại 1</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;trực thuộc tỉnh của Việt Nam. Nha Trang được mệnh danh l&agrave; h&ograve;n ngọc của&nbsp;</span><a style=\"text-decoration: none; color: #0b0080; background-image: none; font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\" title=\"Biển Đ&ocirc;ng\" href=\"http://vi.wikipedia.org/wiki/Bi%E1%BB%83n_%C4%90%C3%B4ng\">biển Đ&ocirc;ng</a><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">, Vi&ecirc;n ngọc xanh&nbsp;</span><sup id=\"cite_ref-1\" class=\"reference\" style=\"line-height: 1em; font-size: 10px; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><a style=\"text-decoration: none; color: #0b0080; background-image: none;\" href=\"http://vi.wikipedia.org/wiki/Nha_Trang#cite_note-1\">[1]</a></sup><span style=\"font-family: sans-serif; font-size: 13px; line-height: 19.1875px;\">&nbsp;v&igrave; gi&aacute; trị thi&ecirc;n nhi&ecirc;n, sắc đẹp cũng như kh&iacute; hậu của n&oacute;.</span><sup id=\"cite_ref-2\" class=\"reference\" style=\"line-height: 1em; font-size: 10px; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><a style=\"text-decoration: none; color: #0b0080; background-image: none;\" href=\"http://vi.wikipedia.org/wiki/Nha_Trang#cite_note-2\">[2]</a></sup><sup id=\"cite_ref-3\" class=\"reference\" style=\"line-height: 1em; font-size: 10px; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><a style=\"text-decoration: none; color: #0b0080; background-image: none;\" href=\"http://vi.wikipedia.org/wiki/Nha_Trang#cite_note-3\">[3]</a></sup></p>"], ["created_at", Thu, 12 Dec 2013 18:50:36 UTC +00:00], ["title", "Nha Trang"], ["updated_at", Thu, 12 Dec 2013 18:50:36 UTC +00:00], ["user_id", 3]]
+  [1m[36m (153.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 164ms (ActiveRecord: 154.3ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2013-12-13 01:50:36 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 67ms (Views: 63.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:50:37 +0700
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-12-13 01:50:55 +0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-12-13 01:51:49 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:51:49 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:51:49 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:51:49 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:51:49 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:52:49 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 161ms (Views: 159.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started GET "/images/search.png" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/search.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.0ms)
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-13 01:52:50 +0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6v9UgqHAK5FylwvT92fa0WtgXgkRX/ebfrsRae5vqJs=", "user"=>{"email"=>"tuan@g.m", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'tuan@g.m' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["last_sign_in_at", Thu, 12 Dec 2013 18:49:16 UTC +00:00], ["current_sign_in_at", Thu, 12 Dec 2013 18:53:06 UTC +00:00], ["sign_in_count", 4], ["updated_at", Thu, 12 Dec 2013 18:53:06 UTC +00:00]]
+  [1m[35m (130.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 221ms (ActiveRecord: 131.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:06 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:53:07 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-13 01:56:59 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+
+Started GET "/images/l1.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/l1.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (44.2ms)
+
+
+Started GET "/images/see_more3.png" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/see_more3.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.6ms)
+
+
+Started GET "/images/l2.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/l2.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.8ms)
+
+
+Started GET "/images/l3.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/l3.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.7ms)
+
+
+Started GET "/images/l4.jpg" for 127.0.0.1 at 2013-12-13 01:57:00 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/l4.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (38.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2013-12-13 01:57:39 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2013-12-13 01:57:46 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2013-12-13 01:57:53 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" LIMIT 3[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/l1.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+
+Started GET "/assets/l2.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+
+Started GET "/assets/l4.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+
+Started GET "/users/images/l1.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/images/l1.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.2ms)
+
+
+Started GET "/users/images/see_more3.png" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/images/see_more3.png"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.8ms)
+
+
+Started GET "/users/images/l3.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/images/l3.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/users/images/l2.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/images/l2.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (42.7ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (72.4ms)
+
+
+Started GET "/users/images/l4.jpg" for 127.0.0.1 at 2013-12-13 01:57:59 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/images/l4.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/banana/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.2ms)
