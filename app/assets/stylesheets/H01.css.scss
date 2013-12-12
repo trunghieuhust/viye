@@ -1,0 +1,366 @@
+/*css chung*/
+	*{
+		margin: 0 auto;
+		padding: 0 auto;
+	}
+	body{
+		font-size: 12px;
+		font: 13px "Droid Sans", Arial, Helvetica, "Trebuchet MS", sans-serif;
+		background-color: #f8f8f8;
+		color: #404040;
+	}
+	li{
+		list-style: none;
+	}
+/*font face*/
+	@font-face{
+	  font-family: font-1;
+	  src: font-url("hltfap4e.ttf");
+	}
+/*css cho header*/
+	#MY-HEADER{
+		/*position: fixed;*/
+		width: 100%;
+		background-color: #20aae5;
+		padding: 0 50px;
+		box-shadow: 0px 2px 2px #333;
+		height: 60px;
+		border-bottom: 0.5em solid #1894ca;
+		-webkit-box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
+		box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
+		z-index: 1000;
+	}
+	#MY-HEADER > div{
+		display: inline-block;
+		margin: 0 20px;
+		height: 100%;
+	}
+/*css cho logo*/
+	#MY-LOGO{
+		width: 140px;
+		float: left;
+		padding: 5px 30px 0 0;
+		text-align: center;
+		display: block;
+		background: image-url("viye_3.png") no-repeat;
+	}
+	#MY-LOGO:hover{
+		opacity: 0.8;
+	}
+	/*#MY-LOGO a{
+		font-family: PTSansBold,Helvetica,Arial,sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		text-shadow: 0 3px 3px rgba(0,0,0,0.2);
+		font-size: 32px;
+		color: white;
+		line-height: 32px;
+	}
+	#MY-LOGO span{
+		color: #084a68;
+		font-size: 12px;
+	}*/
+/*css cho form search*/
+	#MY-SEARCH{
+		float: left;
+		padding: 13px 0;
+	}
+	#MY-SEARCH input{
+		width: 300px;
+		height: 30px;
+		padding: 0px 20px 0px 30px;
+		font-size: 13px;
+		background: #f0f0f0;
+		border: 2px solid #dadada;
+		border-radius: 4px 0 0 4px;
+		border-right: 0;
+		background: white image-url("search.png") 8px 6px no-repeat;
+	}
+	#MY-SEARCH input:focus {
+		outline: none;
+		color: #505050;
+	}
+	.search-button{
+		position: relative;
+		vertical-align: top;
+		height: 30px;
+		padding: 0 20px;
+		font-size: 13px;
+		color: #505050;
+		text-align: center;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		background: #ebebeb;
+		border: 2px solid #dadada;
+		border-bottom: 2px solid #dadada;
+		border-radius: 0 4px 4px 0;
+		cursor: pointer;
+		left: -3px;
+	}
+	.search-button:active{
+		top: 1px;
+		outline: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+/*css cho login*/
+	#MY-LOGIN{
+		float: right;
+		padding: 13px 0;
+	}
+	#MY-LOGIN button{
+		border-radius: 4px;
+	}
+	#MY-LOGIN .popover-markup{
+		float: left;
+		margin-left: 10px;
+	}
+	.popover-markup:before {
+		content: '';
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		bottom: -5px;
+		left: -5px;
+		z-index: -1;
+		border-radius: 4px;
+	}
+	#MY-LOGIN .control-label{
+		color: #404040;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	.my-text-form{
+		width: 200px;
+		height: 40px;
+		margin-top: 10px;
+		padding: 0px 10px;
+		font-size: 15px;
+		background: #f0f0f0;
+		border: 2px solid #dadada;
+		border-radius: 4px;
+		color: #505050;
+	}
+	.my-text-form:focus{
+		border-color: #20aae5;
+	}
+	.login-button{
+		width: 100%;
+		height: 40px;
+		background-color: #d5452f;
+		margin: 10px 0;
+		vertical-align: top;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #f0f0f0;
+		text-align: center;
+		border: 2px solid #ae3623;
+		border-bottom: 2px solid #ae3623;
+		border-radius: 4px;
+	}
+	.login-button:hover{
+		opacity: 0.9;
+	}
+/*css cho MY-CONTENT*/
+	#MY-CONTENT{
+		width: 80%;
+		z-index: 1;
+		padding-bottom: 30px;
+	}
+	.my-window{
+		position: relative;
+		color: #666;
+		text-align: center;
+		text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+		background: #eee;
+		background: rgba(250, 250, 250, 0.8);
+		margin: 20px 10px 0 10px;
+		-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+		box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+		border-radius: 4px;
+	}
+	.my-window:before {
+		content: '';
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		bottom: -5px;
+		left: -5px;
+		z-index: -1;
+		background: rgba(0, 0, 0, 0.08);
+		border-radius: 4px;
+	}
+
+	.my-window .my-header{
+		text-align: left;
+		padding: 10px 10px;
+		border-bottom: 1px solid #1894ca;
+		font-size: 16px;
+		background-color: #20aae5;
+		border-radius: 4px 4px 0 0;
+	}
+	.my-window .my-content{
+		display: inline-block;
+		background-color: white;
+		border-radius: 0 0 4px 4px;
+		padding: 10px 10px;
+		text-align: left;
+	}
+	.my-header .nav-tabs {
+		border-bottom: 0;
+	}
+	.my-header .nav{
+		margin-bottom: -10px;
+	}
+	.my-header .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+		border: 1px solid #1894ca;
+		border-bottom-color: transparent;
+	}
+	.my-header a{
+		color: #505050;
+	}
+	ul.my-list{
+		padding: 0;
+		margin: 0;
+	}
+	.my-list li{
+		float: left;
+		width: 25%;
+		height: 100%;
+		text-align: left;
+	}
+	.my-list li > a:hover{
+		text-decoration: none;
+	}
+	.my-list li > a > h4{
+		margin: 5px 5px 0 5px;
+		color: #92b25f;
+	}
+	.my-list li > a > h4:hover{
+		color: #3a7e19;
+	}
+	.my-list li > a.img-wrapper{
+		text-align: center;
+		display: block;
+		border: 1px solid #ebebeb;
+		padding: 3px;
+		margin: 5px;
+		background-color: #ebebeb;
+	}
+	.my-list li > a > h5{
+		margin: 10px 5px;
+	}
+	.my-list li > p{
+		font: 13px "Droid Sans", Arial, Helvetica, "Trebuchet MS", sans-serif;
+		color: #909090;
+		line-height: 21px;
+		margin: 5px;
+	}
+	img.img-box{
+		width: 100%;
+		height: 144px;
+	}
+	img.img-box:hover{
+		opacity: 0.7;
+	}
+/*css cho slide bar*/
+	.slide-content a.img-wrapper{
+		text-align: center;
+		display: block;
+		border: 1px solid #ebebeb;
+		padding: 5px;
+		margin: 5px;
+		border-radius: 5px;
+		background-color: white;
+	}
+	.slide-content .img-wrapper > img{
+		position: relative;
+		width: 100%;
+		height: 360px;
+	}
+	#MY-SLIDE-BAR .carousel-inner{
+		width: 80%;
+		padding-bottom: 50px;
+		background-color: #f7f7f7;
+	}
+	.content-left{
+		float: left;
+		width: 60%;
+		padding: 10px 0;
+	}
+	.content-right{
+		float: right;
+		width: 40%;
+		padding: 0 20px;
+	}
+	a.my-title > h3{
+		color: #d5452f;
+		font-size: 32px;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	}
+	a.my-title > h3:hover{
+		color: #ae3623;
+	}
+	#MY-SLIDE-BAR a:hover{
+		text-decoration: none;
+	}
+	div.my-vote{
+		width: 100%;
+		height: 40px;
+		background-color: white;
+		border-radius: 4px;
+		border: 1px solid #ebebeb;
+		padding: 8px 10px;
+	}
+	#MY-SLIDE-BAR p{
+		margin-top: 10px;
+		font: 13px "Droid Sans", Arial, Helvetica, "Trebuchet MS", sans-serif;
+		color: #909090;
+		line-height: 21px;
+	}
+	button.default-button{
+		padding: 0 20px;
+		height: 40px;
+		background-color: #d5452f;
+		margin: 10px 0;
+		vertical-align: top;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #f0f0f0;
+		text-align: center;
+		border: 2px solid #ae3623;
+		border-bottom: 2px solid #ae3623;
+		border-radius: 4px;
+	}
+	button.default-button:hover{
+		opacity: 0.9;
+	}
+	#MY-SLIDE-BAR .carousel-indicators .active{
+		background: #d5452f;
+	}
+	#MY-SLIDE-BAR .carousel-indicators li{
+		border-color: #ae3623;
+	}
+	#MY-SLIDE-BAR .carousel-control{
+		background-color: #f8f8f8;
+		background-image: none;
+		width: 10%;
+		opacity: 1;
+	}
+	#MY-SLIDE-BAR .glyphicon-star.star-1{
+		color: #d5452f;
+		font-size: 20px;
+	}
+	#MY-SLIDE-BAR .glyphicon-star.star-2{
+		color: #ebebeb;
+		font-size: 20px;
+	}
+	.my-vote .vote-mark{
+		color: #1894ca;
+	}
+	.my-vote .vote-span{
+		color: #505050;
+		text-align: center;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		margin: 5px 0 0 10px;
+		position: absolute;
+	}

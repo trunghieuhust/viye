@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TestViye</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+
+</head>
+<body>
+
+	<div id="MY-HEADER">
+		<div id="MY-LOGO">
+			<li><%=link_to 'logo', home_index_path, :class=>"header-logo"%></li>
+			<li><span>slogan go vao day</span></li>
+		</div>
+		<div id="MY-SEARCH">
+			<input type="text" placeholder="hãy gõ từ khóa vào đây!">
+			<button type="button" class="search-button">Tìm kiếm</button>
+		</div>
+
+		<div id="MY-LOGIN">
+			<div id="user_nav">
+				<% if user_signed_in? %>
+				Signed in as <%= current_user.email %>. Not you?
+				<%= link_to "Sign out", destroy_user_session_path %>
+				<% else %>
+				<!-- day la phan dang ki -->				
+				<div class="popover-markup">
+					<button type="button" class="pop-btn search-button">Đăng ký</button>
+					<div id="popover-signup-content" class="popover-content hide">
+						<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class=>"form-horizontal") do |f| %>
+						<%= devise_error_messages! %>
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">Email</label>
+							<div class="controls">
+								<%= f.email_field :email, :autofocus => true, :class=>"my-text-form", :placeholder=>"Example@gmail.com" %>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputPassword">Password</label>
+							<div class="controls">
+								<%= f.password_field :password , :class=>"my-text-form", :placeholder=>"Mật khẩu"%>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputPassword">Password</label>
+							<div class="controls">
+								<%= f.password_field :password_confirmation , :class=>"my-text-form", :placeholder=>"Mật khẩu"%>
+							</div>
+						</div>
+						<div class="control-group">
+							<div><%= f.submit "Sign up" , :class=>"login-button" %></div>
+						</div>
+						<% end %>		
+					</div>
+				</div>
+				<!-- het phan dang ki -->						
+
+
+				<!-- day la phan dang nhap -->
+				<div class="popover-markup">
+					<button type="button" class="pop-btn search-button">Đăng nhập</button>
+					<div id="popover-login-content" class="popover-content hide">
+
+						<%= form_for("user", :url => user_session_path, :class=>"form-horizontal") do |f| %>
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">Email</label>
+							<div class="controls">
+								<%= f.text_field :email , :class=>"my-text-form", :placeholder=>"Email"%>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputPassword">Password</label>
+							<div class="controls">
+								<%= f.password_field :password , :class=>"my-text-form", :placeholder=>"Mật khẩu" %>
+							</div>
+						</div>
+						<br>
+						<%= f.check_box :remember_me %>
+						<%= f.label :remember_me %>
+						<%= f.submit 'Sign in', :class=>"login-button" %>
+						<% end %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+			<!-- het phan dang nhap -->
+		</div>
+	</div>
+
+	<%= yield %>
+
+</body>
+</html>
+	
