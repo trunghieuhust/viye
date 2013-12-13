@@ -1,4 +1,6 @@
 Viye::Application.routes.draw do
+  resources :comments
+
   resources :posts
 
   get "home/index"
