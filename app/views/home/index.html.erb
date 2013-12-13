@@ -18,7 +18,7 @@
 		          		<span class="glyphicon glyphicon-star star-2"></span>
 		          		<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span>
 		          	</div>
-		          	<p><%= truncate(@post[0].content, length: 600, separator: ' ') %></p>
+		          	<p><%= truncate(@post[0].content.html_safe, length: 600, separator: ' ') %></p>
 		            
 		            <%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[0] %>
 		          	</div>
@@ -35,7 +35,7 @@
 		          		<span class="glyphicon glyphicon-star star-2"></span>
 		          		<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span>
 		          	</div>
-		          	<p><%= truncate(@post[1].content, length: 600, separator: ' ') %></p>
+		          	<p><%= truncate(@post[1].content.html_safe, length: 600, separator: ' ') %></p>
 		            
 		            <%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[1] %>
 		          	</div>
@@ -52,7 +52,7 @@
 		          		<span class="glyphicon glyphicon-star star-2"></span>
 		          		<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span>
 		          	</div>
-		          	<p><%= truncate(@post[2].content, length: 600, separator: ' ') %></p>
+		          	<p><%= truncate(@post[2].content.html_safe, length: 600, separator: ' ') %></p>
 		            
 		            <%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[2] %>
 		          	</div>
