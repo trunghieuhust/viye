@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+
+gem 'timelineJS-rails'
 gem 'tinymce-rails'
 
 gem 'devise'
@@ -14,6 +16,7 @@ group :production do
 gem "pg"
 gem "rails_12factor"
 end	
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
