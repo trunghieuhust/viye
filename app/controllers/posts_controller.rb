@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    # @posts = Post.where(:user_id => current_user.id)
+    @posts = Post.order("id desc")
   end
 
   # GET /posts/1

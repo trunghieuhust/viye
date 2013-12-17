@@ -6,7 +6,7 @@ Viye::Application.routes.draw do
   resources :posts do
     resources :comments, :only => [:create]
   end
-  devise_for :users, :controllers => { :sessions => 'users/sessions' } 
+  devise_for :users
 
   get "home/index"
 

@@ -1,19 +1,15 @@
+<div class="a_post">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<h1><%= @post.title %></h1>
 
 <p>
-  <strong>Content:</strong>
   <%= @post.content.html_safe	 %>
 </p>
 <%if @post.user == current_user%>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%end%>
 <%= link_to 'Back', posts_path %>
-
  <h2>Comments</h2>
  <div id="comments">
          <%= render :partial => @post.comments %>
@@ -28,3 +24,4 @@
         <p><%= f.submit "Add comment" %></p>
 <%end%>
 <% end %>
+</div>
