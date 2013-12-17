@@ -27,10 +27,14 @@
 						<!-- <img class="my-ava" src="images/user.png" width="30px" height="30px"> -->
 						<span class="my-username"><%= current_user.email %></span>
 					</a>
-					<a href="#"><span class="glyphicon glyphicon-cog"></span></a>
+					<div class="my-tooltip" title="Account-setting" rel="tooltip-bottom"><a href="#"><span class="glyphicon glyphicon-cog"></span></a></div>
+					<div class="my-tooltip" title="Logout" rel="tooltip-bottom"><a href="<%= destroy_user_session_path %>"><span class="glyphicon glyphicon-log-out"></span></a></div>
+
 				</div>
-				<%= link_to "Sign out", destroy_user_session_path %>
 				<% else %>
+
+
+
 				<!-- day la phan dang ki -->				
 				<div class="popover-markup">
 					<button type="button" class="pop-btn search-button">Đăng ký</button>
@@ -96,7 +100,67 @@
 	</div>
 
 	<%= yield %>
-
+	
+	<div id="MY-FOOTER">
+		<div class="wrap-footer">
+			<div class="col-1">
+				<ul class="ft-list">
+					<li class="ft-title"><a href="#">Miền Bắc</a></li>
+					<li class="my-li"><a href="#">Hà Nội</a></li>
+					<li class="my-li"><a href="#">Điện Biên</a></li>
+					<li class="my-li"><a href="#">Tây Bắc</a></li>
+					<li class="my-li"><a href="#">Ba Vì</a></li>
+					<li class="my-li"><a href="#">Lai Châu</a></li>
+					<li class="my-li"><a href="#">Cao Bằng</a></li>
+					<li class="my-li"><a href="#"><span>Xem thêm...</span></a></li>
+				</ul>
+			</div>
+			<div class="col-2">
+				<ul class="ft-list">
+					<li class="ft-title"><a href="#">Miền Trung</a></li>
+					<li class="my-li"><a href="#">Hà Nội</a></li>
+					<li class="my-li"><a href="#">Điện Biên</a></li>
+					<li class="my-li"><a href="#">Tây Bắc</a></li>
+					<li class="my-li"><a href="#">Ba Vì</a></li>
+					<li class="my-li"><a href="#">Lai Châu</a></li>
+					<li class="my-li"><a href="#">Cao Bằng</a></li>
+					<li class="my-li"><a href="#"><span>Xem thêm...</span></a></li>
+				</ul>
+			</div>
+			<div class="col-3">
+				<ul class="ft-list">
+					<li class="ft-title"><a href="#">Miền Nam</a></li>
+					<li class="my-li"><a href="#">Hà Nội</a></li>
+					<li class="my-li"><a href="#">Điện Biên</a></li>
+					<li class="my-li"><a href="#">Tây Bắc</a></li>
+					<li class="my-li"><a href="#">Ba Vì</a></li>
+					<li class="my-li"><a href="#">Lai Châu</a></li>
+					<li class="my-li"><a href="#">Cao Bằng</a></li>
+					<li class="my-li"><a href="#"><span>Xem thêm...</span></a></li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<ul class="ft-list">
+					<li class="ft-title">Thống kê Website</li>
+					<li class="my-li">Số thành viên:<span>12345</span></li>
+					<li class="my-li">Số bài post của thành viên:<span>123456</span></li>
+					<li class="my-li">Số bài post của admin:<span>123</span></li>
+					<li class="my-li">Số lượng review:<span>696969</span></li>
+				</ul>
+			</div>
+			<div class="col-5">
+				<span class="ft-title">Nhập email để theo dõi chúng tôi</span>
+				<div class="ft-content">
+					<input class="default-text-form" type="text" placeholder="Nhập email vào đây"> 
+					<button class="default-button">Follow</button>
+				</div>
+			</div>
+		</div>
+		<div id="UptoTop" class="go-top my-tooltip" title="Trở về đầu trang" rel="tooltip"><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+		<div class="copyright">
+			<span class="ft-text">Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2013-2014. All right reserved by VTH2</span>
+		</div>
+	</div>
+</div>
 </body>
 </html>
-	

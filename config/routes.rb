@@ -6,10 +6,11 @@ Viye::Application.routes.draw do
   resources :posts do
     resources :comments, :only => [:create]
   end
+  devise_for :users, :controllers => { :sessions => 'users/sessions' } 
 
-    get "home/index"
-    devise_for :users
-    root 'home#index'
+  get "home/index"
+
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
