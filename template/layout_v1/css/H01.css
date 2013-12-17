@@ -12,6 +12,15 @@
 	li{
 		list-style: none;
 	}
+	.clear{
+		clear: both;
+	}
+	.my-color-1{
+		color: #20aae5;
+	}
+	.my-color-2{
+		color: #d5452f;
+	}
 /*font face*/
 	@font-face{
   		font-family: font-1;
@@ -330,12 +339,10 @@
 		opacity: 0.7;
 	}
 	.left-content{
-		width: 60%;
 		display: inline-block;
 		float: left;
 	}
 	.right-content{
-		width: 40%;
 		display: inline-block;
 		float: right;
 	}
@@ -513,6 +520,9 @@
 		padding: 8px 10px;
 		font-family: font-1;
 	}
+	#MY-SLIDE-BAR div.my-vote .glyphicon{
+		margin-right: 0;
+	}
 	#MY-SLIDE-BAR p{
 		margin-top: 10px;
 		font: 14px "Droid Sans", Arial, Helvetica, "Trebuchet MS", sans-serif;
@@ -528,7 +538,6 @@
 		margin: 17px 0;
 		vertical-align: top;
 		font-size: 15px;
-		text-transform: uppercase;
 		color: #f0f0f0;
 		text-align: center;
 		border: 2px solid #ae3623;
@@ -562,6 +571,7 @@
 		font-size: 20px;
 	}
 	.vote-mark{
+		font-family: font-1;
 		color: #1894ca;
 	}
 	.my-vote .vote-span{
@@ -771,4 +781,184 @@
 	}
 	span.my-flag{
 		margin-left: 5px;
+	}
+	.input-append .add-on, .input-prepend .add-on {
+		width: 32px;
+		height: 32px;
+		min-width: 16px;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 30px;
+		text-align: center;
+		text-shadow: 0 1px 0 #ffffff;
+		background-color: #eeeeee;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		top: 1px;
+		position: absolute;
+		left: 85%;
+	}
+	#BirthDay{
+		width: 85%;
+	}
+/*css cho trang hien thi chi tiet post*/
+	div.left-menu-fixed{
+		min-height: 60px;
+		background-color: #ebebeb;
+		position: fixed;
+		left: 0;
+		top: 88px;
+		-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+		box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		border: 1px solid #dadada;
+	}
+	.content-init{
+		width: 100%;
+		border: 1px solid rgb(229, 229, 229);
+		padding: 5px;
+		margin: 5px 0;
+		overflow: hidden;
+	}
+	.content-init > p{
+		margin: 0;
+		font-family: font-1;
+		font-size: 14px;
+	}
+	.glyphicon {
+		margin-right:5px;
+	}
+	ul.cmt-list{
+		padding: 0 5px;
+		margin: 10px 0;
+		overflow: hidden;
+	}
+	ul.cmt-list li{
+		min-height: 50px;
+		margin: 5px 0;
+		overflow: hidden;
+	}
+	ul.cmt-list li.cmt-right > p{
+		float: right;
+		text-align: right;
+	}
+	.left-bubble{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 5px 10px;
+		background: white;
+		min-height: 30px;
+		border-radius: 5px;
+		margin-left: 20px;
+		max-width: 78%;
+	}
+	.right-bubble{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 5px 10px;
+		background: white;
+		min-height: 30px;
+		border-radius: 5px;
+		margin-right: 20px;
+		max-width: 78%;
+		float: right;
+	}
+	.right-bubble > p{
+		float: right;
+	}
+	.left-bubble:after {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: -15px;
+		border-style: solid;
+		border-width: 10px 15px 10px 0;
+		border-color: rgb(245, 245, 245) white rgb(245, 245, 245) rgb(245, 245, 245);
+		display: block;
+		width: 0;
+	}
+	.right-bubble:after {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 100%;
+		border-style: solid;
+		border-width: 10px 0 10px 15px;
+		border-color: rgb(245, 245, 245) rgb(245, 245, 245) rgb(245, 245, 245) white;
+		display: block;
+		width: 0;
+	}
+	.posted-time{
+		font-family: font-1;
+		font-size: 10px;
+	}
+	.author{
+		font-family: font-1;
+		font-size: 14px;
+		color: rgb(32, 170, 229);
+		margin-right: 10px;
+	}
+	#CMT-AREA{
+		background-color: rgb(245, 245, 245);
+	}
+	.new-cmt-area{
+		border-radius: 0;
+		box-shadow: none;
+		border-top: 1px dashed #e3e3e3;
+		border-width: 1px 0 0 0;
+		padding: 15px;
+	}
+	.wrap-ava-1{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+		height: 50px;
+		width: 50px;
+		padding: 2px;
+		background-color: white;
+		border-radius: 3px;
+		border: 1px solid #20aae5;
+	}
+	.wrap-more-info{
+		margin-left: 60px;
+	}
+	.wrap-more-info > p{
+		float: left;
+		width: 100%;
+	}
+	.author:hover{
+		color: #1894ca;
+	}
+	#POSTED-AUTHOR .wrap-ava-1{
+		float: left;
+	}
+	ul.list-menu{
+		padding: 0;
+		margin: 0;
+	}
+	ul.list-menu > li{
+		font-family: font-1;
+		font-size: 14px;
+		color: #505050;
+		text-shadow: 0 1px 2px;
+		padding: 5px 10px;
+		border-top: 1px solid #dadada;
+		display: block;
+	}
+	ul.list-menu > li:first-child{
+		border-top: 0;
+	}
+	ul.list-menu > li:hover{
+		background-color: #20aae5;
+	}
+	ul.list-menu a{
+		color: inherit;
+		display: block;
+	}
+	ul.list-menu a:hover{
+		text-decoration: none;
 	}
