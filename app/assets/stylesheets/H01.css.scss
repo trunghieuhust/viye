@@ -61,6 +61,10 @@ li{
 	color: white;
 	line-height: 32px;
 }
+a:hover{
+	background-color: transparent !important;
+	/*display: none;*/
+}
 #MY-LOGO span{
 	font-family: font-1;
 	color: rgba(255,255,255,0.9);
