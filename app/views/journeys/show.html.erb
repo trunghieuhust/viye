@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @journey.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @journey.enddate %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @journey.content %>
+</p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @journey.headline %>
+</p>
+
+<p>
+  <strong>Media:</strong>
+  <%= @journey.media %>
+</p>
+
+<p>
+  <strong>Mediacaption:</strong>
+  <%= @journey.mediacaption %>
+</p>
+
+<p>
+  <strong>Mediacredit:</strong>
+  <%= @journey.mediacredit %>
+</p>
+
+<%= link_to 'Edit', edit_journey_path(@journey) %> |
+<%= link_to 'Back', journeys_path %>

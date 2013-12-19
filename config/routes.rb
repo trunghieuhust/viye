@@ -1,4 +1,6 @@
 Viye::Application.routes.draw do
+  resources :journeys
+
   resources :comments
 
   #resources :comments

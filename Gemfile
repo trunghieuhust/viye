@@ -11,11 +11,11 @@ gem 'devise'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-gem "sqlite3", '1.3.8'
+	gem "sqlite3", '1.3.8'
 end
 group :production do
-gem "pg"
-gem "rails_12factor"
+	gem "pg"
+	gem "rails_12factor"
 end	
 
 # Use SCSS for stylesheets
@@ -28,8 +28,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
+gem 'therubyracer', platforms: :ruby
+gem 'execjs'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
