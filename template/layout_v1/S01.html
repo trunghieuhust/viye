@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/H01.css">
+		<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
+	</head>
+	<body>
+		<div id="MY-HEADER">
+			<div id="MY-LOGO">
+				<li><a class="header-logo" href="#">Du Lich Viet</a></li>
+				<li><span>Vietnam in your eye</span></li>
+			</div>
+			<div id="MY-SEARCH">
+				<input type="text" placeholder="Hãy gõ từ khóa vào đây!">
+				<button type="button" class="search-button">Tìm kiếm</button>
+			</div>
+			<div id="MY-LOGIN">
+				<div class="popover-markup">
+					<button type="button" class="pop-btn search-button">Đăng ký</button>
+					<div id="popover-signup-content" class="popover-content hide">
+						<form class="form-horizontal" method="post">
+					    	<div class="control-group">
+					        	<label class="control-label" for="inputEmail">Email</label>
+					        	<div class="controls">
+					            	<input type="text" class="my-text-form" placeholder="Example@gmail.com" autofocus>
+					        	</div>
+					    	</div>
+							<div class="control-group">
+						        <label class="control-label" for="inputPassword">Password</label>
+						       	<div class="controls">
+						            <input type="password" class="my-text-form" placeholder="Password">
+						        </div>
+						    </div>
+						    <div class="control-group">
+						        <label class="control-label" for="inputPassword">Confirm Password</label>
+						        <div class="controls">
+						            <input type="password" class="my-text-form" placeholder="Confirm password">
+						        </div>
+						    </div>
+						    <div class="control-group">
+						        <div class="controls">
+						            <button class="login-button" type="submit"> Đăng ký </button>
+						        </div>
+						    </div>
+					    </form>
+					</div>
+				</div>
+				<div class="popover-markup">
+					<button type="button" class="pop-btn search-button">Đăng nhập</button>
+					<div id="popover-login-content" class="popover-content hide">
+						<form class="form-horizontal"  method="post">
+							<div class="controls">
+								<input class="my-text-form" type="text" name="username" placeholder="Email" autofocus>
+							</div>
+							<div class="controls">
+	            	   		<input class="my-text-form" type="password" name="password" placeholder="Mật khẩu">
+	            	       	</div>
+	            	       	<div class="checkbox">
+							    <label>
+							      	<input type="checkbox"><span>Remember me</span>
+							    </label>
+							</div>
+				            <button class="login-button" type="submit"> Đăng Nhập </button>
+				        </form>
+					</div>
+				</div>
+				<!-- <div class="wrap-ava">
+					<a class="one" href="#">
+						<span class="glyphicon glyphicon-user"></span> -->
+						<!-- <img class="my-ava" src="images/user.png" width="30px" height="30px"> -->
+						<!-- <span class="my-username">VinhDQ</span>
+					</a>
+					<div class="my-tooltip" title="Account-setting" rel="tooltip-bottom"><a href="#"><span class="glyphicon glyphicon-cog"></span></a></div>
+					<div class="my-tooltip" title="Logout" rel="tooltip-bottom"><a href="#"><span class="glyphicon glyphicon-log-out"></span></a></div>
+				</div> -->
+			</div>
+		</div>
+		<!-- day la phan noi dung -->
+		<div class="wrapper">
+			<div id="MY-CONTENT">
+				<div class="alert alert-info my-alert">
+					<button class="close" data-dismiss="alert" type="button">×</button>
+		            Có n kết quả được tìm thấy
+			    </div>
+			    <div class="alert alert-danger my-alert">
+					<button class="close" data-dismiss="alert" type="button">×</button>
+					Không có kết quả nào được tìm thấy
+				</div>
+				<div class="my-window">
+					<div class="my-header">
+						<ul class="nav nav-tabs">
+						  <li class="active"><a  data-toggle="tab" href="#MOINHAT">Mới nhất</a></li>
+						  <li><a data-toggle="tab" href="#DANHGIACAONHAT">Đánh giá cao nhất</a></li>
+						  <li><a data-toggle="tab" href="#XEMNHIEUNHAT">Xem nhiều nhất</a></li>
+						</ul>
+					</div>
+					<div class="tab-content my-content">
+				        <div id="MOINHAT" class="tab-pane fade in active">
+				        	<ul class="my-list-1">
+					        	<li>
+					        		<a href="#"><h4>Nha Trang</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l1.jpg">
+					        		</a>
+					        		<a href="#"><h5>Nha Trang resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Phan Thiết</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l2.jpg">
+					        		</a>
+					        		<a href="#"><h5>Phan Thiết resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Hạ Long</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l3.jpg">
+					        		</a>
+					        		<a href="#"><h5>Phan Thiết resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Ninh Thuận</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l4.jpg">
+					        		</a>
+					        		<a href="#"><h5>Phan Thiết resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Nha Trang</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l1.jpg">
+					        		</a>
+					        		<a href="#"><h5>Nha Trang resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Phan Thiết</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l2.jpg">
+					        		</a>
+					        		<a href="#"><h5>Phan Thiết resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Hạ Long</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l3.jpg">
+					        		</a>
+					        		<a href="#"><h5>Phan Thiết resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        	<li>
+					        		<a href="#"><h4>Ninh Thuận</h4></a>
+					        		<a class="img-wrapper" href="#">
+					        			<img class="img-box" src="images/l4.jpg">
+					        		</a>
+					        		<a href="#"><h5>Phan Thiết resort</h5></a>
+					        		<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
+					        		<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
+					        		<a href="#"><img src="images/see_more3.png"></a>
+					        		</p>
+					        	</li>
+					        </ul>
+				        </div>
+				        <div id="DANHGIACAONHAT" class="tab-pane fade">
+				        	<p>sap xep theo danh gia</p>
+				        </div>
+				        <div id="XEMNHIEUNHAT" class="tab-pane fade">
+				        	<p>sap xep theo review</p>
+				        </div>
+					</div>
+					<ul class="pagination">
+  						<li class="disabled"><a href="#">&laquo;</a></li>
+  						<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+  						<li><a href="#">2</a></li>
+  						<li><a href="#">3</a></li>
+  						<li><a href="#">4</a></li>
+  						<li><a href="#">5</a></li>
+  						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="MY-FOOTER">
+				<div class="wrap-footer">
+					<div class="col-1">
+						<ul class="ft-list">
+							<li class="ft-title"><a href="#">Miền Bắc</a></li>
+							<li class="my-li"><a href="#">Hà Nội</a></li>
+							<li class="my-li"><a href="#">Điện Biên</a></li>
+							<li class="my-li"><a href="#">Tây Bắc</a></li>
+							<li class="my-li"><a href="#">Ba Vì</a></li>
+							<li class="my-li"><a href="#">Lai Châu</a></li>
+							<li class="my-li"><a href="#">Cao Bằng</a></li>
+							<li class="my-li"><a href="#"><span>Xem thêm...</span></a></li>
+						</ul>
+					</div>
+					<div class="col-2">
+						<ul class="ft-list">
+							<li class="ft-title"><a href="#">Miền Trung</a></li>
+							<li class="my-li"><a href="#">Hà Nội</a></li>
+							<li class="my-li"><a href="#">Điện Biên</a></li>
+							<li class="my-li"><a href="#">Tây Bắc</a></li>
+							<li class="my-li"><a href="#">Ba Vì</a></li>
+							<li class="my-li"><a href="#">Lai Châu</a></li>
+							<li class="my-li"><a href="#">Cao Bằng</a></li>
+							<li class="my-li"><a href="#"><span>Xem thêm...</span></a></li>
+						</ul>
+					</div>
+					<div class="col-3">
+						<ul class="ft-list">
+							<li class="ft-title"><a href="#">Miền Nam</a></li>
+							<li class="my-li"><a href="#">Hà Nội</a></li>
+							<li class="my-li"><a href="#">Điện Biên</a></li>
+							<li class="my-li"><a href="#">Tây Bắc</a></li>
+							<li class="my-li"><a href="#">Ba Vì</a></li>
+							<li class="my-li"><a href="#">Lai Châu</a></li>
+							<li class="my-li"><a href="#">Cao Bằng</a></li>
+							<li class="my-li"><a href="#"><span>Xem thêm...</span></a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<ul class="ft-list">
+							<li class="ft-title">Thống kê Website</li>
+							<li class="my-li">Số thành viên:<span>12345</span></li>
+							<li class="my-li">Số bài post của thành viên:<span>123456</span></li>
+							<li class="my-li">Số bài post của admin:<span>123</span></li>
+							<li class="my-li">Số lượng review:<span>696969</span></li>
+						</ul>
+					</div>
+					<div class="col-5">
+						<span class="ft-title">Nhập email để theo dõi chúng tôi</span>
+						<div class="ft-content">
+							<input class="default-text-form" type="text" placeholder="Nhập email vào đây"> 
+							<button class="default-button">Follow</button>
+						</div>
+					</div>
+				</div>
+				<div id="UptoTop" class="go-top my-tooltip" title="Trở về đầu trang" rel="tooltip"><span class="glyphicon glyphicon-circle-arrow-up"></span></div>
+				<div class="copyright">
+					<span class="ft-text">Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2013-2014. All right reserved by VTH2</span>
+				</div>
+			</div>
+		</div>
+		<!-- day la javascript -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/layout.js"></script>
+    	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    	<script type="text/javascript" src="js/perfect-scrollbar.js"></script>
+	</body>
+
+
+</html>

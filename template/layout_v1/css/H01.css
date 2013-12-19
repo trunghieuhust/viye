@@ -853,6 +853,7 @@
 		border-radius: 5px;
 		margin-left: 20px;
 		max-width: 78%;
+		font-size: 12px;
 	}
 	.right-bubble{
 		position: relative;
@@ -865,6 +866,7 @@
 		margin-right: 20px;
 		max-width: 78%;
 		float: right;
+		font-size: 12px;
 	}
 	.right-bubble > p{
 		float: right;
@@ -875,8 +877,8 @@
 		top: 5px;
 		left: -15px;
 		border-style: solid;
-		border-width: 10px 15px 10px 0;
-		border-color: rgb(245, 245, 245) white rgb(245, 245, 245) rgb(245, 245, 245);
+		border-width: 8px 16px 8px 0;
+		border-color: #4bbae9  white #4bbae9 #4bbae9;
 		display: block;
 		width: 0;
 	}
@@ -886,8 +888,8 @@
 		top: 5px;
 		left: 100%;
 		border-style: solid;
-		border-width: 10px 0 10px 15px;
-		border-color: rgb(245, 245, 245) rgb(245, 245, 245) rgb(245, 245, 245) white;
+		border-width: 8px 0 8px 16px;
+		border-color: #4bbae9 #4bbae9 #4bbae9 white;
 		display: block;
 		width: 0;
 	}
@@ -902,14 +904,7 @@
 		margin-right: 10px;
 	}
 	#CMT-AREA{
-		background-color: rgb(245, 245, 245);
-	}
-	.new-cmt-area{
-		border-radius: 0;
-		box-shadow: none;
-		border-top: 1px dashed #e3e3e3;
-		border-width: 1px 0 0 0;
-		padding: 15px;
+		background-color: rgba(32, 170, 229,0.8);
 	}
 	.wrap-ava-1{
 		display: inline-block;
@@ -932,6 +927,9 @@
 	}
 	.author:hover{
 		color: #1894ca;
+	}
+	#POSTED-AUTHOR{
+		font-family: font-1;
 	}
 	#POSTED-AUTHOR .wrap-ava-1{
 		float: left;
@@ -961,4 +959,27 @@
 	}
 	ul.list-menu a:hover{
 		text-decoration: none;
+	}
+	#new-cmt-wrap{
+		width: 78%;
+	}
+	#new-cmt-wrap .default-button{
+		font-family: font-1;
+		font-size: 12px;
+		margin: 10px 0 0 0;
+		padding: 5px 10px;
+		height: 30px;
+	}
+	#new-cmt-wrap h6{
+		font-size: 10px;
+	}
+	#NEW-COMMENT{
+		font-size: 12px;
+	}
+	.cmt-content{
+		padding: 0 10px;
+	}
+	.my-alert{
+		margin: 20px 10px 0 10px;
+		font-size: 16px;
 	}
