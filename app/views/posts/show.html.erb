@@ -24,4 +24,18 @@
         <p><%= f.submit "Add comment" %></p>
 <%end%>
 <% end %>
+
+ <script>
+
+  $(document).ready(function() {
+    createStoryJS({
+      type: 'timeline',
+      width: '400',
+      height: '500',
+      source: '/a.json'	, //get the events.json format from https://github.com/VeriteCo/TimelineJS#file-formats
+      embed_id: 'my-timeline'
+    });
+  });
+        </script>
+<div id="timeline-embed"></div>
 </div>

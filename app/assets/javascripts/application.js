@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require tinymce-jquery
-
+//=require timelineJS/embed
 $(document).ready(function(){
 /*popover login & signup*/
 $('button.pop-btn').popover({
