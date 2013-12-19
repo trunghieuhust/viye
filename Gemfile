@@ -6,8 +6,9 @@ gem 'rails', '4.0.2'
 gem "kaminari"
 gem 'timelineJS-rails'
 gem 'tinymce-rails'
-
+gem 'carrierwave'
 gem 'devise'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 gem "sqlite3", '1.3.8'
