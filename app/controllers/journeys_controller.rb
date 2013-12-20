@@ -37,6 +37,7 @@ class JourneysController < ApplicationController
           } }
         end
       end
+  end
 
   # GET /journeys/1
   # GET /journeys/1.json
