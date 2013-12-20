@@ -5,7 +5,38 @@ class JourneysController < ApplicationController
   # GET /journeys.json
   def index
     @journeys = Journey.all
-  end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: json_out = {
+        "timeline"=>
+        {
+          "headline"=>"The Main Timeline Headline Goes here",
+          "type"=>"default",
+          "text"=>"<p>Intro body text goes here, some HTML is ok</p>",
+          "asset"=> {
+            "media"=>"http://www.exglam.com/wp-content/uploads/2013/02/Kajal-agarwal-in-Blue-and-white-Fade-Short-with-white-Top-and-a-Blue-bow-in-hair.jpg",
+            "credit"=>"Credit Name Goes Here",
+            "caption"=>"Caption text goes here"
+            },
+
+            "date"=> @histories.map { |timeline| {"startDate" => timeline.startdate.strftime("%Y,%m,%d"),"endDate" => timeline.enddate.strftime("%Y,%m,%d"),"headline" => timeline.headline,"text" => timeline.content, "asset" => {"media" => timeline.media}}},
+
+
+            "era"=> [
+              {
+                "startDate"=>"2011,12,10",
+                "endDate"=>"2011,12,11",
+                "headline"=>"Headline Goes Here",
+                "text"=>"<p>Body text goes here, some HTML is OK</p>",
+                "tag"=>"This is Optional"
+              }
+
+            ]
+          }
+          } }
+        end
+      end
 
   # GET /journeys/1
   # GET /journeys/1.json
@@ -71,4 +102,4 @@ class JourneysController < ApplicationController
     def journey_params
       params.require(:journey).permit(:startdate, :enddate, :content, :headline, :media, :mediacaption, :mediacredit)
     end
-end
+  end

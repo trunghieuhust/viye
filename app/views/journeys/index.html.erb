@@ -35,5 +35,16 @@
 </table>
 
 <br>
-
+<script>
+  $(document).ready(function() {
+    createStoryJS({
+      type:       'timeline',
+      width:      '1200',
+      height:     '500',
+      source:     '<%= @histories %>',
+      embed_id:   'my-timeline'
+    });
+  });
+</script>
+<div id="my-timeline"></div>
 <%= link_to 'New Journey', new_journey_path %>
