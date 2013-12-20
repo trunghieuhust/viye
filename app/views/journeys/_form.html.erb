@@ -1,0 +1,45 @@
+<%= form_for(@journey) do |f| %>
+  <% if @journey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journey.errors.count, "error") %> prohibited this journey from being saved:</h2>
+
+      <ul>
+      <% @journey.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.datetime_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %><br>
+    <%= f.datetime_select :enddate %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :headline %><br>
+    <%= f.text_field :headline %>
+  </div>
+  <div class="field">
+    <%= f.label :media %><br>
+    <%= f.text_field :media %>
+  </div>
+  <div class="field">
+    <%= f.label :mediacaption %><br>
+    <%= f.text_field :mediacaption %>
+  </div>
+  <div class="field">
+    <%= f.label :mediacredit %><br>
+    <%= f.text_field :mediacredit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

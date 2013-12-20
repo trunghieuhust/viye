@@ -1,0 +1,19 @@
+<div class="posts">
+<% @posts.each do |post| %>      
+<div>
+<h1><%= link_to post.title, post %></h1>
+<p><%= post.content.html_safe %></p>
+<p>
+<%= link_to 'Show', post %> 
+<% if post.user == current_user %>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</p>
+</div>
+<hr>
+
+
+<% end %>
+<%= link_to 'New Post', new_post_path %>
+</div>

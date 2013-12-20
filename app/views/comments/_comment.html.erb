@@ -1,0 +1,12 @@
+<%= div_for comment do %>
+        <p>
+                <strong>
+                        Posted <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.email %>
+                </strong>
+                <br/>
+                <%= comment.body %>
+                <%if comment.user == current_user%>
+                <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        		<%end%>
+        </p>
+<% end %>
