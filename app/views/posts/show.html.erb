@@ -1,41 +1,153 @@
-<div class="a_post">
-<p id="notice"><%= notice %></p>
+<div class="left-menu-fixed">
+        <ul class="list-menu">
+          <li><a href="#"><span class="glyphicon glyphicon-comment"></span>Comment</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-star"></span>Đánh giá</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>Follow</a></li>
+        </ul>
+      </div>
+      <div id="MY-CONTENT">
+        <div class="left-content" style="width: 70%;">
+          <div id="POST-DETAIL" class="my-window">
+            <div class="my-content">
+              <div class="content-init">
+                <p id="notice"><%= notice %></p>
 
-<h1><%= @post.title %></h1>
+                <h1><%= @post.title %></h1>
+                <p>
+                  <%= @post.content.html_safe  %>
+                </p>
+                <%if @post.user == current_user%>
+                <%= link_to 'Edit', edit_post_path(@post) %> |
+                <%end%>
+                <%= link_to 'Back', posts_path %>
+                 
+              <div id="timeline-embed">
+              <script>
 
-<p>
-  <%= @post.content.html_safe	 %>
-</p>
-<%if @post.user == current_user%>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%end%>
-<%= link_to 'Back', posts_path %>
- <h2>Comments</h2>
- <div id="comments">
-         <%= render :partial => @post.comments %>
- </div> 
-<%if signed_in? %>
-<%= form_for [@post, Comment.new] do |f| %>
-        <p>
-                <%= f.label :body, "New comment" %><br/>
-                <%= f.text_area :body %>
-        </p>
+                  $(document).ready(function() {
+                    createStoryJS({
+                      type: 'timeline',
+                      width: '400',
+                      height: '500',
+                      source: '/a.json' , //get the events.json format from https://github.com/VeriteCo/TimelineJS#file-formats
+                      embed_id: 'my-timeline'
+                    });
+                  });
+                  </script>
+              </div>
 
-        <p><%= f.submit "Add comment" %></p>
-<%end%>
-<% end %>
 
- <script>
+              </div>
+              <div id="POSTED-AUTHOR" class="content-init">
+                <p class="wrap-ava-1"><a href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a></p>
+                <div class="wrap-more-info">
+                  <p>
+                    <span class="glyphicon glyphicon-user"></span>Posted by <a class="author" href="#">VinhDQ</a>
+                    <span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm 
+                    | <span class="glyphicon glyphicon-comment"></span>2 Comments 
+                    | <span class="glyphicon glyphicon-eye-open"></span>10 Reviews
+                  </p>
+                  <p>
+                    Tags:
+                      <a href="#"><span class="label label-info">Nha Trang</span></a>
+                    <a href="#"><span class="label label-info">Vung Bien</span></a>
+                     | Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+                     <span class="glyphicon glyphicon-star my-color-2"></span>
+                          <span class="glyphicon glyphicon-star my-color-2"></span>
+                          <span class="glyphicon glyphicon-star my-color-2"></span>
+                          <span class="glyphicon glyphicon-star my-color-2"></span>
+                          <span class="glyphicon glyphicon-star"></span>
+                    </p>
+                  </div>
+              </div>
 
-  $(document).ready(function() {
-    createStoryJS({
-      type: 'timeline',
-      width: '400',
-      height: '500',
-      source: '/a.json'	, //get the events.json format from https://github.com/VeriteCo/TimelineJS#file-formats
-      embed_id: 'my-timeline'
-    });
-  });
-        </script>
-<div id="timeline-embed"></div>
-</div>
+                <div id="comments">
+                         <%= render :partial => @post.comments %>
+                 </div> 
+                <%if signed_in? %>
+                <%= form_for [@post, Comment.new] do |f| %>
+                        <p>
+                                <%= f.label :body, "New comment" %><br/>
+                                <%= f.text_area :body %>
+                        </p>
+
+                        <p><%= f.submit "Add comment" %></p>
+                <%end%>
+                <% end %>
+              <!-- <div id="CMT-AREA" class="content-init">
+              <ul class="cmt-list">
+                <li class="cmt-left">
+                  <p class="wrap-ava-1">
+                    <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
+                  </p>
+                  <div class="left-bubble">
+                    <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
+                    <p class="cmt-content">comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^</p>
+                  </div>
+                </li>
+                <li class="cmt-right">
+                  <p class="wrap-ava-1">
+                    <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
+                  </p>
+                  <div class="right-bubble">
+                    <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
+                    <p class="cmt-content">co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.="</p>
+                  </div>
+                </li>
+                <li class="cmt-left">
+                  <p class="wrap-ava-1">
+                    <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
+                  </p>
+                  <div id="new-cmt-wrap" class="left-bubble">
+                    <p><a class="author" href="#">VinhDQ</a></p>
+                    <p class="cmt-content">
+                      <form accept-charset="UTF-8" action="" method="POST">
+                        <textarea class="form-control" id="NEW-COMMENT" rows="3" placeholder="Type in your message"></textarea>
+                        <h6 class="pull-right">320 characters remaining</h6>
+                                <button class="default-button" type="submit">Post New Comment</button>
+                      </form>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="right-content" style="width: 30%;">
+          <div class="my-window">
+            <div class="my-header">Google map</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div class="my-window">
+            <div class="my-header">Bạn muốn đặt phòng?</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div id="TAG-CLOUD" class="my-window">
+            <div class="my-header">Các Tag liên quan</div>
+            <div class="my-content">
+              <div class="col-1">
+                <ul class="my-tag">
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                </ul>
+              </div>
+              <div class="col-2">
+                <ul class="my-tag">
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                  <li><a href="#">Hà Nội</a><span>x 123</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
