@@ -8,6 +8,7 @@ gem 'timelineJS-rails'
 gem 'tinymce-rails'
 gem 'carrierwave'
 gem 'devise'
+gem 'truncate_html'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
