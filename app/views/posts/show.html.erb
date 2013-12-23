@@ -50,71 +50,74 @@
               </p>
               <p>
                 Tags:
-                <a href="#"><span class="label label-info">Nha Trang</span></a>
-                <a href="#"><span class="label label-info">Vung Bien</span></a>
-                | Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
-                <span class="glyphicon glyphicon-star my-color-2"></span>
-                <span class="glyphicon glyphicon-star my-color-2"></span>
-                <span class="glyphicon glyphicon-star my-color-2"></span>
-                <span class="glyphicon glyphicon-star my-color-2"></span>
-                <span class="glyphicon glyphicon-star"></span>
-              </p>
+                <% @post.tags.any? %>
+                <% @post.tags.each do |tag| %>
+                <%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
+                <% end %>
+
+                | Điểm đánh giá: <span class="vote-mark">(<%=@post.average_rating%>/5) </span>
+                <div id="star">
+                    <script>
+                    $('#star').raty({
+                      readOnly: true,
+                      score: <%= @post.average_rating %>,
+                      path: '/assets/'
+                    });
+                    </script>
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
 
-          <div id="star">
+<!--           <div id="star">
             <p>Averate rating</p>
 
-            <script>
-            $('#star').raty({
-              readOnly: true,
-              score: <%= @post.average_rating %>,
-              path: '/assets/'
-            });
-            </script>
+
           </div>
+        -->
+        <%if signed_in?%>
+        <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
+        <%unless @rating%> 
+        <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
+        <%end%>
+        <div id="user_star">
+          <p>Your rating</p>
 
-          <%if signed_in?%>
-          <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
-          <%unless @rating%> 
-          <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
-          <%end%>
-          <div id="user_star">
-            <p>Your rating</p>
-
-            <script>
-            $('#user_star').raty({
-              score: <%= @rating.score %>,
-              path: '/assets/',
-              click: function(score, evt) {
-                $.ajax({
-                  url: '/ratings/' + <%= @rating.id %>,
-                  type: 'PATCH',
-                  data: { score: score }
-                });
-              }
-            });
-            </script>
-          </div>
-
-          <%end%>
-
-          <div id="comments">
-           <%= render :partial => @post.comments %>
-         </div> 
-         <%if signed_in? %>
-         <%= form_for [@post, Comment.new] do |f| %>
-         <p>
-          <%= f.label :body, "New comment" %><br/>
-          <%= f.text_area :body %>
-        </p>
-
-        <p><%= f.submit "Add comment" %></p>
+          <script>
+          $('#user_star').raty({
+            score: <%= @rating.score %>,
+            path: '/assets/',
+            click: function(score, evt) {
+              $.ajax({
+                url: '/ratings/' + <%= @rating.id %>,
+                type: 'PATCH',
+                data: { score: score }
+              });
+            }
+          });
+          </script>
+        </div>
 
         <%end%>
-        <%else %>
-        <%="<i>Login to comment</i>".html_safe%>
-        <% end %>
+
+        <div id="comments">
+         <%= render :partial => @post.comments %>
+       </div> 
+       <%if signed_in? %>
+       <%= form_for [@post, Comment.new] do |f| %>
+       <p>
+        <%= f.label :body, "New comment" %><br/>
+        <%= f.text_area :body %>
+      </p>
+
+      <p><%= f.submit "Add comment" %></p>
+
+      <%end%>
+      <%else %>
+      <%="<i>Login to comment</i>".html_safe%>
+      <% end %>
+
 
 
 

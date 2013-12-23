@@ -13,6 +13,8 @@ devise_for :users
 get "home/index"
 get '/search', to: 'posts#index'
 root 'home#index'
+get 'tagged' => 'posts#index', :as => 'tagged'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

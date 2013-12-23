@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223042259) do
+ActiveRecord::Schema.define(version: 20131223085931) do
 
   create_table "comments", force: true do |t|
     t.integer  "post_id"
@@ -55,6 +55,23 @@ ActiveRecord::Schema.define(version: 20131223042259) do
 
   add_index "ratings", ["post_id"], name: "index_ratings_on_post_id"
   add_index "ratings", ["user_id"], name: "index_ratings_on_user_id"
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", force: true do |t|
+    t.string "name"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

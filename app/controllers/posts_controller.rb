@@ -5,23 +5,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if params.key?("sortby")
-      @posts = Post.all
-      case params[:sortby]
-      when "hot"
-        @posts.sort
-      when "new"
-        @posts.order("created_at desc")
-      when "popular"
-        @posts.sort
-      else @posts.all
-      end
-    elsif params.key?("keyword")
+    if params[:keyword].present?
       @posts = Post.search(params[:keyword])
+    elsif  params[:tag].present? 
+      @posts = Post.tagged_with(params[:tag])
     else 
       @posts = Post.all
     end
-
     # @posts = Post.where(:user_id => current_user.id)
     #@posts = Post.order("id desc")
   end
@@ -79,6 +69,13 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def tagged
+    if params[:tag].present? 
+      @posts = Post.tagged_with(params[:tag])
+    else 
+      @posts = Post.postall
+    end  
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -88,6 +85,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :tag_list)
     end
   end
