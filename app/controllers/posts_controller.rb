@@ -16,8 +16,8 @@ class PostsController < ApplicationController
         @posts.sort
       else @posts.all
       end
-    elsif params.key?("search")
-      @posts = Post.search(params[:search])
+    elsif params.key?("keyword")
+      @posts = Post.search(params[:keyword])
     else 
       @posts = Post.all
     end
