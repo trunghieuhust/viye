@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-	before_filter :user_signed_in, except: [:create]
+	before_filter except: [:create]
 	def create
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.create!(comment_params)
