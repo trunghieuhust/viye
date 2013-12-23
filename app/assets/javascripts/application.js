@@ -16,6 +16,7 @@
 //= require_tree .
 //= require tinymce-jquery
 //=require timelineJS/embed
+//=require jquery.raty.js
 $(document).ready(function(){
 /*popover login & signup*/
 $('button.pop-btn').popover({
