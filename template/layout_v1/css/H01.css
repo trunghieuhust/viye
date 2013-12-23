@@ -8,6 +8,7 @@
 		font: 13px "Droid Sans", Arial, Helvetica, "Trebuchet MS", sans-serif;
 		background-color: #f8f8f8;
 		color: #404040;
+		z-index: 0;
 	}
 	li{
 		list-style: none;
@@ -40,7 +41,7 @@
 		height: 65px;
 		-webkit-box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
 		box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
-		z-index: 1;
+		z-index: 1000;
 		display: inline-block;
 		width: 100%;
 		border-bottom: 5px solid #1894ca;
@@ -219,12 +220,13 @@
 	.wrapper{
 		display: inline-block;
 		width: 100%;
+		z-index: 1;
 	}
 	#MY-CONTENT{
 		width: 80%;
-		z-index: 1;
 		padding-bottom: 30px;
 		overflow: hidden;
+		z-index: 2;
 	}
 	.my-window{
 		overflow: hidden;
@@ -238,6 +240,7 @@
 		-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
 		box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
 		border-radius: 4px;
+		z-index: 3;
 	}
 	.my-window .my-header{
 		text-align: left;
@@ -762,16 +765,14 @@
 		font-weight: normal;
 		line-height: 1;
 	}
-	.fileinput-button input {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 0;
-		opacity: 0;
-		-ms-filter: 'alpha(opacity=0)';
-		font-size: 200px;
-		direction: ltr;
+	#fileupload{
+		font-size: 14px;
+		position: relative;
+		display: inline-block;
+		margin-left: -110px;
+		width: 100px;
 		cursor: pointer;
+		opacity: 0;
 	}
 	input[type="file"] {
 		display: block;
@@ -797,6 +798,7 @@
 		top: 1px;
 		position: absolute;
 		left: 85%;
+		cursor: pointer;
 	}
 	#BirthDay{
 		width: 85%;
@@ -855,6 +857,9 @@
 		max-width: 78%;
 		font-size: 12px;
 	}
+	.left-bubble > p:first-child{
+		margin-bottom: 0;
+	}
 	.right-bubble{
 		position: relative;
 		display: inline-block;
@@ -868,8 +873,12 @@
 		float: right;
 		font-size: 12px;
 	}
-	.right-bubble > p{
-		float: right;
+	.right-bubble > p:first-child{
+		text-align: right;
+		margin-bottom: 0;
+	}
+	.right-bubble > p+p, .left-bubble > p+p{
+		line-height: 20px;
 	}
 	.left-bubble:after {
 		content: "";
@@ -960,6 +969,19 @@
 	ul.list-menu a:hover{
 		text-decoration: none;
 	}
+	li.vote-btn{
+		font-family: font-1;
+		font-size: 14px;
+		color: #505050;
+		text-shadow: 0 1px 2px;
+		padding: 5px 10px;
+		border-top: 1px solid #dadada;
+		display: block;
+		cursor: pointer;
+	}
+	li.vote-btn:hover{
+		background-color: #20aae5;
+	}
 	#new-cmt-wrap{
 		width: 78%;
 	}
@@ -982,4 +1004,26 @@
 	.my-alert{
 		margin: 20px 10px 0 10px;
 		font-size: 16px;
+	}
+	.sort-by{
+		margin: 10px 10px 0 5px;
+		font-weight: bold;
+	}
+	#VOTE-FORM-AREA .popover-content{
+		width: 165px;
+	}
+	#VOTE-FORM-AREA	.glyphicon-star{
+		font-size: 16px;
+		margin-top: 2px;
+	}
+	#VOTE-FORM-AREA .radio{
+		padding-top: 0;
+		margin: 5px 0;
+	}
+	#VOTE-FORM-AREA .login-button{
+		height: auto;
+		font-size: 12px;
+		font-family: font-1;
+		text-transform: none;
+		padding: 5px 0;
 	}

@@ -1,40 +1,293 @@
-/*lay out chung*/
+/*CSS chung*/
 	*{
-		padding: 0;
-		margin: 0;
+		padding: 0 auto;
+		margin: 0 auto;
 	}
-/*FONT FACE*/
-	@font-face{
-  		font-family: museo-sans;
-  		src: url(../fonts/MuseoSans-100.otf);
-	}
-/*layout cho bo cuc*/
+/*CSS cho bo cuc*/
 	body{
-		background-color: color: rgb(85, 85, 85);
+		font-size: 12px;
+		font: 13px "Droid Sans", Arial, Helvetica, "Trebuchet MS", sans-serif;
+		color: #404040;
 	}
 	.ad-wrapper{
 		width: 100%;
 		overflow: hidden;
+		background-color: #2E3436;
 	}
 	body > .ad-wrapper{
-		padding-top: 60px;
+		margin-top: -5px;
 	}
 	.ad-left-content{
 		width: 20%;
-		background-color: #20aae5;
+		background-color: #2E3436;
 		float: left;
-		min-height: 600px;
-		border-right: 2px solid #ccc;
+		min-height: 620px;
+		height: 100%;
 	}
 	.ad-right-content{
 		width: 80%;
 		float: right;
+		box-shadow: 0px 1px rgba(255, 255, 255, 0.3) inset, 0px 0px 0px 1px rgba(255, 255, 255, 0.1) inset, 0px 0px 6px rgba(0, 0, 0, 0.2);
+		min-height: 620px;
+		background-color: rgb(248, 248, 248);
+		padding: 20px;
+		height: 100%;
 	}
-/*layout cho AD-HEADER*/
-	#AD-HEADER{
-		position: fixed;
+/*CSS cho AD-MAIN-MENU*/
+	#AD-MAIN-MENU{
 		width: 100%;
-		background-color: #2E3436;
-		height: 60px;
-		border-bottom: 2px solid #666;
+		padding-left: 30px;
+		padding-top: 30px;
+		overflow: hidden;
+		border: 0;
+	}
+	#AD-MAIN-MENU > li{
+		background-color: #20aae5;
+		width: 100%;
+		border-radius: 4px 0 0 4px;
+		border-bottom: 3px solid rgb(24, 148, 202);
+		margin-bottom: 5px;
+		display: block;
+		text-align: left;
+	}
+	#AD-MAIN-MENU > li:hover{
+		opacity: 0.8;
+	}
+	#AD-MAIN-MENU > li.active{
+		background-color: rgb(248, 248, 248);
+		right: -5px;
+		border-color: rgb(218, 218, 218);
+	}
+	#AD-MAIN-MENU > li.active:hover{
+		opacity: 1;
+	}
+	#AD-MAIN-MENU > li > a{
+		margin: 0;
+		border: 0;
+		border-radius: 0;
+		font-family: font-1;
+		font-size: 14px;
+		color: white;
+		text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+		display: block;
+		padding: 10px 20px;
+	}
+	#AD-MAIN-MENU > li > a:hover{
+		text-decoration: none;
+		background-color: transparent;
+	}
+	#AD-MAIN-MENU > li.active > a{
+		background-color: transparent;
+		color: rgb(80, 80, 80);
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+	}
+	#AD-MAIN-MENU > li > a .glyphicon{
+		font-size: 16px;
+	}
+	.ad-nav{
+		padding-left: 30px;
+		padding-top: 30px;
+	}
+	.ad-nav .panel{
+		border: 0;
+		background-color: inherit;
+		border-radius: 0;
+		padding: 0;
+		margin: 0;
+	}
+	.ad-nav .panel-heading{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		display: inline;
+	}
+	.ad-nav .panel-heading:hover{
+		opacity: 0.8;
+	}
+	.ad-nav .panel-heading a.collapsed{
+		background-color: rgb(248, 248, 248);
+		right: -5px;
+		border-color: rgb(218, 218, 218);
+		color: rgb(80, 80, 80);
+	}
+	.ad-nav .panel-heading .glyphicon{
+		font-size: 16px;
+	}
+	.ad-nav .panel-heading a{
+		margin: 0;
+		border-radius: 4px 0 0 4px;
+		border-bottom: 3px solid rgb(24, 148, 202);
+		margin-bottom: 5px;
+		display: block;
+		text-align: left;
+		background-color: #20aae5;
+		font-family: font-1;
+		font-size: 14px;
+		color: white;
+		text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+		display: block;
+		padding: 10px 20px;
+	}
+	.ad-nav a:hover{
+		text-decoration: none;
+	}
+	.ad-nav a{
+		text-decoration: none;
+	}
+	.ad-nav .panel-body{
+		padding: 0;
+	}
+	.ad-nav ul{
+		padding-left: 60px;
+	}
+	.ad-nav ul > li{
+		list-style: square;
+		color: white;
+		text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+	}
+	.ad-nav ul > li > a{
+		font-family: font-1;
+		font-size: 12px;
+		color: inherit;
+		text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+	}
+	.ad-nav ul > li:hover{
+		color: #20aae5;
+	}
+	.ad-nav ul > li.active{
+		color: #20aae5;
+		font-weight: bold;
+	}
+	.collapse{
+		background-color: transparent;
+		color: rgb(80, 80, 80);
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+	}
+/*CSS cho ad-right-content*/
+	.my-table{
+		border: 1px solid #20aae5;
+		background-color: white;
+	}
+	.my-table thead{
+		background-color: #20aae5;
+	}
+	.my-pagination{
+		margin: 0;
+	}
+	table .last-td{
+		text-align: right;
+	}
+/*CSS cho AD-SEARCH*/
+	.ad-panel{
+		text-align: center;
+		margin: -20px -20px 20px -20px;
+	}
+	.ad-panel .panel-heading{
+		background-color: rgb(46, 52, 54);
+		border-radius: 0;
+		height: 29px;
+		padding: 5px 0;
+	}
+	.ad-panel .panel{
+		border-radius: 0;
+		border: 1px solid #ccc;
+	}
+	.my-form-control{
+		position: relative;
+		vertical-align: top;
+		height: 30px;
+		padding: 3px;
+		font-size: 13px;
+		color: #505050;
+		text-align: center;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		background: #ebebeb;
+		border: 2px solid #dadada;
+		border-right: 0;
+		border-bottom: 2px solid #dadada;
+		cursor: pointer;
+		left: -3px;
+	}
+	.ad-panel .search-button{
+		left: -6px;
+	}
+	.ad-panel #MY-SEARCH{
+		padding: 0;
+		float: none;
+	}
+	.ad-panel .alert{
+		margin-bottom: 0;
+		display: inline-block;
+		float: left;
+		margin-left: 10px;
+	}
+	.ad-panel .alert .close{
+		margin-left: 20px;
+	}
+/*CSS cho manager post*/
+	ul.ad-post-list{
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+	}
+	ul.ad-post-list > li{
+		width: 25%;
+		padding: 5px;
+		float: left;
+		height: 260px;
+		display: block;
+	}
+	ul.ad-post-list > li .ad-wrap-li{
+		background-color: #20aae5;
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+		border: 1px solid #20aae5;
+		display: block;
+		box-shadow: 0px 1px rgba(255, 255, 255, 0.3) inset, 0px 0px 0px 1px rgba(255, 255, 255, 0.1) inset, 0px 0px 3px rgba(0, 0, 0, 0.5);
+	}
+	ul.ad-post-list > li > input{
+		position: absolute;
+		z-index: 100;
+		margin: 5px 0 0 5px;
+	}
+	.wrap-pop{
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		margin-top: -250px;
+		text-align: center;
+		padding-top: 90px;
+	}
+	.wrap-pop > a{
+		font-family: font-1;
+		font-size: 24px;
+	}
+	.wrap-pop > a:hover{
+		text-decoration: none;
+	}
+	.wrap-pop:hover{
+		background: radial-gradient(circle farthest-corner at center center , rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%) repeat scroll 0px 0px transparent;
+		opacity: 1;
+	}
+	.wrap-pop > div{
+		margin-top: 10px;
+	}
+	.wrap-pop > div > a{
+		font-size: 20px;
+	}
+	ul.ad-post-list > li .wrap-frame{
+		width: 100%;
+		height: 250px;
+	}
+	#ad-menu-bottom .col-md-2 input{
+		vertical-align: text-bottom;
+		margin-top: 8px;
+		margin-right: 5px;
+	}
+	#ad-menu-bottom .col-md-2 .btn-group{
+		margin-top: 2px;
+		vertical-align: text-bottom;
+		margin-right: 5px;
 	}

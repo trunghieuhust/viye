@@ -22,6 +22,23 @@ $(document).ready(function(){
 		            $(".pop-btn").popover('hide');
 		        }
 		    });
+	/*popover vote*/
+		$('li.vote-btn').popover({
+				html: true,
+				placement: 'right',
+				trigger: 'manual',
+			    title: function () {
+			        return $(this).parent().children('.popover-head:first').html();
+			    },
+			    content: function () {
+			        return $(this).parent().children('.popover-content:first').html();
+			    }
+			}).click(function() {
+				$(this).parent().children('.popover').removeClass('hide');
+				$('button.pop-btn').not(this).parent().children('.popover').addClass('hide');
+				$('button.pop-btn').not(this).popover('hide');
+				$(this).popover('toggle');
+			});
 	/*tooltip js*/
 		$("[rel='tooltip']").tooltip();
 		$("[rel='tooltip-bottom']").tooltip({
@@ -52,4 +69,6 @@ $(document).ready(function(){
 		      	pickTime: false
 		    });
 		});
+	/*tree menu*/
+
 });
