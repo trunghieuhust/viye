@@ -5,9 +5,25 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params.key?("sortby")
+      @posts = Post.all
+      case params[:sortby]
+      when "hot"
+        @posts.sort
+      when "new"
+        @posts.order("created_at desc")
+      when "popular"
+        @posts.sort
+      else @posts.all
+      end
+    elsif params.key?("search")
+      @posts = Post.search(params[:search])
+    else 
+      @posts = Post.all
+    end
+
     # @posts = Post.where(:user_id => current_user.id)
-    @posts = Post.order("id desc")
+    #@posts = Post.order("id desc")
   end
 
   # GET /posts/1

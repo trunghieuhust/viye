@@ -35,7 +35,7 @@ class JourneysController < ApplicationController
             ]
           }
           } }
-        end
+        
       end
   end
 
