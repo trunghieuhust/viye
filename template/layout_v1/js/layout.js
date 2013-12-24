@@ -70,5 +70,7 @@ $(document).ready(function(){
 		    });
 		});
 	/*tree menu*/
-
+		$('ul.my-nav > li').click(function(event) {
+			$('ul.my-nav > li:not(this)').removeClass('active');
+		});
 });

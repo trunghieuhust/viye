@@ -33,20 +33,19 @@
 		</div>
 		<div class="ad-wrapper">
 			<div class="ad-left-content">
-				<!-- <ul id="AD-MAIN-MENU" class="nav nav-tabs nav-stacked">
-					<li><a data-toggle="tab" href="#L-1"><span class="glyphicon glyphicon-file"></span>Write a new Post</a></li>
-					<li><a data-toggle="tab" href="#L-2"><span class="glyphicon glyphicon-user"></span>Manager account</a></li>
-					<li class="active"><a data-toggle="tab" href="#L-3"><span class="glyphicon glyphicon-list-alt"></span>Manager Post</a></li>
-				</ul> -->
+				<ul id="AD-MAIN-MENU" class="nav nav-tabs nav-stacked my-nav">
+					<li><a class="collapsed" data-toggle="tab" href="#L-0"><span class="glyphicon glyphicon-file"></span>Admin home</a></li>
+					<li> <a class="collapsed" data-toggle="tab" href="#L-1"><span class="glyphicon glyphicon-file"></span>Write a new Post</a></li>
+				</ul>
 				<div id="Group-menu-1" class="ad-nav">
 	                <div class="panel panel-default">
 	                    <div class="panel-heading">
-	                        <a class="" data-toggle="collapse" data-parent="#Group-menu-1" href="#M-2"><span class="glyphicon glyphicon-user"></span>Manager account</a>
+	                        <a class="collapsed" data-toggle="collapse" data-parent="#Group-menu-1" href="#M-2"><span class="glyphicon glyphicon-user"></span>Manager account</a>
 	                    </div>
 	                    <div id="M-2" class="panel-collapse collapse collapse">
 	                        <div class="panel-body">
-	                        	<ul>
-	                        		<li class="active"><a data-toggle="tab" href="#L-2">Admin group</a></li>
+	                        	<ul class="my-nav">
+	                        		<li><a data-toggle="tab" href="#L-2">Admin group</a></li>
 	                        		<li><a data-toggle="tab" href="#L-2">User account</a></li>
 	                        	</ul>
 	                        </div>
@@ -54,13 +53,19 @@
 	                </div>
 	                <div class="panel panel-default">
 	                    <div class="panel-heading">
-	                        <a class="" data-toggle="collapse" data-parent="#Group-menu-1" href="#M-3"><span class="glyphicon glyphicon-list-alt"></span>Manager Post</a>
+	                        <a class="collapsed" data-toggle="collapse" data-parent="#Group-menu-1" href="#M-3"><span class="glyphicon glyphicon-list-alt"></span>Manager Post</a>
 	                    </div>
 	                    <div id="M-3" class="panel-collapse collapse">
 	                        <div class="panel-body">
-	                        	<ul>
+	                        	<ul class="my-nav">
 	                        		<li><a data-toggle="tab" href="#L-3">Admin Post</a></li>
 	                        		<li><a data-toggle="tab" href="#L-3">User Post</a></li>
+	                        		<li><a data-toggle="tab" href="#L-3">Miền Bắc</a></li>
+	                        		<li><a data-toggle="tab" href="#L-3">Miền Trung</a></li>
+	                        		<li><a data-toggle="tab" href="#L-3">Miền Nam</a></li>
+	                        		<li><a data-toggle="tab" href="#L-3">Hà Nội</a></li>
+	                        		<li><a data-toggle="tab" href="#L-3">Đà Nẵng</a></li>
+	                        		<li><a data-toggle="tab" href="#L-3">Hồ Chí Minh</a></li>
 	                        	</ul>
 	                        </div>
 	                    </div>
@@ -69,6 +74,7 @@
 
 			</div>
 			<div class="ad-right-content tab-content">
+				<div id="L-0" class="tab-pane fade in active">trang thong ke</div>
 				<div id="L-1" class="tab-pane fade">L1</div>
 				<div id="L-2" class="tab-pane fade">
 					<div class="panel-group ad-panel" id="AD-SEARCH-1">
@@ -325,7 +331,7 @@
   						</div><!-- /.modal-dialog -->
 					</div><!-- /.modal -->
 				</div>
-				<div id="L-3" class="tab-pane fade in active">
+				<div id="L-3" class="tab-pane fade">
 					<div class="panel-group ad-panel" id="AD-SEARCH-2">
   						<div class="panel panel-default">
     						<div class="panel-heading">
@@ -361,13 +367,15 @@
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
 								<div class="wrap-frame">
-									<div style="visibility: visible; -moz-user-select: none; overflow: hidden; height: 200px; width: 330px; opacity: 1;" class="zoomer-small">
-										<iframe style="visibility: visible; -moz-user-select: none; overflow: hidden; height: 400px; width: 660px; opacity: 1;" class="snippet-preview" allowtransparency="true" src="http://www.bootsnipp.com/iframe/xrMG" data-url="http://www.bootsnipp.com/user/snippets/xrMG" scrolling="no" frameborder="0"></iframe>
-									</div>
-									<div style="-moz-user-select: none; overflow: hidden; top: 0px; position: absolute; text-align: center; font-size: 15px; height: 200px; width: 330px; box-shadow: none;" class="zoomer-cover"><a href="http://www.bootsnipp.com/user/snippets/xrMG" style="height: 200px; width: 330px; color: rgb(68, 68, 68); display: none; line-height: 188px; text-decoration: none; background: radial-gradient(circle farthest-corner at center center , rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.4) 100%) repeat scroll 0px 0px transparent; box-shadow: none;">Edit snippet</a>
-									</div>
-									<div style="visibility: visible; -moz-user-select: none; overflow: hidden; top: 0px; position: absolute; text-align: center; font-size: 15px; line-height: 188px; background: none repeat scroll 0% 0% rgb(255, 255, 255); height: 200px; width: 330px; opacity: 0; display: none;" class="zoomer-loader">Generating preview...
-									</div>
+									<h5>Nha Trang resort</h5>
+									<img src="images/l1.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
 								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
@@ -381,7 +389,17 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l2.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
@@ -394,7 +412,17 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l3.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
@@ -407,7 +435,17 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l4.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
@@ -420,7 +458,17 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l1.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
@@ -433,7 +481,17 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l2.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
@@ -446,7 +504,17 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l3.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
@@ -459,12 +527,22 @@
 						<li>
 							<input type="checkbox" id="checkbox" />
 							<div class="ad-wrap-li">
-								<div class="wrap-frame"></div>
+								<div class="wrap-frame">
+									<h5>Nha Trang resort</h5>
+									<img src="images/l4.jpg">
+									<p>
+										<span class="glyphicon glyphicon-calendar"></span>Sept 16th, 2012 at 4:20 pm
+										<br><span class="glyphicon glyphicon-comment"></span>2 Comments 
+										| <span class="glyphicon glyphicon-eye-open"></span>10 Reviews 
+										<br><span class="glyphicon glyphicon-star"></span>Điểm đánh giá: <span class="vote-mark">(4.3/5) </span>
+										<br><span class="glyphicon glyphicon-user"></span>Posted by <span class="author">VinhDQ</span>
+									</p>
+								</div>
 								<div class="wrap-pop">
 									<a href="#">View Post</a>
 									<div>
 										<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-										<a href="#" role="button" data-toggle="modal"><span class="glyphicon glyphicon-trash"></span></a>
+										<a href="#myModal-2" role="button" data-toggle="modal"><span class="glyphicon glyphicon-trash"></span></a>
 									</div>
 								</div>
 							</div>
