@@ -107,7 +107,9 @@
 			<ul class="my-list-1">
 				<% @admin_posts_mientrung.each do |admin_post_mt| %>      
 				<li>
-					<%= link_to admin_post_mt.tags.first.name, tagged_url(:tag => admin_post_mt.tags.first.name)%>
+					<%= link_to (tagged_url(:tag => admin_post_mt.tags.first.name)) do%>
+					<h5><%=admin_post_mt.tags.first.name%></h5>
+					<%end%>
 
 					<%=link_to admin_post_mt, class:"img-wrapper" do%>
 					<img class="img-box" src="<%=admin_post_mt.get_image%>">
@@ -128,7 +130,9 @@
 		<ul class="my-list-1">
 			<% @admin_posts_miennam.each do |admin_post_mn| %>      
 			<li>
-				<%= link_to admin_post_mn.tags.first.name, tagged_url(:tag => admin_post_mn.tags.first.name)%>
+				<%= link_to (tagged_url(:tag => admin_post_mn.tags.first.name)) do%>
+				<h5><%=admin_post_mn.tags.first.name%></h5>
+				<%end%>
 
 				<%=link_to admin_post_mn, class:"img-wrapper" do%>
 				<img class="img-box" src="<%=admin_post_mn.get_image%>">
@@ -168,7 +172,7 @@
 					</div>
 					<div class="my-cell col-2">
 						<%=link_to user_post, class:"img-wrapper" do%>
-							<img class="img-box" src="<%=user_post.get_image%>">
+						<img class="img-box" src="<%=user_post.get_image%>">
 						<%end%>
 
 					</div>
@@ -202,25 +206,13 @@
 	<div id="TAG-CLOUD" class="my-window">
 		<div class="my-header">Các Tag liên quan</div>
 		<div class="my-content">
-			<div class="col-1">
-				<ul class="my-tag">
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-				</ul>
-			</div>
-			<div class="col-2">
-				<ul class="my-tag">
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-					<li><a href="#">Hà Nội</a><span>x 123</span></li>
-				</ul>
+			<div id="tag_cloud" >
+				<% tag_cloud Post.tag_counts, %w{s m l} do |tag, css_class| %>
+				<%= link_to tag.name, tagged_url(:tag => tag.name), class: "label label-info" %>
+				<% end %>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </div>

@@ -80,8 +80,10 @@ class PostsController < ApplicationController
       @posts = Post.postall
     end  
   end
-
-  private
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
@@ -91,4 +93,7 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :tag_list)
     end
+
+
+
   end
