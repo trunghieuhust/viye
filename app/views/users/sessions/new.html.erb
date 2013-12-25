@@ -1,4 +1,72 @@
-<h2>Sign in</h2>
+<div id="MY-CONTENT">
+        <div class="left-content" style="width: 60%;">
+          <div class="my-window">
+            <div class="my-header">Vui lòng điền thông tin vào form dưới đây để hoàn tất việc đăng nhập</div>
+            <div class="my-content">
+              <div class="span6">
+                <div class="wrap-form">
+                  <div id="legend">
+                    <legend class="form-title">Đăng nhập</legend>
+                  </div>
+                  <div class="form-horizontal my-form">
+                    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>						
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Email</label>
+                          <div class="col-sm-8">
+                            <%= f.email_field :email, :autofocus => true, :class=>"form-control", :id=>"email" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Password</label>
+                          <div class="col-sm-8">
+                              <%= f.password_field :password, :class=>"form-control", :id=>"Username" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                        	<label for="inputEmail3" class="col-sm-4 control-label">   </label>
+                        	<div class="col-sm-8">
+	                        <% if devise_mapping.rememberable? %>
+	    					<%= f.check_box :remember_me %> <%= f.label :remember_me %>
+	                        <% end %>
+	                        </div> 
+	                    </div>                                                              
+                        <div class="form-group form-inline">
+                          <label for="inputEmail3" class="col-sm-4 control-label"></label>
+                          <div class="col-sm-8">
+                              <%= f.submit "ĐĂNG NHẬP", :class=>"submit-button" %>
+                          </div>
+                        </div>
+  
+                                            
+                        <div class="alert alert-warning">                          
+                          <%= devise_error_messages! %>
+                        </div>                        
+                    <% end %>
+                    <%= render "users/shared/links" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content" style="width: 40%;">
+          <div class="my-window">
+            <div class="my-header">Quảng cáo - 1</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div class="my-window">
+            <div class="my-header">Quảng cáo - 2</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div id="TAG-CLOUD" class="my-window">
+            <div class="my-header">Quảng cáo - 3</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+        </div>
+</div>
+
+
+<!-- <h2>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -15,3 +83,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+ -->
