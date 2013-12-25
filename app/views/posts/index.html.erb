@@ -1,19 +1,45 @@
 <div class="posts">
-<% @posts.each do |post| %>      
-<div>
-<h1><%= link_to post.title, post %></h1>
-<p><%= post.content.html_safe %></p>
-<p>
-<%= link_to 'Show', post %> 
-<% if post.user == current_user %>
-  <%= link_to 'Edit', edit_post_path(post) %>
-  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
-</p>
-</div>
-<hr>
+	<%if @posts.count == 0%>
+			<div class="alert alert-danger my-alert">
+				<button class="close" data-dismiss="alert" type="button">×</button>
+				<%if (@type == "search")%>
+					Không có kết quả nào được tìm thấy 
+				<%elsif @type == "tag"%>
+					không có bài viết về <%=@tag%>
+				<%else%>
+					Không có bài viết nào được đăng. Bấm "NEW POST" để đăng bài
+				<%end%>
+			</div>
+	<%else%>
+			<div class="alert alert-info my-alert">
+				<button class="close" data-dismiss="alert" type="button">×</button>
+				<%if (@type == "search")%>
+					Có <%=@posts.count%> kết quả được tìm thấy
+				<%elsif @type == "tag"%>
+					Có <%=@posts.count%> bài viết về <%=@tag%>
+				<%else%>
+					Có <%=@posts.count%> bài viết được đăng.
+				<%end%>
+			</div>
+	<%end%>
 
+					<% @posts.each do |post| %>      
+					<div>
+						<h1><%= link_to post.title, post %></h1>
+						<p><%= truncate_html((post.content.html_safe), length: 600, separator: ' ') %>
+							<%=link_to image_tag("see_more3.png"), @post %>
+						</p>
+						<p>
+							<%= link_to 'Show', post %> 
+							<% if post.user == current_user %>
+							<%= link_to 'Edit', edit_post_path(post) %>
+							<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+							<% end %>
+						</p>
+					</div>
+					<hr>
+				
+	<% end %>
 
-<% end %>
-<%= link_to 'New Post', new_post_path %>
+	<%= link_to 'New Post', new_post_path %>
 </div>
