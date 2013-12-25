@@ -69,188 +69,158 @@
 <!-- ket thuc slidebar -->
 
 <!-- day la phan noi dung -->
-	<div id="MY-CONTENT">
-		<div class="my-window">
-			<div class="my-header">
-				<ul class="nav nav-tabs">
-					<li class="active"><a  data-toggle="tab" href="#MIENBAC">Top Miền Bắc</a></li>
-					<li><a data-toggle="tab" href="#MIENTRUNG">Top Miền Trung</a></li>
-					<li><a data-toggle="tab" href="#MIENNAM">Top Miền Nam</a></li>
+<!-- <div class="wrapper"> -->
+<div id="MY-CONTENT">
+	<div class="my-window">
+		<div class="my-header">
+			<ul class="nav nav-tabs">
+				<li class="active"><a  data-toggle="tab" href="#MIENBAC">Top Miền Bắc</a></li>
+				<li><a data-toggle="tab" href="#MIENTRUNG">Top Miền Trung</a></li>
+				<li><a data-toggle="tab" href="#MIENNAM">Top Miền Nam</a></li>
+			</ul>
+		</div>
+		<div id="description" class="tab-content my-content">
+			<div id="MIENBAC" class="tab-pane fade in active">
+				<ul class="my-list-1">
+					<% @admin_posts_mienbac.each do |admin_post_mb| %>      
+					<li>
+						<%= link_to (tagged_url(:tag => admin_post_mb.tags.first.name)) do%>
+						<h5><%=admin_post_mb.tags.first.name%></h5>
+						<%end%>
+						
+						<%=link_to admin_post_mb, class:"img-wrapper" do%>
+						<img class="img-box" src="<%=admin_post_mb.get_image%>">
+						<%end%>
+						<%=link_to admin_post_mb, class:"img-wrapper" do%>
+						<h5><%=admin_post_mb.title%></h5>
+						<%end%>
+						<a href="#"></a>
+						<div class="misc"><span class="posted-time"><%=admin_post_mb.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mb.average_rating%>/5)</span></span></div>
+						<%= truncate_html(admin_post_mb.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
+						<%=link_to image_tag("see_more3.png"), admin_post_mb %>
+					</p>
+				</li>
+				<%end%>
+			</ul>
+		</div>
+		<div id="MIENTRUNG" class="tab-pane fade">
+			<ul class="my-list-1">
+				<% @admin_posts_mientrung.each do |admin_post_mt| %>      
+				<li>
+					<%= link_to admin_post_mt.tags.first.name, tagged_url(:tag => admin_post_mt.tags.first.name)%>
+
+					<%=link_to admin_post_mt, class:"img-wrapper" do%>
+					<img class="img-box" src="<%=admin_post_mt.get_image%>">
+					<%end%>
+					<%=link_to admin_post_mt, class:"img-wrapper" do%>
+					<h5><%=admin_post_mt.title%></h5>
+					<%end%>
+					<a href="#"></a>
+					<div class="misc"><span class="posted-time"><%=admin_post_mt.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mt.average_rating%>/5)</span></span></div>
+					<%= truncate_html(admin_post_mt.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
+					<%=link_to image_tag("see_more3.png"), admin_post_mt %>
+				</p>
+			</li>
+			<%end%>
+		</ul>
+	</div>
+	<div id="MIENNAM" class="tab-pane fade">
+		<ul class="my-list-1">
+			<% @admin_posts_miennam.each do |admin_post_mn| %>      
+			<li>
+				<%= link_to admin_post_mn.tags.first.name, tagged_url(:tag => admin_post_mn.tags.first.name)%>
+
+				<%=link_to admin_post_mn, class:"img-wrapper" do%>
+				<img class="img-box" src="<%=admin_post_mn.get_image%>">
+				<%end%>
+				<%=link_to admin_post_mn, class:"img-wrapper" do%>
+				<h5><%=admin_post_mn.title%></h5>
+				<%end%>
+				<a href="#"></a>
+				<div class="misc"><span class="posted-time"><%=admin_post_mn.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mn.average_rating%>/5)</span></span></div>
+				<%= truncate_html(admin_post_mn.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
+				<%=link_to image_tag("see_more3.png"), admin_post_mn %>
+			</p>
+		</li>
+		<%end%>
+	</ul>
+</div>
+</div>
+</div>
+<div class="left-content" style="width: 60%;">
+	<div class="my-window">
+		<div class="my-header">Các POST của thành viên mới đăng</div>
+		<div class="my-content">
+			<ul class="my-list-2">
+				<% @user_posts.each do |user_post| %>      
+				<li>
+					<div class="my-cell col-1">
+						<%=link_to user_post do%>
+						<h5><%=user_post.title%></h5>
+						<%end%>
+						<div class="misc"><span class="posted-time"><%=user_post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=user_post.average_rating%>/5)</span></span></div>
+
+
+						<%= truncate_html(user_post.content.html_safe, length: 600, separator: ' ', class:"my-review") %>
+
+						<%=link_to image_tag("see_more3.png"), user_post %>
+
+					</div>
+					<div class="my-cell col-2">
+						<%=link_to user_post, class:"img-wrapper" do%>
+							<img class="img-box" src="<%=user_post.get_image%>">
+						<%end%>
+
+					</div>
+					<div class="my-tag">
+						<% user_post.tags.any? %>
+						<% user_post.tags.each do |tag| %>
+						<%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
+						<% end %>
+					</div>
+
+
+				</li>
+				<% end %>
+
+
+
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="right-content" style="width: 40%;">
+	<div class="my-window">
+		<div class="my-header">Google map</div>
+		<div class="my-content">khong co gi</div>
+	</div>
+	<div class="my-window">
+		<div class="my-header">Bạn muốn đặt phòng?</div>
+		<div class="my-content">khong co gi</div>
+	</div>
+	<div id="TAG-CLOUD" class="my-window">
+		<div class="my-header">Các Tag liên quan</div>
+		<div class="my-content">
+			<div class="col-1">
+				<ul class="my-tag">
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
 				</ul>
 			</div>
-			<div id="description" class="tab-content my-content">
-				<div id="MIENBAC" class="tab-pane fade in active">
-					<ul class="my-list-1">
-						<li>
-							<a href="#"><h4>Nha Trang</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l1.jpg">
-							</a>
-							<a href="#"><h5>Nha Trang resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Phan Thiết</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l2.jpg">
-							</a>
-							<a href="#"><h5>Phan Thiết resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Hạ Long</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l3.jpg">
-							</a>
-							<a href="#"><h5>Phan Thiết resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Ninh Thuận</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l4.jpg">
-							</a>
-							<a href="#"><h5>Phan Thiết resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Nha Trang</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l1.jpg">
-							</a>
-							<a href="#"><h5>Nha Trang resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Phan Thiết</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l2.jpg">
-							</a>
-							<a href="#"><h5>Phan Thiết resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Hạ Long</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l3.jpg">
-							</a>
-							<a href="#"><h5>Phan Thiết resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-						<li>
-							<a href="#"><h4>Ninh Thuận</h4></a>
-							<a class="img-wrapper" href="#">
-								<img class="img-box" src="images/l4.jpg">
-							</a>
-							<a href="#"><h5>Phan Thiết resort</h5></a>
-							<div class="misc"><span class="posted-time">10/12/2013</span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span></div>
-							<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở...
-								<a href="#"><img src="images/see_more3.png"></a>
-							</p>
-						</li>
-					</ul>
-				</div>
-				<div id="MIENTRUNG" class="tab-pane fade">
-					<p>day la top mien trung</p>
-				</div>
-				<div id="MIENNAM" class="tab-pane fade">
-					<p>day la top mien nam</p>
-				</div>
-			</div>
-		</div>
-		<div class="left-content" style="width: 60%;">
-			<div class="my-window">
-				<div class="my-header">Các POST của thành viên mới đăng</div>
-				<div class="my-content">
-					<ul class="my-list-2">
-						<% @user_posts.each do |user_post| %>      
-						<li>
-							<div class="my-cell col-1">
-								<%=link_to user_post.title , user_post %>
-								<div class="misc"><span class="posted-time"><%=user_post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=user_post.average_rating%>/5)</span></span></div>
-
-								
-									<%= truncate_html(user_post.content.html_safe, length: 600, separator: ' ', class:"my-review") %>
-
-									<%=link_to image_tag("see_more3.png"), user_post %>
-
-								
-							</div>
-							<div class="my-cell col-2">
-								<a href="#" class="img-wrapper"><img class="img-box" src="<%=user_post.get_image%>"></a>
-
-							</div>
-							<div class="my-tag">
-								<% user_post.tags.any? %>
-								<% user_post.tags.each do |tag| %>
-								<%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
-								<% end %>
-							</div>
-							
-
-						</li>
-						<% end %>
-
-
-
-
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="right-content" style="width: 40%;">
-			<div class="my-window">
-				<div class="my-header">Google map</div>
-				<div class="my-content">khong co gi</div>
-			</div>
-			<div class="my-window">
-				<div class="my-header">Bạn muốn đặt phòng?</div>
-				<div class="my-content">khong co gi</div>
-			</div>
-			<div id="TAG-CLOUD" class="my-window">
-				<div class="my-header">Các Tag liên quan</div>
-				<div class="my-content">
-					<div class="col-1">
-						<ul class="my-tag">
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-						</ul>
-					</div>
-					<div class="col-2">
-						<ul class="my-tag">
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-							<li><a href="#">Hà Nội</a><span>x 123</span></li>
-						</ul>
-					</div>
-				</div>
+			<div class="col-2">
+				<ul class="my-tag">
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+					<li><a href="#">Hà Nội</a><span>x 123</span></li>
+				</ul>
 			</div>
 		</div>
 	</div>
-	
+</div>
+</div>
