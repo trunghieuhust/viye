@@ -14,7 +14,8 @@
 -->
 <h1><%= @post.title %></h1>
 <p>
-  <%= @post.content.html_safe  %>
+  <%=@post.content.html_safe%>
+
 </p>
 <%if @post.user == current_user%>
 <%= link_to 'Edit', edit_post_path(@post) %> |
@@ -57,18 +58,18 @@
 
                 | Điểm đánh giá: <span class="vote-mark">(<%=@post.average_rating%>/5) </span>
                 <div id="star">
-                    <script>
-                    $('#star').raty({
-                      readOnly: true,
-                      score: <%= @post.average_rating %>,
-                      path: '/assets/'
-                    });
-                    </script>
-                  </span>
-                </p>
-              </div>
+                  <script>
+                  $('#star').raty({
+                    readOnly: true,
+                    score: <%= @post.average_rating %>,
+                    path: '/assets/'
+                  });
+                  </script>
+                </span>
+              </p>
             </div>
           </div>
+        </div>
 
 <!--           <div id="star">
             <p>Averate rating</p>

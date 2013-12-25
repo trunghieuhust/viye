@@ -7,8 +7,12 @@ class PostsController < ApplicationController
   def index
     if params[:keyword].present?
       @posts = Post.search(params[:keyword])
+      @type = "search"
+      @keyword = params[:keyword]
     elsif  params[:tag].present? 
       @posts = Post.tagged_with(params[:tag])
+      @type = "tag"
+      @tag = params[:tag]
     else 
       @posts = Post.all
     end
