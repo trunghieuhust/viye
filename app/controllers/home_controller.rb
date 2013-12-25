@@ -6,18 +6,14 @@ before_action :authenticate_user!, except: [:index, :show]
   	@admin_posts_mienbac = []
   	@admin_posts_mientrung = []
   	@admin_posts_miennam = []
-  	@all = Post.all
-  	@all.each do |admin_post|
-  		if admin_post.user.users_type == 0
-  			if admin_post.tags.include?("Miền Bắc") || admin_post.tags.include?("mien bac") || admin_post.tags.include?("miền bắc")
-  				@admin_posts_mienbac.push(admin_post)
-  			elsif admin_post.tags.include?("Miền Trung") || admin_post.tags.include?("mien trung") || admin_post.tags.include?("miền trung")
-  				@admin_posts_mientrung << admin_post
-  			elsif admin_post.tags.include?("Miền Nam") || admin_post.tags.include?("mien nam") || admin_post.tags.include?("miền nam")
-  				@admin_posts_miennam << admin_post
-  			end  			  			
-  		end
-  	end
+
+	@posts_mienbac = Post.tagged_with("Miền Bắc")
+	@posts_mientrung = Post.tagged_with("Miền Trung")
+	@posts_miennam = Post.tagged_with("Miền Nam")  	
+
+	@admin_posts_mienbac = @posts_mienbac.select{|post | post.user.users_type == 0 || post.user.users_type == 1}
+	@admin_posts_mientrung = @posts_mientrung.select{|post | post.user.users_type == 0 || post.user.users_type == 1}
+	@admin_posts_miennam = @posts_miennam.select{|post | post.user.users_type == 0 || post.user.users_type == 1}
   end
 
 end

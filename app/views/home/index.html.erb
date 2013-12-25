@@ -7,16 +7,24 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="item slide-content">
-				<div class="content-left"><a class="img-wrapper" href="#"><%= image_tag("l1.jpg")%></a></div>
+				<div class="content-left">
+					<%=link_to @post[0], class:"img-wrapper" do%>
+					<img class="img-box" src="<%=@post[0].get_image%>">
+					<%end%>
+				</div>
 				<div class="content-right">
-					<a class="my-title" href="#"><h3><%= @post[0].title %></h3></a>
+					<%=link_to @post[0], class:"my-title" do%>
+					<h3><%= @post[0].title %></h3>
+					<%end%>
+
 					<div class="my-vote">
 						<span class="glyphicon glyphicon-star star-1"></span>
 						<span class="glyphicon glyphicon-star star-1"></span>
 						<span class="glyphicon glyphicon-star star-1"></span>
 						<span class="glyphicon glyphicon-star star-1"></span>
 						<span class="glyphicon glyphicon-star star-2"></span>
-						<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span>
+						
+						<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(<%=@post[0].average_rating%>/5)	</span></span>
 					</div>
 					<p><%= truncate_html((@post[0].content.html_safe), length: 600, separator: ' ') %></p>
 					
@@ -24,47 +32,57 @@
 				</div>
 			</div>
 			<div class="item slide-content">
-				<div class="content-left"><a class="img-wrapper" href="#"><%= image_tag("l2.jpg")%></a></div>
-				<div class="content-right">
-					<a class="my-title" href="#"><h3><%= @post[1].title %></h3></a>
-					<div class="my-vote">
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-2"></span>
-						<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span>
-					</div>
-					<p><%= truncate_html(@post[1].content.html_safe, length: 600, separator: ' ') %></p>
-					
-					<%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[1] %>
+				<div class="content-left">
+					<%=link_to @post[1], class:"img-wrapper" do%>
+					<img class="img-box" src="<%=@post[1].get_image%>">
+					<%end%>
 				</div>
-			</div>
-			<div class="item slide-content active">
-				<div class="content-left"><a class="img-wrapper" href="#"><%= image_tag("l4.jpg")%></a></div>
 				<div class="content-right">
-					<a class="my-title" href="#"><h3><%= @post[2].title %></h3></a>
-					<div class="my-vote">
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-1"></span>
-						<span class="glyphicon glyphicon-star star-2"></span>
-						<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(4.3/5)</span></span>
-					</div>
-					<p><%= truncate_html(@post[2].content.html_safe, length: 600, separator: ' ') %></p>
-					
-					<%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[2] %>
+					<%=link_to @post[1], class:"my-title" do%>
+					<h3><%= @post[1].title %></h3>
+					<%end%>				<div class="my-vote">
+					<span class="glyphicon glyphicon-star star-1"></span>
+					<span class="glyphicon glyphicon-star star-1"></span>
+					<span class="glyphicon glyphicon-star star-1"></span>
+					<span class="glyphicon glyphicon-star star-1"></span>
+					<span class="glyphicon glyphicon-star star-2"></span>
+					<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(<%=@post[1].average_rating%>/5)</span></span>
 				</div>
+				<p><%= truncate_html(@post[1].content.html_safe, length: 600, separator: ' ') %></p>
+
+				<%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[1] %>
 			</div>
 		</div>
-		<a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
+		<div class="item slide-content active">
+			<div class="content-left">
+				<%=link_to @post[2], class:"img-wrapper" do%>
+				<img class="img-box" src="<%=@post[2].get_image%>">
+				<%end%>
+			</div>
+			<div class="content-right">
+				<%=link_to @post[2], class:"my-title" do%>
+				<h3><%= @post[2].title %></h3>
+				<%end%>				<div class="my-vote">
+				<span class="glyphicon glyphicon-star star-1"></span>
+				<span class="glyphicon glyphicon-star star-1"></span>
+				<span class="glyphicon glyphicon-star star-1"></span>
+				<span class="glyphicon glyphicon-star star-1"></span>
+				<span class="glyphicon glyphicon-star star-2"></span>
+				<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(<%=@post[2].average_rating%>/5)</span></span>
+			</div>
+			<p><%= truncate_html(@post[2].content.html_safe, length: 600, separator: ' ') %></p>
+
+			<%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[2] %>
+		</div>
 	</div>
+</div>
+<a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
 </div>
 <!-- ket thuc slidebar -->
 
