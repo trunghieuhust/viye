@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
 	has_many :ratings
 	acts_as_taggable_on :tags
 
+	require 'nokogiri'
+
 	validates :title, :content, presence:true
 	def self.search(search)
 		if search
@@ -18,5 +20,11 @@ class Post < ActiveRecord::Base
 		else
 			ratings.sum(:score) / ratings.size
 		end	
+	end
+	def get_image
+		doc = Nokogiri::HTML(self.content)
+		if img = doc.xpath('//img').first
+			p img.attr('src')
+		end
 	end
 end

@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem 'devise'
 gem 'truncate_html'
 gem 'acts-as-taggable-on'
+gem 'nokogiri'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
