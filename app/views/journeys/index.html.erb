@@ -1,16 +1,11 @@
-<!-- <h1>Listing journeys</h1>
 <h1>Listing journeys</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Startdate</th>
-      <th>Enddate</th>
-      <th>Content</th>
-      <th>Headline</th>
-      <th>Media</th>
-      <th>Mediacaption</th>
-      <th>Mediacredit</th>
+      <th>User</th>
+      <th>Name</th>
+      <th>Description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,13 +15,9 @@
   <tbody>
     <% @journeys.each do |journey| %>
       <tr>
-        <td><%= journey.startdate %></td>
-        <td><%= journey.enddate %></td>
-        <td><%= journey.content %></td>
-        <td><%= journey.headline %></td>
-        <td><%= journey.media %></td>
-        <td><%= journey.mediacaption %></td>
-        <td><%= journey.mediacredit %></td>
+        <td><%= journey.user %></td>
+        <td><%= journey.name %></td>
+        <td><%= journey.description %></td>
         <td><%= link_to 'Show', journey %></td>
         <td><%= link_to 'Edit', edit_journey_path(journey) %></td>
         <td><%= link_to 'Destroy', journey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,18 +26,6 @@
   </tbody>
 </table>
 
-<br> -->
-<script>
-  $(document).ready(function() {
-    createStoryJS({
-      type:       'timeline',
-      width:      '1200',
-      height:     '500',
-      source:     '<%= @journeys %>',
-      embed_id:   'my-timeline'
-    });
-  });
-</script>
-<div id="my-timeline"></div>
 <br>
-<%= link_to 'New Event', new_journey_path %>
+
+<%= link_to 'New Journey', new_journey_path %>

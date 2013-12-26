@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  journey_id: 
+  startdate: 2013-12-26 14:15:04
+  enddate: 2013-12-26 14:15:04
+  content: MyString
+  media: MyString
+  mediacaption: MyString
+  mediacredit: MyString
+
+two:
+  journey_id: 
+  startdate: 2013-12-26 14:15:04
+  enddate: 2013-12-26 14:15:04
+  content: MyString
+  media: MyString
+  mediacaption: MyString
+  mediacredit: MyString

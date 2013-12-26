@@ -1,0 +1,11 @@
+<%= div_for journey_event do %>
+<p>
+	<%=journey_event.startdate%>
+	<%if journey_event.journey.user == current_user%><br>
+	<%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%end%>
+
+</p>
+
+
+<%end%>

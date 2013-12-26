@@ -11,14 +11,14 @@
     <div id="POST-DETAIL" class="my-window">
       <div class="my-content">
         <div class="content-init">
-                <h1><%= @post.title %></h1>
-                <p>
-                  <%=@post.content.html_safe%>
-                </p>
-                <%if @post.user == current_user%>
-                <%= link_to 'Sửa bài viết', edit_post_path(@post) %> |
-                <%= link_to 'Xóa bài viết', @post, method: :delete, data: { confirm: 'bài viết đã xóa sẽ không thể phục hồi lại??' } %> | 
-                <%end%>
+          <h1><%= @post.title %></h1>
+          <p>
+            <%=@post.content.html_safe%>
+          </p>
+          <%if @post.user == current_user%>
+          <%= link_to 'Sửa bài viết', edit_post_path(@post) %> |
+          <%= link_to 'Xóa bài viết', @post, method: :delete, data: { confirm: 'bài viết đã xóa sẽ không thể phục hồi lại??' } %> | 
+          <%end%>
         </div>
         <div id="POSTED-AUTHOR" class="content-init">
           <p class="wrap-ava-1"><a href="#"> <%= image_tag("ava_demo.png", :width=>"100%", :height=>"100%") %> </a></p>
@@ -31,238 +31,107 @@
             </p>
             <p>
               Tags:
-                <% @post.tags.any? %>
-                <% @post.tags.each do |tag| %>
-                <%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
-                <% end %>
+              <% @post.tags.any? %>
+              <% @post.tags.each do |tag| %>
+              <%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
+              <% end %>
 
-                | Điểm đánh giá: <span class="vote-mark">(<%=@post.average_rating%>/5) </span>
-                    <span>  <div id="star">
-        Average rating
-      </div></span>
+              | Điểm đánh giá: <span class="vote-mark">(<%=@post.average_rating%>/5) </span>
+              <span class="star">
+                <script>
+                $('.star').raty({
+                  readOnly: true,
+                  score: <%= @post.average_rating %>,
+                  path: '/assets/'
+                });
+                </script>
+              </span>
 
 
             </p>
           </div>
         </div>
+       </div>
 
-      <%if signed_in?%>
-      <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
-      <%unless @rating%> 
-      <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
-      <%end%>
-      <div id="user_star">
-        <p>Your rating</p>
-      </div>
-      <%end%>
-        <script>
-        $('#star').raty({
-          readOnly: true,
-          score: <%= @post.average_rating %>,
-          path: '/assets/'
+  </span>
+</p>
+
+</div>
+<div id="CMT-AREA" class="content-init">
+  <%if signed_in?%>
+      <p>Đánh giá của bạn</p>
+  <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
+  <%unless @rating%> 
+  <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
+  <%end%>
+  <span id="user_star">
+    <script>
+    $('#user_star').raty({
+      score: <%= @rating.score %>,
+      path: '/assets/',
+      click: function(score, evt) {
+        $.ajax({
+          url: '/ratings/' + <%= @rating.id %>,
+          type: 'PATCH',
+          data: { score: score }
         });
+      }
+    });
+    </script>
+  </span>
+  <%end%>
 
-        $('#user_star').raty({
-          score: <%= @rating.score %>,
-          path: '/assets/',
-          click: function(score, evt) {
-            $.ajax({
-              url: '/ratings/' + <%= @rating.id %>,
-              type: 'PATCH',
-              data: { score: score }
-            });
-          }
-        });
-        </script>
+  <div id="comments">
+   <%= render :partial => @post.comments %>
+ </div> 
+ <%if signed_in? %>
+ <%= form_for [@post, Comment.new] do |f| %>
+ <p>
+  <%= f.label :body, "Nội dung" %><br/>
+  <%= f.text_area :body %>
+</p>
 
+<p><%= f.submit "Bình luận" %></p>
 
+<%end%>
+<%else %>
+<%="<i>Bạn cần đăng nhập để nhận xét về bài viết này</i>".html_safe%>
+<% end %>
 
-      <div id="comments">
-       <%= render :partial => @post.comments %>
-     </div> 
-     <%if signed_in? %>
-     <%= form_for [@post, Comment.new] do |f| %>
-     <p>
-      <%= f.label :body, "New comment" %><br/>
-      <%= f.text_area :body %>
-    </p>
+</div>
+</div>
 
-    <p><%= f.submit "Add comment" %></p>
-
-    <%end%>
-    <%else %>
-    <%="<i>Login to comment</i>".html_safe%>
-    <% end %>
-
-
-
-
-
-              <!-- <div id="CMT-AREA" class="content-init">
-              <ul class="cmt-list">
-                <li class="cmt-left">
-                  <p class="wrap-ava-1">
-                    <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-                  </p>
-                  <div class="left-bubble">
-                    <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
-                    <p class="cmt-content">comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^</p>
-                  </div>
-                </li>
-                <li class="cmt-right">
-                  <p class="wrap-ava-1">
-                    <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-                  </p>
-                  <div class="right-bubble">
-                    <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
-                    <p class="cmt-content">co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.="</p>
-                  </div>
-                </li>
-                <li class="cmt-left">
-                  <p class="wrap-ava-1">
-                    <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-                  </p>
-                  <div id="new-cmt-wrap" class="left-bubble">
-                    <p><a class="author" href="#">VinhDQ</a></p>
-                    <p class="cmt-content">
-                      <form accept-charset="UTF-8" action="" method="POST">
-                        <textarea class="form-control" id="NEW-COMMENT" rows="3" placeholder="Type in your message"></textarea>
-                        <h6 class="pull-right">320 characters remaining</h6>
-                                <button class="default-button" type="submit">Post New Comment</button>
-                      </form>
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div> -->
-          </div>
-                <!-- <a href="#"><span class="label label-info">Nha Trang</span></a>
-              <a href="#"><span class="label label-info">Vung Bien</span></a> -->
-               | Điểm đánh giá: <span class="vote-mark">(<%=@post.average_rating%>/5) </span>
-                <span id="star">
-                  <script>
-                  $('#star').raty({
-                    readOnly: true,
-                    score: <%= @post.average_rating %>,
-                    path: '/assets/'
-                  });
-                  </script>
-                </span>
-              </p>
-            </div>
-        </div>
-        <div id="CMT-AREA" class="content-init">
-          <%if signed_in?%>
-          <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
-          <%unless @rating%> 
-          <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
-          <%end%>
-              <p>Đánh giá của bạn</p>
-              <span id="user_star">
-                    <script>
-                    $('#user_star').raty({
-                      score: <%= @rating.score %>,
-                      path: '/assets/',
-                      click: function(score, evt) {
-                        $.ajax({
-                          url: '/ratings/' + <%= @rating.id %>,
-                          type: 'PATCH',
-                          data: { score: score }
-                        });
-                      }
-                    });
-                    </script>
-              </span>
-          <%end%>
-
-          <div id="comments">
-             <%= render :partial => @post.comments %>
-          </div> 
-           <%if signed_in? %>
-           <%= form_for [@post, Comment.new] do |f| %>
-           <p>
-            <%= f.label :body, "Nội dung" %><br/>
-            <%= f.text_area :body %>
-          </p>
-
-          <p><%= f.submit "Bình luận" %></p>
-
-          <%end%>
-          <%else %>
-          <%="<i>Bạn cần đăng nhập để nhận xét về bài viết này</i>".html_safe%>
-          <% end %>
-
-         <!--  <ul class="cmt-list">
-            <li class="cmt-left">
-              <p class="wrap-ava-1">
-                <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-              </p>
-              <div class="left-bubble">
-                <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
-                <p class="cmt-content">comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^</p>
-              </div>
-            </li>
-            <li class="cmt-right">
-              <p class="wrap-ava-1">
-                <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-              </p>
-              <div class="right-bubble">
-                <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
-                <p class="cmt-content">co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.="</p>
-              </div>
-            </li>
-            <li class="cmt-left">
-              <p class="wrap-ava-1">
-                <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-              </p>
-              <div id="new-cmt-wrap" class="left-bubble">
-                <p><a class="author" href="#">VinhDQ</a></p>
-                <p class="cmt-content">
-                  <form accept-charset="UTF-8" action="" method="POST">
-                    <textarea class="form-control" id="NEW-COMMENT" rows="3" placeholder="Type in your message"></textarea>
-                    <h6 class="pull-right">320 characters remaining</h6>
-                            <button class="default-button" type="submit">Post New Comment</button>
-                  </form>
-                </p>
-              </div>
-            </li>
-          </ul> -->
-        </div>
-      </div>
-    </div>
+<div class="right-content" style="width: 30%;">
+  <div class="my-window">
+    <div class="my-header">Google map</div>
+    <div class="my-content">khong co gi</div>
   </div>
-  <div class="right-content" style="width: 30%;">
-    <div class="my-window">
-      <div class="my-header">Google map</div>
-      <div class="my-content">khong co gi</div>
-    </div>
-    <div class="my-window">
-      <div class="my-header">Bạn muốn đặt phòng?</div>
-      <div class="my-content">khong co gi</div>
-    </div>
-    <div id="TAG-CLOUD" class="my-window">
-      <div class="my-header">Các Tag liên quan</div>
-      <div class="my-content">
-        <div class="col-1">
-          <ul class="my-tag">
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-          </ul>
-        </div>
-        <div class="col-2">
-          <ul class="my-tag">
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-            <li><a href="#">Hà Nội</a><span>x 123</span></li>
-          </ul>
-        </div>
+  <div class="my-window">
+    <div class="my-header">Bạn muốn đặt phòng?</div>
+    <div class="my-content">khong co gi</div>
+  </div>
+  <div id="TAG-CLOUD" class="my-window">
+    <div class="my-header">Các Tag liên quan</div>
+    <div class="my-content">
+      <div class="col-1">
+        <ul class="my-tag">
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <ul class="my-tag">
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          <li><a href="#">Hà Nội</a><span>x 123</span></li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
-
+</div>

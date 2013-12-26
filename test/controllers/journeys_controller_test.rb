@@ -18,7 +18,7 @@ class JourneysControllerTest < ActionController::TestCase
 
   test "should create journey" do
     assert_difference('Journey.count') do
-      post :create, journey: { content: @journey.content, enddate: @journey.enddate, headline: @journey.headline, media: @journey.media, mediacaption: @journey.mediacaption, mediacredit: @journey.mediacredit, startdate: @journey.startdate }
+      post :create, journey: { description: @journey.description, name: @journey.name, user_id: @journey.user_id }
     end
 
     assert_redirected_to journey_path(assigns(:journey))
@@ -35,7 +35,7 @@ class JourneysControllerTest < ActionController::TestCase
   end
 
   test "should update journey" do
-    patch :update, id: @journey, journey: { content: @journey.content, enddate: @journey.enddate, headline: @journey.headline, media: @journey.media, mediacaption: @journey.mediacaption, mediacredit: @journey.mediacredit, startdate: @journey.startdate }
+    patch :update, id: @journey, journey: { description: @journey.description, name: @journey.name, user_id: @journey.user_id }
     assert_redirected_to journey_path(assigns(:journey))
   end
 

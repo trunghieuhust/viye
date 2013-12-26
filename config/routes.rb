@@ -1,5 +1,7 @@
 Viye::Application.routes.draw do
-  resources :journeys
+  resources :journeys do
+    resources :journey_events, :only => [:create]
+  end
 
   resources :comments
 

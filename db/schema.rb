@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223085931) do
+ActiveRecord::Schema.define(version: 20131226104543) do
 
   create_table "comments", force: true do |t|
     t.integer  "post_id"
@@ -24,17 +24,30 @@ ActiveRecord::Schema.define(version: 20131223085931) do
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
-  create_table "journeys", force: true do |t|
+  create_table "journey_events", force: true do |t|
+    t.integer  "journey_id"
     t.datetime "startdate"
     t.datetime "enddate"
     t.string   "content"
-    t.string   "headline"
     t.string   "media"
     t.string   "mediacaption"
     t.string   "mediacredit"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "headline"
   end
+
+  add_index "journey_events", ["journey_id"], name: "index_journey_events_on_journey_id"
+
+  create_table "journeys", force: true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "journeys", ["user_id"], name: "index_journeys_on_user_id"
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -92,6 +105,7 @@ ActiveRecord::Schema.define(version: 20131223085931) do
     t.date     "dob"
     t.string   "phone_number"
     t.integer  "users_type",             default: 0
+    t.text     "about"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

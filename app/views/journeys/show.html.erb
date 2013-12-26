@@ -1,39 +1,68 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Startdate:</strong>
-  <%= @journey.startdate %>
+	<strong>Name:</strong>
+	<%= @journey.name %>
 </p>
 
 <p>
-  <strong>Enddate:</strong>
-  <%= @journey.enddate %>
+	<strong>Description:</strong>
+	<%= @journey.description %>
 </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @journey.content %>
+<script>
+$(document).ready(function() {
+	createStoryJS({
+		type:       'timeline',
+		width:      '1200',
+		height:     '500',
+		source:     '<%= @journey_events %>',
+		embed_id:   'my-timeline'
+	});
+});
+</script>
+<div id="my-timeline"></div>
+<h2>Comments</h2>
+<div id="journey_events">
+	<%= render :partial => @journey.journeyEvents %>
+</div>
+ <%if signed_in?%>
+ <%= form_for [@journey, JourneyEvent.new] do |f| %>
+ <p>
+ 	  <div class="field">
+    <%= f.label :headline %><br>
+    <%= f.text_field :headline %>
+  </div>
+
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.datetime_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %><br>
+    <%= f.datetime_select :enddate %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :media %><br>
+    <%= f.text_field :media %>
+  </div>
+  <div class="field">
+    <%= f.label :mediacaption %><br>
+    <%= f.text_field :mediacaption %>
+  </div>
+  <div class="field">
+    <%= f.label :mediacredit %><br>
+    <%= f.text_field :mediacredit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 </p>
 
-<p>
-  <strong>Headline:</strong>
-  <%= @journey.headline %>
-</p>
 
-<p>
-  <strong>Media:</strong>
-  <%= @journey.media %>
-</p>
-
-<p>
-  <strong>Mediacaption:</strong>
-  <%= @journey.mediacaption %>
-</p>
-
-<p>
-  <strong>Mediacredit:</strong>
-  <%= @journey.mediacredit %>
-</p>
-
+<%end%>
+<%end%>
 <%= link_to 'Edit', edit_journey_path(@journey) %> |
 <%= link_to 'Back', journeys_path %>

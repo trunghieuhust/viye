@@ -5,7 +5,13 @@ class JourneysController < ApplicationController
   # GET /journeys.json
   def index
     @journeys = Journey.all
+  end
 
+  # GET /journeys/1
+  # GET /journeys/1.json
+  def show
+    @journey = Journey.find(params[:id])
+    @journey_events = @journey.journeyEvents
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: json_out = {
@@ -15,33 +21,28 @@ class JourneysController < ApplicationController
           "type"=>"default",
           "text"=>"<p>Intro body text goes here, some HTML is ok</p>",
           "asset"=> {
-            "media"=>"http://www.exglam.com/wp-content/uploads/2013/02/Kajal-agarwal-in-Blue-and-white-Fade-Short-with-white-Top-and-a-Blue-bow-in-hair.jpg",
-            "credit"=>"Credit Name Goes Here",
-            "caption"=>"Caption text goes here"
-            },
+          "media"=>"http://www.exglam.com/wp-content/uploads/2013/02/Kajal-agarwal-in-Blue-and-white-Fade-Short-with-white-Top-and-a-Blue-bow-in-hair.jpg",
+          "credit"=>"Credit Name Goes Here",
+          "caption"=>"Caption text goes here"
+        },
 
-            "date"=> @journeys.map { |timeline| {"startDate" => timeline.startdate.strftime("%Y,%m,%d"),"endDate" => timeline.enddate.strftime("%Y,%m,%d"),"headline" => timeline.headline,"text" => timeline.content, "asset" => {"media" => timeline.media}}},
+          "date"=> @journey_events.map { |timeline| {"startDate" => timeline.startdate.strftime("%Y,%m,%d"),"endDate" => timeline.enddate.strftime("%Y,%m,%d"),"headline" => timeline.headline,"text" => timeline.content, "asset" => {"media" => timeline.media}}},
 
 
-            "era"=> [
-              {
-                "startDate"=>"2011,12,10",
-                "endDate"=>"2011,12,11",
-                "headline"=>"Headline Goes Here",
-                "text"=>"<p>Body text goes here, some HTML is OK</p>",
-                "tag"=>"This is Optional"
-              }
+          "era"=> [
+            {
+          "startDate"=>"2011,12,10",
+          "endDate"=>"2011,12,11",
+          "headline"=>"Headline Goes Here",
+          "text"=>"<p>Body text goes here, some HTML is OK</p>",
+          "tag"=>"This is Optional"
+        }
 
-            ]
-          }
-          } }
-        
-      end
-  end
+        ]
+        }
+      } }
+    end
 
-  # GET /journeys/1
-  # GET /journeys/1.json
-  def show
   end
 
   # GET /journeys/new
@@ -101,6 +102,6 @@ class JourneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journey_params
-      params.require(:journey).permit(:startdate, :enddate, :content, :headline, :media, :mediacaption, :mediacredit)
+      params.require(:journey).permit(:user_id, :name, :description)
     end
-  end
+end

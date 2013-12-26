@@ -1,19 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  startdate: 2013-12-19 14:12:19
-  enddate: 2013-12-19 14:12:19
-  content: MyString
-  headline: MyString
-  media: MyString
-  mediacaption: MyString
-  mediacredit: MyString
+  user_id: 
+  name: MyString
+  description: MyText
 
 two:
-  startdate: 2013-12-19 14:12:19
-  enddate: 2013-12-19 14:12:19
-  content: MyString
-  headline: MyString
-  media: MyString
-  mediacaption: MyString
-  mediacredit: MyString
+  user_id: 
+  name: MyString
+  description: MyText
