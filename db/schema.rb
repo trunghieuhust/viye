@@ -99,12 +99,12 @@ ActiveRecord::Schema.define(version: 20131226104543) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
+    t.string   "name"                     
     t.string   "avatar"
-    t.string   "sex"
+    t.string   "sex"                     default: 1
     t.date     "dob"
-    t.string   "phone_number"
-    t.integer  "users_type",             default: 0
+    t.string   "phone_number"            default: 0
+    t.integer  "users_type",             default: 2
     t.text     "about"
   end
 

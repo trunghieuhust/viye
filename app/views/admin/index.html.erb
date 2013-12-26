@@ -153,7 +153,10 @@
 						<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
 						<!-- nhet link trang ca nhan cua nguoi dung vao day -->
 						<a href="#"><span class="glyphicon glyphicon-eye-open"></span></a>
-						<a href="#myModal-1" role="button" data-toggle="modal"><span class=" glyphicon glyphicon-trash"></span></a>
+						<%=link_to registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :role => 'button' do%>
+							<span class=" glyphicon glyphicon-trash"></span></a>
+						<%end%>
+
 						<a href="#"><span class="glyphicon glyphicon-ok"></span></a>
 					</td>
 					</tr>
@@ -165,7 +168,7 @@
 			<div class="col-md-6">
 				<h6>Total Count <span class="label label-info"><%=@staffs.count%></span></h6>
 			</div>
-			<div class="col-md-6">
+<!-- 			<div class="col-md-6">
 				<ul class="pagination pagination-sm pull-right my-pagination">
 					<li class="disabled"><a href="javascript:void(0)">«</a></li>
 					<li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
@@ -175,7 +178,7 @@
 					<li><a href="#">5</a></li>
 					<li><a href="#">»</a></li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 		<div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
