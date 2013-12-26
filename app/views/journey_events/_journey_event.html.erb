@@ -1,8 +1,41 @@
 <%= div_for journey_event do %>
 <p>
-	<%=journey_event.startdate%>
+	<p>
+		<strong>Headline:</strong>
+		<%= journey_event.headline %>
+	</p>
+	<p>
+		<strong>Startdate:</strong>
+		<%= journey_event.startdate %>
+	</p>
+
+	<p>
+		<strong>Enddate:</strong>
+		<%= journey_event.enddate %>
+	</p>
+
+	<p>
+		<strong>Content:</strong>
+		<%= journey_event.content %>
+	</p>
+
+	<p>
+		<strong>Media:</strong>
+		<%= journey_event.media %>
+	</p>
+
+	<p>
+		<strong>Mediacaption:</strong>
+		<%= journey_event.mediacaption %>
+	</p>
+
+	<p>
+		<strong>Mediacredit:</strong>
+		<%= journey_event.mediacredit %>
+	</p>
+
 	<%if journey_event.journey.user == current_user%><br>
-	<%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to 'Destroy', journey_event, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<%end%>
 
 </p>

@@ -17,13 +17,13 @@ class JourneysController < ApplicationController
       format.json { render json: json_out = {
         "timeline"=>
         {
-          "headline"=>"The Main Timeline Headline Goes here",
+          "headline"=>"",
           "type"=>"default",
-          "text"=>"<p>Intro body text goes here, some HTML is ok</p>",
+          "text"=>"",
           "asset"=> {
-          "media"=>"http://www.exglam.com/wp-content/uploads/2013/02/Kajal-agarwal-in-Blue-and-white-Fade-Short-with-white-Top-and-a-Blue-bow-in-hair.jpg",
-          "credit"=>"Credit Name Goes Here",
-          "caption"=>"Caption text goes here"
+          "media"=>"",
+          "credit"=>"",
+          "caption"=>""
         },
 
           "date"=> @journey_events.map { |timeline| {"startDate" => timeline.startdate.strftime("%Y,%m,%d"),"endDate" => timeline.enddate.strftime("%Y,%m,%d"),"headline" => timeline.headline,"text" => timeline.content, "asset" => {"media" => timeline.media}}},
@@ -33,9 +33,9 @@ class JourneysController < ApplicationController
             {
           "startDate"=>"2011,12,10",
           "endDate"=>"2011,12,11",
-          "headline"=>"Headline Goes Here",
-          "text"=>"<p>Body text goes here, some HTML is OK</p>",
-          "tag"=>"This is Optional"
+          "headline"=>"",
+          "text"=>"",
+          "tag"=>""
         }
 
         ]
@@ -58,6 +58,7 @@ class JourneysController < ApplicationController
   # POST /journeys.json
   def create
     @journey = Journey.new(journey_params)
+    @journey.user = current_user
 
     respond_to do |format|
       if @journey.save
@@ -102,6 +103,6 @@ class JourneysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journey_params
-      params.require(:journey).permit(:user_id, :name, :description)
+      params.require(:journey).permit(:name, :description)
     end
 end
