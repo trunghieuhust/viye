@@ -57,7 +57,7 @@
 		                </span>
 						<span class="vote-span">Điểm đánh giá: <span class="vote-mark">(<%=@post[1].average_rating%>/5)</span></span>
 					</div>
-					<p><%= truncate_html(@post[1].content.html_safe, length: 600, separator: ' ') %></p>
+					<p><%= truncate_html(@post[1].content.html_safe, length: 500, separator: ' ') %></p>
 
 					<%=link_to '<button class="default-button" type="button" >Xem thêm</button>'.html_safe, @post[1] %>
 				</div>
@@ -90,13 +90,13 @@
 				</div>
 			</div>
 	</div>
-<a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
-	<span class="glyphicon glyphicon-chevron-left"></span>
-</a>
-<a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
-	<span class="glyphicon glyphicon-chevron-right"></span>
-</a>
-</div>
+	<a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+	</div>
 </div>
 <!-- ket thuc slidebar -->
 
@@ -130,125 +130,125 @@
 						<div class="misc"><span class="posted-time"><%=admin_post_mb.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mb.average_rating%>/5)</span></span></div>
 						<%= truncate_html(admin_post_mb.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
 						<%=link_to image_tag("see_more3.png"), admin_post_mb %>
-					</p>
-				</li>
-				<%end%>
-			</ul>
-		</div>
-		<div id="MIENTRUNG" class="tab-pane fade">
-			<ul class="my-list-1">
-				<% @admin_posts_mientrung.each do |admin_post_mt| %>      
-				<li>
-					<%= link_to (tagged_url(:tag => admin_post_mt.tags.first.name)) do%>
-					<h5><%=admin_post_mt.tags.first.name%></h5>
+						</p>
+					</li>
 					<%end%>
-
-					<%=link_to admin_post_mt, class:"img-wrapper" do%>
-					<img class="img-box" src="<%=admin_post_mt.get_image%>">
-					<%end%>
-					<%=link_to admin_post_mt, class:"img-wrapper" do%>
-					<h5><%=admin_post_mt.title%></h5>
-					<%end%>
-					<a href="#"></a>
-					<div class="misc"><span class="posted-time"><%=admin_post_mt.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mt.average_rating%>/5)</span></span></div>
-					<%= truncate_html(admin_post_mt.content.html_safe, length: 90, separator: ' ', class:"my-review") %>
-					<%=link_to image_tag("see_more3.png"), admin_post_mt %>
-				</p>
-			</li>
-			<%end%>
-		</ul>
-	</div>
-	<div id="MIENNAM" class="tab-pane fade">
-		<ul class="my-list-1">
-			<% @admin_posts_miennam.each do |admin_post_mn| %>      
-			<li>
-				<%= link_to (tagged_url(:tag => admin_post_mn.tags.first.name)) do%>
-				<h5><%=admin_post_mn.tags.first.name%></h5>
-				<%end%>
-
-				<%=link_to admin_post_mn, class:"img-wrapper" do%>
-				<img class="img-box" src="<%=admin_post_mn.get_image%>">
-				<%end%>
-				<%=link_to admin_post_mn, class:"img-wrapper" do%>
-				<h5><%=admin_post_mn.title%></h5>
-				<%end%>
-				<a href="#"></a>
-				<div class="misc"><span class="posted-time"><%=admin_post_mn.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mn.average_rating%>/5)</span></span></div>
-				<%= truncate_html(admin_post_mn.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
-				<%=link_to image_tag("see_more3.png"), admin_post_mn %>
-			</p>
-		</li>
-		<%end%>
-	</ul>
-</div>
-</div>
-</div>
-<div class="left-content" style="width: 60%;">
-	<div class="my-window">
-		<div class="my-header">Các POST của thành viên mới đăng</div>
-		<div class="my-content">
-			<ul class="my-list-2">
-				<% @user_posts.each do |user_post| %>      
-				<li>
-					<div class="my-cell col-1">
-						<%=link_to user_post do%>
-						<h5><%=user_post.title%></h5>
-						<%end%>
-						<div class="misc"><span class="posted-time"><%=user_post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=user_post.average_rating%>/5)</span></span></div>
-
-
-						<%= truncate_html(user_post.content.html_safe, length: 600, separator: ' ', class:"my-review") %>
-
-						<%=link_to image_tag("see_more3.png"), user_post %>
-
-					</div>
-					<div class="my-cell col-2">
-						<%=link_to user_post, class:"img-wrapper" do%>
-						<img class="img-box" src="<%=user_post.get_image%>">
+				</ul>
+			</div>
+			<div id="MIENTRUNG" class="tab-pane fade">
+				<ul class="my-list-1">
+					<% @admin_posts_mientrung.each do |admin_post_mt| %>      
+					<li>
+						<%= link_to (tagged_url(:tag => admin_post_mt.tags.first.name)) do%>
+						<h5><%=admin_post_mt.tags.first.name%></h5>
 						<%end%>
 
-					</div>
-					<div class="my-tag">
-						<% user_post.tags.any? %>
-						<% user_post.tags.each do |tag| %>
-						<%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
-						<% end %>
-					</div>
+						<%=link_to admin_post_mt, class:"img-wrapper" do%>
+						<img class="img-box" src="<%=admin_post_mt.get_image%>">
+						<%end%>
+						<%=link_to admin_post_mt, class:"img-wrapper" do%>
+						<h5><%=admin_post_mt.title%></h5>
+						<%end%>
+						<a href="#"></a>
+						<div class="misc"><span class="posted-time"><%=admin_post_mt.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mt.average_rating%>/5)</span></span></div>
+						<%= truncate_html(admin_post_mt.content.html_safe, length: 90, separator: ' ', class:"my-review") %>
+						<%=link_to image_tag("see_more3.png"), admin_post_mt %>
+						</p>
+					</li>
+					<%end%>
+				</ul>
+			</div>
+			<div id="MIENNAM" class="tab-pane fade">
+				<ul class="my-list-1">
+					<% @admin_posts_miennam.each do |admin_post_mn| %>      
+					<li>
+						<%= link_to (tagged_url(:tag => admin_post_mn.tags.first.name)) do%>
+						<h5><%=admin_post_mn.tags.first.name%></h5>
+						<%end%>
 
-
-				</li>
-				<% end %>
-
-
-
-
-			</ul>
+						<%=link_to admin_post_mn, class:"img-wrapper" do%>
+						<img class="img-box" src="<%=admin_post_mn.get_image%>">
+						<%end%>
+						<%=link_to admin_post_mn, class:"img-wrapper" do%>
+						<h5><%=admin_post_mn.title%></h5>
+						<%end%>
+						<a href="#"></a>
+						<div class="misc"><span class="posted-time"><%=admin_post_mn.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mn.average_rating%>/5)</span></span></div>
+						<%= truncate_html(admin_post_mn.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
+						<%=link_to image_tag("see_more3.png"), admin_post_mn %>
+						</p>
+					</li>
+					<%end%>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="right-content" style="width: 40%;">
-	<div class="my-window">
-		<div class="my-header">Google map</div>
-		<div class="my-content">
-			<iframe width="100%" height="360px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=hanoi&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=43.25835,80.859375&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=vi&amp;geocode=&amp;q=hanoi&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=43.25835,80.859375&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam&amp;z=13" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small>
+	<div class="left-content" style="width: 60%;">
+		<div class="my-window">
+			<div class="my-header">Các POST của thành viên mới đăng</div>
+			<div class="my-content">
+				<ul class="my-list-2">
+					<% @user_posts.each do |user_post| %>      
+					<li>
+						<div class="my-cell col-1">
+							<%=link_to user_post do%>
+							<h5><%=user_post.title%></h5>
+							<%end%>
+							<div class="misc"><span class="posted-time"><%=user_post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=user_post.average_rating%>/5)</span></span></div>
+
+
+							<%= truncate_html(user_post.content.html_safe, length: 600, separator: ' ', class:"my-review") %>
+
+							<%=link_to image_tag("see_more3.png"), user_post %>
+
+						</div>
+						<div class="my-cell col-2">
+							<%=link_to user_post, class:"img-wrapper" do%>
+							<img class="img-box" src="<%=user_post.get_image%>">
+							<%end%>
+
+						</div>
+						<div class="my-tag">
+							<% user_post.tags.any? %>
+							<% user_post.tags.each do |tag| %>
+							<%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
+							<% end %>
+						</div>
+
+
+					</li>
+					<% end %>
+
+
+
+
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div class="my-window">
-		<div class="my-header">Bạn muốn đặt phòng?</div>
-		<div class="my-content">
-			
+	<div class="right-content" style="width: 40%;">
+		<div class="my-window">
+			<div class="my-header">Google map</div>
+			<div class="my-content">
+				<iframe width="100%" height="360px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=hanoi&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=43.25835,80.859375&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=vi&amp;geocode=&amp;q=hanoi&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=43.25835,80.859375&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam&amp;z=13" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small>
+			</div>
 		</div>
-	</div>
-	<div id="TAG-CLOUD" class="my-window">
-		<div class="my-header">Các Tag liên quan</div>
-		<div class="my-content">
-			<div id="tag_cloud" >
-				<% tag_cloud Post.tag_counts, %w{s m l} do |tag, css_class| %>
-				<%= link_to tag.name, tagged_url(:tag => tag.name), class: "label label-info" %>
-				<% end %>
+		<div class="my-window">
+			<div class="my-header">Bạn muốn đặt phòng?</div>
+			<div class="my-content">
+				
+			</div>
+		</div>
+		<div id="TAG-CLOUD" class="my-window">
+			<div class="my-header">Các Tag liên quan</div>
+			<div class="my-content">
+				<div id="tag_cloud" >
+					<% tag_cloud Post.tag_counts, %w{s m l} do |tag, css_class| %>
+					<%= link_to tag.name, tagged_url(:tag => tag.name), class: "label label-info" %>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
-</div>
+

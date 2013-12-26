@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TestViye</title>
+	<title>Du lịch việt | Vietnam in your eye</title>
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
@@ -10,7 +10,9 @@
 <body>
 	<div id="MY-HEADER">
 		<div id="MY-LOGO">
-			<li><a class="header-logo" href=<%=home_index_path%> >Du Lich Viet</a></li>
+			<%=link_to home_index_path, :class=>"header-logo" do%>
+			<li>Du Lich Viet</li>
+			<%end%>
 			<li><span>Vietnam in your eye</span></li>
 		</div>	
 		<div id="MY-SEARCH"> 
@@ -24,13 +26,17 @@
 			<div id="user_nav">
 				<% if user_signed_in? %>
 				<div class="wrap-ava">
+
 					<a class="one" href="#">
-						<span class="glyphicon glyphicon-user"></span>
-						<!-- <img class="my-ava" src="images/user.png" width="30px" height="30px"> -->
+			
+						<img class="my-ava" src="images/ava_demo.png" width="30px" height="30px">
 						<span class="my-username"><%= current_user.name %></span>
 					</a>
-					<div class="my-tooltip" title="Account-setting" rel="tooltip-bottom"><a href="<%= edit_user_registration_path%>"><span class="glyphicon glyphicon-cog"></span></a></div>
-					<div class="my-tooltip" title="Logout" rel="tooltip-bottom"><a href="<%= destroy_user_session_path %>"><span class="glyphicon glyphicon-log-out"></span></a></div>
+					<div class="my-tooltip" title="Tạo bài viết mới" rel="tooltip-bottom"><a href="<%=new_post_path %>"><span class="glyphicon glyphicon-plus"></span></a></div>
+					<div class="my-tooltip" title="Trang cá nhân" rel="tooltip-bottom"><a href="http://localhost:3000/profile/show"><span class="glyphicon glyphicon-list"></span></a></div>
+					<div class="my-tooltip" title="Cài đặt tài khoản" rel="tooltip-bottom"><a href="<%= edit_user_registration_path%>"><span class="glyphicon glyphicon-cog"></span></a></div>
+					<div class="my-tooltip" title="Đăng xuất" rel="tooltip-bottom"><a href="<%= destroy_user_session_path %>"><span class="glyphicon glyphicon-log-out"></span></a></div>
+
 
 				</div>
 				<% else %>

@@ -17,7 +17,7 @@
                 </p>
                 <%if @post.user == current_user%>
                 <%= link_to 'Sửa bài viết', edit_post_path(@post) %> |
-                <%= link_to 'Xóa bài viết', @post, method: :delete, data: { confirm: 'bài viết đã xóa sẽ không thể phục hồi lại??' } %> | 
+                <%= link_to 'Xóa bài viết', @post, method: :delete, data: { confirm: 'Bài viết đã xóa sẽ không thể phục hồi lại?' } %> | 
                 <%end%>
         </div>
         <div id="POSTED-AUTHOR" class="content-init">
