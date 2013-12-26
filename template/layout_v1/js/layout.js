@@ -73,4 +73,11 @@ $(document).ready(function(){
 		$('ul.my-nav > li').click(function(event) {
 			$('ul.my-nav > li:not(this)').removeClass('active');
 		});
+	/*textarea auto resize height*/
+		       var text = jQuery('#your_textarea').val(),
+            // look for any "\n" occurences
+            matches = text.match(/\n/g),
+            breaks = matches ? matches.length : 2;
+
+        jQuery('#your_textarea').attr('rows',breaks + 2);
 });

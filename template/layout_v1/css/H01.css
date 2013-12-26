@@ -1027,3 +1027,9 @@
 		text-transform: none;
 		padding: 5px 0;
 	}
+/*css cho trang hien thi list post cua nguoi dung*/
+	.wrap-icon{
+		position: absolute;
+		right: 20px;
+		margin-top: -25px;
+	}
