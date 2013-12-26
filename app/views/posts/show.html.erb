@@ -57,67 +57,62 @@
                 <% end %>
 
                 | Điểm đánh giá: <span class="vote-mark">(<%=@post.average_rating%>/5) </span>
-                <div id="star">
-                  <script>
-                  $('#star').raty({
-                    readOnly: true,
-                    score: <%= @post.average_rating %>,
-                    path: '/assets/'
-                  });
-                  </script>
-                </span>
-              </p>
-            </div>
+                    <span>  <div id="star">
+        Average rating
+      </div></span>
+
+
+            </p>
           </div>
         </div>
 
-<!--           <div id="star">
-            <p>Averate rating</p>
-
-
-          </div>
-        -->
-        <%if signed_in?%>
-        <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
-        <%unless @rating%> 
-        <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
-        <%end%>
-        <div id="user_star">
-          <p>Your rating</p>
-
-          <script>
-          $('#user_star').raty({
-            score: <%= @rating.score %>,
-            path: '/assets/',
-            click: function(score, evt) {
-              $.ajax({
-                url: '/ratings/' + <%= @rating.id %>,
-                type: 'PATCH',
-                data: { score: score }
-              });
-            }
-          });
-          </script>
-        </div>
-
-        <%end%>
-
-        <div id="comments">
-         <%= render :partial => @post.comments %>
-       </div> 
-       <%if signed_in? %>
-       <%= form_for [@post, Comment.new] do |f| %>
-       <p>
-        <%= f.label :body, "New comment" %><br/>
-        <%= f.text_area :body %>
-      </p>
-
-      <p><%= f.submit "Add comment" %></p>
-
+      <%if signed_in?%>
+      <% @rating = Rating.where(post_id: @post.id, user_id: current_user.id).first %>
+      <%unless @rating%> 
+      <%@rating = Rating.create(post_id: @post.id, user_id: current_user.id, score: 0) %>
       <%end%>
-      <%else %>
-      <%="<i>Login to comment</i>".html_safe%>
-      <% end %>
+      <div id="user_star">
+        <p>Your rating</p>
+      </div>
+      <%end%>
+        <script>
+        $('#star').raty({
+          readOnly: true,
+          score: <%= @post.average_rating %>,
+          path: '/assets/'
+        });
+
+        $('#user_star').raty({
+          score: <%= @rating.score %>,
+          path: '/assets/',
+          click: function(score, evt) {
+            $.ajax({
+              url: '/ratings/' + <%= @rating.id %>,
+              type: 'PATCH',
+              data: { score: score }
+            });
+          }
+        });
+        </script>
+
+
+
+      <div id="comments">
+       <%= render :partial => @post.comments %>
+     </div> 
+     <%if signed_in? %>
+     <%= form_for [@post, Comment.new] do |f| %>
+     <p>
+      <%= f.label :body, "New comment" %><br/>
+      <%= f.text_area :body %>
+    </p>
+
+    <p><%= f.submit "Add comment" %></p>
+
+    <%end%>
+    <%else %>
+    <%="<i>Login to comment</i>".html_safe%>
+    <% end %>
 
 
 

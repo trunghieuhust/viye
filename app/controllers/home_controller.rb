@@ -11,9 +11,9 @@ before_action :authenticate_user!, except: [:index, :show]
 	@posts_mientrung = Post.tagged_with("Miền Trung")
 	@posts_miennam = Post.tagged_with("Miền Nam")  	
 
-	@admin_posts_mienbac = @posts_mienbac.select{|post | post.user.users_type == 0 || post.user.users_type == 1}
-	@admin_posts_mientrung = @posts_mientrung.select{|post | post.user.users_type == 0 || post.user.users_type == 1}
-	@admin_posts_miennam = @posts_miennam.select{|post | post.user.users_type == 0 || post.user.users_type == 1}
+	@admin_posts_mienbac = @posts_mienbac.select{|post | post.user.users_type == 0 || post.user.users_type == 1}.sample(4)
+	@admin_posts_mientrung = @posts_mientrung.select{|post | post.user.users_type == 0 || post.user.users_type == 1}.sample(4)
+	@admin_posts_miennam = @posts_miennam.select{|post | post.user.users_type == 0 || post.user.users_type == 1}.sample(4)
   end
 
 end
