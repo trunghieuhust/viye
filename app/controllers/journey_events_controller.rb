@@ -4,8 +4,6 @@ class JourneyEventsController < ApplicationController
 	def create
 		@journey = Journey.find(params[:journey_id])
 		@journeyEvent = @journey.journeyEvents.create!(journey_event_params)
-		@journey.user = current_user
-		@journey.save
 		redirect_to @journey
 	end
 		def journey_event_params

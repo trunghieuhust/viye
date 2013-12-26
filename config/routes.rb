@@ -1,7 +1,4 @@
 Viye::Application.routes.draw do
-  resources :journeys do
-    resources :journey_events, :only => [:create]
-  end
   get "profile/index"
   get "profile/show"
   get "admin/index"
@@ -10,12 +7,16 @@ Viye::Application.routes.draw do
   resources :profile
 
   resources :comments
-
+  resources :journey_events
   resources :ratings, only: :update
 
   resources :posts do
     resources :comments, :only => [:create]
   end
+  resources :journeys do
+    resources :journey_events, :only => [:create]
+  end
+
 #devise_for :users,  :controllers => { :sessions => "users/sessions" }
 devise_for :users
 get "home/index"

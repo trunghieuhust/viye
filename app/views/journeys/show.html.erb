@@ -19,12 +19,18 @@ $(document).ready(function() {
 	});
 });
 </script>
+<%if @journey_events.count != 0%>
 <div id="my-timeline"></div>
-<h2>Comments</h2>
+<%else%>
+Chua co event, bam vao nut tao event de tao moi event.<br>
+<%end%>
+<%if signed_in?%>
+<h2>lists event</h2>
 <div id="journey_events">
 	<%= render :partial => @journey.journeyEvents %>
 </div>
- <%if signed_in?%>
+ <%if signed_in? && @journey.user == current_user %>
+<h2>new event</h2>
  <%= form_for [@journey, JourneyEvent.new] do |f| %>
  <p>
  	  <div class="field">
@@ -65,4 +71,5 @@ $(document).ready(function() {
 <%end%>
 <%end%>
 <%= link_to 'Edit', edit_journey_path(@journey) %> |
+<%end%>
 <%= link_to 'Back', journeys_path %>
