@@ -2,6 +2,12 @@ Viye::Application.routes.draw do
   resources :journeys do
     resources :journey_events, :only => [:create]
   end
+  get "profile/index"
+  get "profile/show"
+  get "admin/index"
+  get "admin/login"
+  resources :journeys
+  resources :profile
 
   resources :comments
 

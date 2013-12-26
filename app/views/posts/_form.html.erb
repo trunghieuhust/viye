@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <b> Tiêu đề </b><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
+    <b>Nội dung</b><br>
     <%= f.text_area :content, :class => "tinymce", :rows => 30, :cols => 70 %>
     <%= tinymce %>
 
@@ -25,6 +25,7 @@
 <%= f.text_field :tag_list %>
 
   <div class="actions">
-    <%= f.submit %>
+    <br>
+    <%= f.submit "Đăng bài viết"%>
   </div>
 <% end %>
