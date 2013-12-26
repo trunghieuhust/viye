@@ -1,0 +1,132 @@
+
+<div id="MY-CONTENT">
+        <div class="left-content" style="width: 60%;">
+          <div class="my-window">
+            <div class="my-header">Hãy nhập thông tin cá nhân vào đây</div>
+            <div class="my-content">
+              <div class="span6">
+                <div class="wrap-form">
+                  <div id="legend">
+                    <legend class="form-title">Thông tin cá nhân</legend>
+                  </div>
+                  <!-- <form class="form-horizontal my-form" role="form"> -->
+                  <div class="form-horizontal my-form">
+                    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :role=>"form", :html => { :method => :put }) do |f| %>
+                      
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Tên hiển thị<span class="my-flag">*</span></label>
+                          <div class="col-sm-8">
+                              <%= f.text_field :name, :autofocus => true, :class=>"form-control", :id=>"Username", :placeholder=>"tên hiển thị" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Email<span class="my-flag">*</span></label>
+                          <div class="col-sm-8">
+                            <%= f.email_field :email, :class=>"form-control", :id=>"email" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Password</label>
+                          <div class="col-sm-8">
+                              <%= f.password_field :password, :class=>"form-control", :id=>"Username" %>
+                              <br><i>chỉ nhập khi bạn muốn thay đổi password!</i>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Nhập lại Password</label>
+                          <div class="col-sm-8">
+                              <%= f.password_field :password_confirmation, :class=>"form-control", :id=>"Username" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Password hiện tại<span class="my-flag">*</span></label>
+                          <div class="col-sm-8">
+                              <%= f.password_field :current_password, :class=>"form-control", :id=>"Username" %>
+                              
+                          </div>
+                        </div>
+                        <!-- <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Phone Number</label>
+                          <div class="col-sm-8">
+                              <input type="text" class="form-control" id="Phone" placeholder="Phone Number">
+                          </div>
+                        </div> -->
+                        <div class="form-group form-inline">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Giới tính
+                          </label>
+                          <div class="col-sm-4">
+                              <div class="radio my-radio">
+                            <label>
+                                <%= f.radio_button :sex, '1' %>
+                                <%= f.label :sex, 'Male', :value => 'Male' %>
+                                 
+                                <!-- <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Male -->
+                            </label>
+                          </div>
+                            <div class="radio my-radio">
+                            <label>
+                                  <%= f.radio_button :sex, '2' %>
+                                  <%= f.label :sex, 'Female', :value => 'Female'%>
+                                  
+                                <!-- <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Female -->
+                            </label>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="form-group form-inline">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Ngày sinh</label>
+                          <div id="datetimepicker4" class="col-sm-8 input-append">
+                              <!-- <input data-format="dd-MM-yyyy" type="text" class="form-control" id="BirthDay" placeholder="dd-MM-yyyy"> -->
+                              <%= f.date_field :dob, :placeholder =>"dd-MM-yyyy", :class=>"form-control ", :id=>"BirthDay" %>
+                            <!-- <span class="add-on glyphicon glyphicon-calendar"></span> -->
+                          </div>
+                        </div>
+                        <!-- <div class="form-group form-inline">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Upload Avatar</label>
+                          <div class="col-sm-8">
+                          <span class="btn btn-success fileinput-button">
+                              <span class="glyphicon glyphicon-plus"></span>
+                              <span>Select files...</span>
+                              <input id="fileupload" type="file" name="files[]" multiple="">
+                          </span>
+                          </div>
+                        </div> -->
+                        <div class="form-group form-inline">
+                          <label for="inputEmail3" class="col-sm-4 control-label"></label>
+                          <div class="col-sm-8">
+                              <%= f.submit "CẬP NHẬT", :class=>"submit-button" %>
+                          </div>
+                        </div>
+  
+                        <div class="alert alert-info">
+                            <button class="close" data-dismiss="alert" type="button">×</button> <strong>Confirmation:</strong>
+                            Hãy điền thông tin cá nhân của bạn vào form, những form có dấu (*) là bắt buộc
+                            <br>
+                        </div>
+                        
+                        <div class="alert alert-warning">
+                          
+                          <%= devise_error_messages! %>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content" style="width: 40%;">
+          <div class="my-window">
+            <div class="my-header">Quảng cáo - 1</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div class="my-window">
+            <div class="my-header">Quảng cáo - 2</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div id="TAG-CLOUD" class="my-window">
+            <div class="my-header">Quảng cáo - 3</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+        </div>
+</div>

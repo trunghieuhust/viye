@@ -1,0 +1,11 @@
+*{
+	margin: 0 auto;
+	padding: 0 auto;
+}
+#MY-MENU{
+	border-top: 3px solid #f0f0f0;
+}
+#MY-MENU > li{
+	float: left;
+	display: inline-block;
+}

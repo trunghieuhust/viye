@@ -1,0 +1,94 @@
+<div id="MY-CONTENT">
+	<%if @posts.count == 0%>
+			<div class="alert alert-danger my-alert">
+				<button class="close" data-dismiss="alert" type="button">×</button>
+				<%if (@type == "search")%>
+					Không có kết quả nào được tìm thấy 
+				<%elsif @type == "tag"%>
+					không có bài viết về <%=@tag%>
+				<%else%>
+					Không có bài viết nào được đăng. Bấm "NEW POST" để đăng bài
+				<%end%>
+			</div>
+	<%else%>
+			<div class="alert alert-info my-alert">
+				<button class="close" data-dismiss="alert" type="button">×</button>
+				<%if (@type == "search")%>
+					Có <%=@posts.count%> kết quả được tìm thấy
+				<%elsif @type == "tag"%>
+					Có <%=@posts.count%> bài viết về <%=@tag%>
+				<%else%>
+					Có <%=@posts.count%> bài viết được đăng.
+				<%end%>
+			</div>
+	<%end%>
+
+	<div class="left-content" style="width: 60%;">
+		<div class="my-window">
+			<div class="my-header">Bài đăng</div>
+			<div class="my-content">
+		
+				<ul class="my-list-2">
+					<% @posts.each do |post| %>     
+					<li>
+						<div class="my-cell col-1">
+							<%=link_to post do%>
+							<h5><%=post.title%></h5>
+							<%end%>
+							 <div class="misc"><span class="posted-time"><%=post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=post.average_rating%>/5)</span></span></div>
+
+
+							<p><%= truncate_html((post.content.html_safe), length: 600, separator: ' ') %>
+								<%=link_to image_tag("see_more3.png"), @post %>
+							</p>
+							<p>
+								<%= link_to 'Show', post %> 
+								<% if post.user == current_user %>
+								<%= link_to 'Edit', edit_post_path(post) %>
+								<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+								<% end %>
+							</p>
+
+						</div>
+						<div class="my-cell col-2">
+							<%=link_to post, class:"img-wrapper" do%>
+							<img class="img-box" src="<%=post.get_image%>">
+							<%end%>
+
+						</div>
+						<div class="my-tag">
+							<% post.tags.any? %>
+							<% post.tags.each do |tag| %>
+							<%= link_to tag.name, tagged_url(:tag => tag.name), :class=>"label label-info" %>
+							<% end %>
+						</div>
+
+
+					</li>
+					<% end %>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	<div class="right-content" style="width: 40%;">
+      <div class="my-window">
+        <div class="my-header">Quảng cáo - 1</div>
+        <div class="my-content">khong co gi</div>
+      </div>
+      <div class="my-window">
+        <div class="my-header">Quảng cáo - 2</div>
+        <div class="my-content">khong co gi</div>
+      </div>
+      <div id="TAG-CLOUD" class="my-window">
+        <div class="my-header">Quảng cáo - 3</div>
+        <div class="my-content">khong co gi</div>
+      </div>
+    </div>
+
+
+<hr>
+				
+ <%= link_to 'New Post', new_post_path %>
+	
+</div>

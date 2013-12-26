@@ -1,0 +1,50 @@
+<div id="MY-CONTENT">
+  <div class="left-content" style="width: 70%;">
+    <div id="POST-DETAIL" class="my-window">
+      <div class="my-content">
+        <div class="content-init">
+	        <h1>Tạo bài viết mới</h1>
+			<%if signed_in?%>
+			<%= render 'form' %>
+			<% end %>
+			<%= link_to 'Back', posts_path %>
+
+               
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-content" style="width: 30%;">
+    <div class="my-window">
+      <div class="my-header">Google map</div>
+      <div class="my-content">khong co gi</div>
+    </div>
+    <div class="my-window">
+      <div class="my-header">Bạn muốn đặt phòng?</div>
+      <div class="my-content">khong co gi</div>
+    </div>
+    <div id="TAG-CLOUD" class="my-window">
+      <div class="my-header">Các Tag liên quan</div>
+      <div class="my-content">
+        <div class="col-1">
+          <ul class="my-tag">
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <ul class="my-tag">
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+            <li><a href="#">Hà Nội</a><span>x 123</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

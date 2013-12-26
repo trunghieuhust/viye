@@ -1,0 +1,96 @@
+<div id="MY-CONTENT">
+        <div class="left-content" style="width: 60%;">
+          <div class="my-window">
+            <div class="my-header">Vui lòng điền thông tin vào form dưới đây để hoàn tất việc đăng kí</div>
+            <div class="my-content">
+              <div class="span6">
+                <div class="wrap-form">
+                  <div id="legend">
+                    <legend class="form-title">Thông tin cá nhân</legend>
+                  </div>
+                  <div class="form-horizontal my-form">
+                    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+						<div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Tên hiển thị<span class="my-flag">*</span></label>
+                          <div class="col-sm-8">
+                              <%= f.text_field :name, :autofocus => true, :class=>"form-control", :id=>"Username", :placeholder=>"tên hiển thị" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Email<span class="my-flag">*</span></label>
+                          <div class="col-sm-8">
+                            <%= f.email_field :email, :class=>"form-control", :id=>"email" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Password</label>
+                          <div class="col-sm-8">
+                              <%= f.password_field :password, :class=>"form-control", :id=>"Username" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail3" class="col-sm-4 control-label">Nhập lại Password</label>
+                          <div class="col-sm-8">
+                              <%= f.password_field :password_confirmation, :class=>"form-control", :id=>"Username" %>
+                          </div>
+                        </div>                                                                     
+                        <div class="form-group form-inline">
+                          <label for="inputEmail3" class="col-sm-4 control-label"></label>
+                          <div class="col-sm-8">
+                              <%= f.submit "ĐĂNG KÍ", :class=>"submit-button" %>
+                          </div>
+                        </div>
+  
+                        <div class="alert alert-info">
+                            <button class="close" data-dismiss="alert" type="button">×</button> <strong>Confirmation:</strong>
+                            Hãy điền thông tin cá nhân của bạn vào form, những form có dấu (*) là bắt buộc.                            
+                        </div>                        
+                        <div class="alert alert-warning">                          
+                          <%= devise_error_messages! %>
+                        </div>                        
+                    <% end %>
+                    <%= render "users/shared/links" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content" style="width: 40%;">
+          <div class="my-window">
+            <div class="my-header">Quảng cáo - 1</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div class="my-window">
+            <div class="my-header">Quảng cáo - 2</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+          <div id="TAG-CLOUD" class="my-window">
+            <div class="my-header">Quảng cáo - 3</div>
+            <div class="my-content">khong co gi</div>
+          </div>
+        </div>
+</div>
+
+
+
+
+<!-- <h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "users/shared/links" %>
+ -->
