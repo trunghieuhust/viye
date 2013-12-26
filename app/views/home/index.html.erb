@@ -151,7 +151,7 @@
 					<%end%>
 					<a href="#"></a>
 					<div class="misc"><span class="posted-time"><%=admin_post_mt.created_at%></span><span class="my-review">10 reviews</span><br><span>điểm đánh giá: <span class="vote-mark">(<%=admin_post_mt.average_rating%>/5)</span></span></div>
-					<%= truncate_html(admin_post_mt.content.html_safe, length: 100, separator: ' ', class:"my-review") %>
+					<%= truncate_html(admin_post_mt.content.html_safe, length: 90, separator: ' ', class:"my-review") %>
 					<%=link_to image_tag("see_more3.png"), admin_post_mt %>
 				</p>
 			</li>
@@ -229,11 +229,15 @@
 <div class="right-content" style="width: 40%;">
 	<div class="my-window">
 		<div class="my-header">Google map</div>
-		<div class="my-content">khong co gi</div>
+		<div class="my-content">
+			<iframe width="100%" height="360px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=hanoi&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=43.25835,80.859375&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=vi&amp;geocode=&amp;q=hanoi&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=43.25835,80.859375&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam&amp;z=13" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small>
+		</div>
 	</div>
 	<div class="my-window">
 		<div class="my-header">Bạn muốn đặt phòng?</div>
-		<div class="my-content">khong co gi</div>
+		<div class="my-content">
+			
+		</div>
 	</div>
 	<div id="TAG-CLOUD" class="my-window">
 		<div class="my-header">Các Tag liên quan</div>

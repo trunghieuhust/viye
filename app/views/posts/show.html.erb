@@ -74,58 +74,34 @@
               </span>
           <%end%>
 
-          <div id="comments">
-             <%= render :partial => @post.comments %>
-          </div> 
-           <%if signed_in? %>
-           <%= form_for [@post, Comment.new] do |f| %>
-           <p>
-            <%= f.label :body, "Nội dung" %><br/>
-            <%= f.text_area :body %>
-          </p>
-
-          <p><%= f.submit "Bình luận" %></p>
-
-          <%end%>
-          <%else %>
-          <%="<i>Bạn cần đăng nhập để nhận xét về bài viết này</i>".html_safe%>
-          <% end %>
-
-         <!--  <ul class="cmt-list">
+          <ul class="cmt-list">
             <li class="cmt-left">
-              <p class="wrap-ava-1">
-                <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-              </p>
-              <div class="left-bubble">
-                <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
-                <p class="cmt-content">comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^ comment vao day nhe cac ban,^^</p>
-              </div>
+              <%= render :partial => @post.comments %>
             </li>
-            <li class="cmt-right">
-              <p class="wrap-ava-1">
-                <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-              </p>
-              <div class="right-bubble">
-                <p><a class="author" href="#">VinhDQ</a><span class="posted-time">Hôm nay 12:04</span></p>
-                <p class="cmt-content">co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.=" co that khong day hay la chem gio,=.="</p>
-              </div>
-            </li>
-            <li class="cmt-left">
-              <p class="wrap-ava-1">
-                <a class="wrap-img" href="#"><img src="images/ava_demo.png" width="100%" height="100%"></a>
-              </p>
-              <div id="new-cmt-wrap" class="left-bubble">
-                <p><a class="author" href="#">VinhDQ</a></p>
-                <p class="cmt-content">
-                  <form accept-charset="UTF-8" action="" method="POST">
-                    <textarea class="form-control" id="NEW-COMMENT" rows="3" placeholder="Type in your message"></textarea>
-                    <h6 class="pull-right">320 characters remaining</h6>
-                            <button class="default-button" type="submit">Post New Comment</button>
-                  </form>
-                </p>
-              </div>
-            </li>
-          </ul> -->
+            <%if signed_in? %>
+            
+               <li class="cmt-left">
+                  <p class="wrap-ava-1">
+                    <a class="wrap-img" href="#"><%= image_tag("ava_demo.png", :width=>"100%", :height=>"100%") %></a>
+                  </p>
+                  <div id="new-cmt-wrap" class="left-bubble">
+                    <p><a class="author" href="#"><%= current_user.name %></a></p>
+                    <p class="cmt-content">
+                      <%= form_for [@post, Comment.new] do |f| %>
+                        <!-- <textarea class="form-control" id="NEW-COMMENT" rows="3" placeholder="Type in your message"></textarea> -->
+                        <%= f.text_area :body,:class=>"form-control", :id=>"NEW-COMMENT", :rows=>"3", :placeholder=>"nhập bình luận của bạn" %>
+                        <h6 class="pull-right">tối đa 320</h6>
+
+                              <%= f.submit 'Bình luận' %>
+                              
+                      <%end%>
+                    </p>
+                  </div>
+                </li>
+              <%else %>
+              <%="<i>Bạn cần đăng nhập để nhận xét về bài viết này</i>".html_safe%>
+              <% end %>
+          </ul>
         </div>
       </div>
     </div>

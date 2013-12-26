@@ -1,4 +1,6 @@
 Viye::Application.routes.draw do
+  get "admin/index"
+  get "admin/login"
   resources :journeys
 
   resources :comments
