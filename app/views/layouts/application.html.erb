@@ -29,7 +29,8 @@
 
 					<a class="one" href="#">
 			
-						<img class="my-ava" src="images/ava_demo.png" width="30px" height="30px">
+						<!-- <img class="my-ava" src="images/ava_demo.png" width="30px" height="30px"> -->
+						<%= image_tag("ava_demo.png",:class=>"my-ava", :width=>"30px", :height=>"30px") %>
 						<span class="my-username"><%= current_user.name %></span>
 					</a>
 					<div class="my-tooltip" title="Tạo bài viết mới" rel="tooltip-bottom"><a href="<%=new_post_path %>"><span class="glyphicon glyphicon-plus"></span></a></div>
