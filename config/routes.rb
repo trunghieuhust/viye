@@ -1,8 +1,7 @@
 Viye::Application.routes.draw do
   get "profile/index"
   get "profile/show"
-  get "admin/index"
-  get "admin/login"
+  get "admin/" => 'admin#index', :as => 'admin'
   resources :journeys
   resources :profile
 
