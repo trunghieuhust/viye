@@ -16,8 +16,8 @@ class PostsController < ApplicationController
     else 
       @posts = Post.all
     end
-    # @posts = Post.where(:user_id => current_user.id)
-    #@posts = Post.order("id desc")
+    #@posts = Post.where(:user_id => current_user.id)
+    @posts = Post.page(params[:page]).per 5
   end
 
   # GET /posts/1
