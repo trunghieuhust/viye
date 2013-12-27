@@ -1,6 +1,4 @@
-<% user = current_user%>
-
-<div id="MY-CONTENT">
+ <div id="MY-CONTENT">
 	<div class="wrap-content">
 		<div class="left-content" style="width: 40%;">
 			<div id="MEISHI" class="my-window">
@@ -13,21 +11,21 @@
 						<span class="glyphicon glyphicon-user my-ava">
 							<input type="file" name="files[]" multiple="">
 						</span>
-						<h3><%=user.name%></h3>
+						<h3><%=@user.name%></h3>
 					</div>
 					<div>
 						<ul class="info-list">
-							<li><span class="glyphicon glyphicon-info-sign"></span><span>Tên hiển thị:</span><%=user.name%></li>
-							<li><span class="glyphicon glyphicon-info-sign"></span><span>Ngày sinh:</span><%=user.dob%></li>
+							<li><span class="glyphicon glyphicon-info-sign"></span><span>Tên hiển thị:</span><%=@user.name%></li>
+							<li><span class="glyphicon glyphicon-info-sign"></span><span>Ngày sinh:</span><%=@user.dob%></li>
 							<li><span class="glyphicon glyphicon-info-sign"></span><span>Giới tính:</span>
-								<%if user.sex == 1%>
+								<%if @user.sex == 1%>
 								Nam
 								<%else%>
 								Nữ
 								<%end%>
 							</li>
 							<li><span class="glyphicon glyphicon-phone"></span>01649622332</li>
-							<li class="about-me"><span class="glyphicon glyphicon-envelope"></span><%=user.email%></li>
+							<li class="about-me"><span class="glyphicon glyphicon-envelope"></span><%=@user.email%></li>
 							<hr>
 						</ul>
 					</div>
@@ -62,7 +60,7 @@
 							</p>
 							<p>
 								<%= link_to 'Show', post %> 
-								<% if post.user == current_user %>
+								<% if post.user == @user %>
 								<%= link_to 'Edit', edit_post_path(post) %>
 								<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
 								<% end %>
@@ -97,7 +95,7 @@
 			<div class="my-header">Các hành trình của bạn</div>
 			<div class="my-content">
 				<ul class="follow-list">
-					<%user.journeys.each do |journey|%>
+					<%@user.journeys.each do |journey|%>
 					<li>
 						<div class="wrap-icon">
 							<%=link_to new_journey_path do%>

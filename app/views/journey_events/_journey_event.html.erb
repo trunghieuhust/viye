@@ -36,7 +36,7 @@
 		<%= journey_event.mediacredit %>
 	</p>
 -->
-<%if journey_event.journey.user == current_user%>
+<%if journey_event.journey.user == current_user|| current_user.users_type == 0 || current_user.users_type == 1%>
 <%= link_to 'Destroy', journey_event, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%end%>
 		</div>

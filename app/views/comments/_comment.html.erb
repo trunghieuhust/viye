@@ -12,7 +12,7 @@
                 <p class="cmt-content"><%= comment.body %></p>
               </div>
                 
-                <%if comment.user == current_user%>
+                <%if comment.user == current_user || current_user.users_type == 0 || current_user.users_type == 1%>
                 <%= link_to 'xóa', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
         		<%end%>
         

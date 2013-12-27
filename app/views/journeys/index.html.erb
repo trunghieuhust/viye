@@ -19,7 +19,7 @@
         <td><%= journey.name %></td>
         <td><%= journey.description.html_safe %></td>
         <td><%= link_to 'Show', journey %></td>
-        <%if journey.user == current_user%>
+        <%if journey.user == current_user || current_user.users_type == 0 || current_user.users_type == 1%>
         <td><%= link_to 'Edit', edit_journey_path(journey) %></td>
         <td><%= link_to 'Destroy', journey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>

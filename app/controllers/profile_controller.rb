@@ -1,9 +1,12 @@
 class ProfileController < ApplicationController
   def show
-  	@posts = Post.where(:user_id => current_user.id)
-  	@posts = Post.order("id desc")
+  	if params[:id].present?
+  	@user = User.find(params[:id])
+  	@posts = @user.posts
+  else
+  	@user = current_user
   end
-
+end
   def index
   end
 end

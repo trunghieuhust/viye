@@ -152,7 +152,9 @@
 					<td class="last-td">
 						<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
 						<!-- nhet link trang ca nhan cua nguoi dung vao day -->
-						<a href="#"><span class="glyphicon glyphicon-eye-open"></span></a>
+								<%=link_to user_info_path(staff.id) do%>
+							<span class=" glyphicon glyphicon-eye-open"></span></a>
+						<%end%>
 						<%=link_to registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :role => 'button' do%>
 							<span class=" glyphicon glyphicon-trash"></span></a>
 						<%end%>
@@ -224,10 +226,10 @@
 				</div>
 			</div>
 		</div>
-		<%if staffs.count != 0%>
+		<%if @staffs.count != 0%>
 		<div class="alert alert-success">
 			<button class="close" data-dismiss="alert" type="button">×</button>
-			Có <%=staffs.count%> kết quả được tìm thấy
+			Có <%=@staffs.count%> kết quả được tìm thấy
 		</div>
 		<%else%>
 		<div class="alert alert-danger">

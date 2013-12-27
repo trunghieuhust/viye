@@ -7,7 +7,7 @@
           <p>
             <%=@journey.description.html_safe%>
           </p>
-          <%if @journey.user == current_user%>
+          <%if @journey.user == current_user || current_user.users_type == 0 || current_user.users_type == 1%>
           <%= link_to 'Sửa ', edit_journey_path(@journey) %> |
           <%= link_to 'Xóa ', @journey, method: :delete, data: { confirm: 'Hành trình đã xóa sẽ không thể phục hồi lại?' } %> 
           <%end%>
@@ -33,7 +33,7 @@
           <div id="journey_events">
             <%= render :partial => @journey.journeyEvents %>
           </div>
-          <%if signed_in? && @journey.user == current_user %>
+          <%if signed_in? && @journey.user == current_user || current_user.users_type == 0 || current_user.users_type == 1%>
           <h2>new event</h2>
           <%= form_for [@journey, JourneyEvent.new] do |f| %>
           <p>
