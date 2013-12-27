@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if params[:keyword].present?
-      @posts = Post.search(params[:keyword])
+      @posts = Post.search(params[:keyword]).to_set + Post.tagged_with(params[:keyword])
       @type = "search"
       @keyword = params[:keyword]
     elsif  params[:tag].present? 

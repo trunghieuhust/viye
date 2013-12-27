@@ -9,7 +9,8 @@ class Post < ActiveRecord::Base
 	validates :title, :content, presence:true
 	def self.search(search)
 		if search
-			find(:all, :conditions => ['content LIKE ?', "%#{search}%"])
+			find(:all, :conditions => ['content LIKE ? AND title LIKE ?', "%#{search}%","%#{search}%"])
+
 		else
 			find(:all)
 		end

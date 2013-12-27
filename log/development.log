@@ -38865,3 +38865,2130 @@ ActionController::RoutingError (No route matches [GET] "/images/l4.jpg"):
   Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
   Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
   Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 07:55:07 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (18.6ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền bắc')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền trung')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền nam')[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_18cd008 ON posts_taggings_18cd008.taggable_id = posts.id AND posts_taggings_18cd008.taggable_type = 'Post' AND posts_taggings_18cd008.tag_id = 11
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (1 = 0)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_446bf70 ON posts_taggings_446bf70.taggable_id = posts.id AND posts_taggings_446bf70.taggable_type = 'Post' AND posts_taggings_446bf70.tag_id = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT posts.id FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1mSELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  Rendered home/index.html.erb within layouts/application (352.6ms)
+Completed 200 OK in 2230ms (Views: 1768.1ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:09 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/search.png" for 127.0.0.1 at 2013-12-27 07:55:10 +0700
+
+
+Started GET "/assets/SCRIPTIN.ttf" for 127.0.0.1 at 2013-12-27 07:55:11 +0700
+
+
+Started GET "/assets/Caviar.ttf" for 127.0.0.1 at 2013-12-27 07:55:11 +0700
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-27 07:55:11 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền bắc')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền trung')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền nam')[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_f5d0ba1 ON posts_taggings_f5d0ba1.taggable_id = posts.id AND posts_taggings_f5d0ba1.taggable_type = 'Post' AND posts_taggings_f5d0ba1.tag_id = 11
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (1 = 0)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_5d96b5c ON posts_taggings_5d96b5c.taggable_id = posts.id AND posts_taggings_5d96b5c.taggable_type = 'Post' AND posts_taggings_5d96b5c.tag_id = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT posts.id FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  Rendered home/index.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 169ms (Views: 101.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:53 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2013-12-27 07:56:54 +0700
+
+
+Started GET "/search/?keyword=mien+bac" for 127.0.0.1 at 2013-12-27 07:57:00 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"mien bac"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (content LIKE '%mien bac%')
+Completed 500 Internal Server Error in 6ms
+
+NameError (uninitialized constant Post::Tag):
+  app/models/post.rb:13:in `search'
+  app/controllers/posts_controller.rb:9:in `index'
+
+
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+
+
+Started GET "/search/?keyword=mien+bac" for 127.0.0.1 at 2013-12-27 07:58:00 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"mien bac"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (content LIKE '%mien bac%')[0m
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from search at /home/hieu/viye/app/models/post.rb:13)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:13)
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+Completed 500 Internal Server Error in 29ms
+
+NoMethodError (undefined method `tagged_with' for #<Array:0x007fd28479b1d0>):
+  app/models/post.rb:13:in `search'
+  app/controllers/posts_controller.rb:9:in `index'
+
+
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started GET "/search/?keyword=mien+bac" for 127.0.0.1 at 2013-12-27 08:04:19 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"mien bac"}
+Completed 500 Internal Server Error in 19ms
+
+ArgumentError (Unknown key: where):
+  app/models/post.rb:12:in `search'
+  app/controllers/posts_controller.rb:9:in `index'
+
+
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (82.0ms)
+
+
+Started GET "/search/?keyword=mien+bac" for 127.0.0.1 at 2013-12-27 08:04:30 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"mien bac"}
+Completed 500 Internal Server Error in 21ms
+
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 2) in: content LIKE ? AND title LIKE ?):
+  app/models/post.rb:12:in `search'
+  app/controllers/posts_controller.rb:9:in `index'
+
+
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/hieu/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/search/?keyword=mien+bac" for 127.0.0.1 at 2013-12-27 08:04:45 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"mien bac"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (content LIKE '%mien bac%' AND title LIKE '%mien bac%')[0m
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 63ms (Views: 42.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:46 +0700
+
+
+Started GET "/search/?keyword=ha+noi" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"ha noi"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (content LIKE '%ha noi%' AND title LIKE '%ha noi%')
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:04:52 +0700
+
+
+Started GET "/search/?keyword=H%C3%A0+N%E1%BB%99i" for 127.0.0.1 at 2013-12-27 08:05:14 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"Hà Nội"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (content LIKE '%Hà Nội%' AND title LIKE '%Hà Nội%')[0m
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:14 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:14 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:14 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:05:15 +0700
+
+
+Started GET "/search/?keyword=H%C3%A0+N%E1%BB%99i" for 127.0.0.1 at 2013-12-27 08:08:55 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"Hà Nội"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (content LIKE '%Hà Nội%' AND title LIKE '%Hà Nội%')
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'hà nội')[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_3514425 ON posts_taggings_3514425.taggable_id = posts.id AND posts_taggings_3514425.taggable_type = 'Post' AND posts_taggings_3514425.tag_id = 13
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 9], ["taggable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 160ms (Views: 60.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 08:08:56 +0700
+
+
+Started GET "/search/?keyword=h%C3%A0+N%E1%BB%99i" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"hà Nội"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (content LIKE '%hà Nội%' AND title LIKE '%hà Nội%')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'hà nội')
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_814f415 ON posts_taggings_814f415.taggable_id = posts.id AND posts_taggings_814f415.taggable_type = 'Post' AND posts_taggings_814f415.tag_id = 13[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.2ms)[0m  SELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 08:09:06 +0700
+
+
+Started GET "/search/?keyword=h%C3%A0+n%E1%BB%99i" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"hà nội"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (content LIKE '%hà nội%' AND title LIKE '%hà nội%')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'hà nội')[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_3bbd9dc ON posts_taggings_3bbd9dc.taggable_id = posts.id AND posts_taggings_3bbd9dc.taggable_type = 'Post' AND posts_taggings_3bbd9dc.tag_id = 13
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 9], ["taggable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 08:09:13 +0700
+
+
+Started GET "/search/?keyword=%C4%91%C3%A0+n%E1%BA%B5ng" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"đà nẵng"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (content LIKE '%đà nẵng%' AND title LIKE '%đà nẵng%')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'đà nẵng')
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (1 = 0)[0m
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:18 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:19 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:19 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-27 08:09:24 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền bắc')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền trung')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền nam')[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_aab219c ON posts_taggings_aab219c.taggable_id = posts.id AND posts_taggings_aab219c.taggable_type = 'Post' AND posts_taggings_aab219c.tag_id = 11
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE (1 = 0)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_2f492a1 ON posts_taggings_2f492a1.taggable_id = posts.id AND posts_taggings_2f492a1.taggable_type = 'Post' AND posts_taggings_2f492a1.tag_id = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT posts.id FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  Rendered home/index.html.erb within layouts/application (72.4ms)
+Completed 200 OK in 102ms (Views: 86.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 08:09:24 +0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2013-12-27 08:09:24 +0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2013-12-27 08:09:24 +0700
+
+
+Started GET "/search/?keyword=%C4%91%C3%A0+l%E1%BA%A1t" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"đà lạt"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE (content LIKE '%đà lạt%' AND title LIKE '%đà lạt%')
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'đà lạt')[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE (1 = 0)
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 18.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:28 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:29 +0700
+
+
+Started GET "/search/?keyword=%C4%90%C3%A0+L%E1%BA%A1t" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"Đà Lạt"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (content LIKE '%Đà Lạt%' AND title LIKE '%Đà Lạt%')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'đà lạt')
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (1 = 0)[0m
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:34 +0700
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-12-27 08:09:39 +0700
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" LIMIT 3
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền bắc')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền trung')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'miền nam')[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_bfb6800 ON posts_taggings_bfb6800.taggable_id = posts.id AND posts_taggings_bfb6800.taggable_type = 'Post' AND posts_taggings_bfb6800.tag_id = 11
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE (1 = 0)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_2b3441e ON posts_taggings_2b3441e.taggable_id = posts.id AND posts_taggings_2b3441e.taggable_type = 'Post' AND posts_taggings_2b3441e.tag_id = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) ORDER BY "tags"."id" ASC LIMIT 1[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 9]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT posts.id FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN posts ON posts.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Post' AND taggings.context = 'tags') AND (taggings.taggable_id IN(9,10,11)) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  Rendered home/index.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 96ms (Views: 82.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 08:09:39 +0700
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2013-12-27 08:09:39 +0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2013-12-27 08:09:39 +0700
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2013-12-27 08:09:40 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_comment.html.erb (8.6ms)
+  Rendered posts/show.html.erb within layouts/application (99.6ms)
+Completed 200 OK in 121ms (Views: 117.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2013-12-27 08:09:41 +0700
+
+
+Started GET "/assets/ava_demo.png" for 127.0.0.1 at 2013-12-27 08:09:41 +0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2013-12-27 08:09:41 +0700
+
+
+Started GET "/search/?keyword=da+lat" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"keyword"=>"da lat"}
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from search at /home/hieu/viye/app/models/post.rb:12)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from search at /home/hieu/viye/app/models/post.rb:12)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (content LIKE '%da lat%' AND title LIKE '%da lat%')
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'da lat')[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" JOIN taggings posts_taggings_c502434 ON posts_taggings_c502434.taggable_id = posts.id AND posts_taggings_c502434.taggable_type = 'Post' AND posts_taggings_c502434.tag_id = 9
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35m (0.1ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))  [["taggable_id", 11], ["taggable_type", "Post"]]
+  Rendered posts/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 39ms (Views: 30.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/H01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/A01.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/journey_events.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/journeys.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/perfect-scrollbar.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/profile.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:49 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/timelineJS/timeline.css?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/journey_events.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/journeys.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/jquery.raty.min.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/perfect-scrollbar.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/tinymce/preinit.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/profile.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/tinymce/tinymce.jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/tinymce/jquery.tinymce.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/tinymce-jquery.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/timelineJS/timeline.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/timelineJS/embed.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/assets/see_more3.png" for 127.0.0.1 at 2013-12-27 08:09:50 +0700
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2013-12-27 08:09:51 +0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags')) LIMIT 1  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = ('tags'))[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT SUM("ratings"."score") AS sum_id FROM "ratings" WHERE "ratings"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ratings" WHERE "ratings"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/_comment.html.erb (3.4ms)
+  Rendered posts/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2013-12-27 08:09:51 +0700
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2013-12-27 08:09:51 +0700

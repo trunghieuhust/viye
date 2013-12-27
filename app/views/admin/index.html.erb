@@ -48,6 +48,7 @@
 	<div id="L-0" class="tab-pane fade in active">
 		<strong>total user: <%=User.all.count%></strong><br>
 		<strong>total post: <%=Post.all.count%></strong><br>
+		<strong>total post: <%=Tags.all.count%></strong><br>	
 		<strong>total review: <%=Post.all.select {| post| post.user.users_type == 3}.count%></strong><br>
 		<strong>total journey: <%=Journey.all.count%></strong><br>
 		<strong>total journey event: <%=JourneyEvent.all.count%></strong><br>
