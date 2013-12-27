@@ -1,10 +1,12 @@
 <%= div_for journey_event do %>
 <p>
-	<p>
-		<strong>Headline:</strong>
-		<%= journey_event.headline %>
-	</p>
-	<p>
+	<div class="content-init">
+
+		<p>
+			<%= journey_event.headline %>
+
+
+<!-- 	<p>
 		<strong>Startdate:</strong>
 		<%= journey_event.startdate %>
 	</p>
@@ -33,11 +35,11 @@
 		<strong>Mediacredit:</strong>
 		<%= journey_event.mediacredit %>
 	</p>
-
-	<%if journey_event.journey.user == current_user%><br>
-	<%= link_to 'Destroy', journey_event, method: :delete, data: { confirm: 'Are you sure?' } %>
-	<%end%>
-
+-->
+<%if journey_event.journey.user == current_user%>
+<%= link_to 'Destroy', journey_event, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%end%>
+		</div>
 </p>
 
 

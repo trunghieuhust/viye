@@ -17,15 +17,18 @@
       <tr>
         <td><%= journey.user %></td>
         <td><%= journey.name %></td>
-        <td><%= journey.description %></td>
+        <td><%= journey.description.html_safe %></td>
         <td><%= link_to 'Show', journey %></td>
+        <%if journey.user == current_user%>
         <td><%= link_to 'Edit', edit_journey_path(journey) %></td>
         <td><%= link_to 'Destroy', journey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%if signed_in?%>
 <%= link_to 'New Journey', new_journey_path %>
+<%end%>

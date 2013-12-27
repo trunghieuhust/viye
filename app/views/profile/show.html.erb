@@ -5,7 +5,10 @@
 		<div class="left-content" style="width: 40%;">
 			<div id="MEISHI" class="my-window">
 				<div class="my-content">
-					<a href="#"><span class="glyphicon glyphicon-cog"></span></a>
+					<%=link_to edit_user_registration_path do%>
+					<span class="glyphicon glyphicon-cog"></span>
+					<%end%>
+
 					<div>
 						<span class="glyphicon glyphicon-user my-ava">
 							<input type="file" name="files[]" multiple="">
@@ -16,7 +19,13 @@
 						<ul class="info-list">
 							<li><span class="glyphicon glyphicon-info-sign"></span><span>Tên hiển thị:</span><%=user.name%></li>
 							<li><span class="glyphicon glyphicon-info-sign"></span><span>Ngày sinh:</span><%=user.dob%></li>
-							<li><span class="glyphicon glyphicon-info-sign"></span><span>Giới tính:</span><%=user.sex%></li>
+							<li><span class="glyphicon glyphicon-info-sign"></span><span>Giới tính:</span>
+								<%if user.sex == 1%>
+								Nam
+								<%else%>
+								Nữ
+								<%end%>
+							</li>
 							<li><span class="glyphicon glyphicon-phone"></span>01649622332</li>
 							<li class="about-me"><span class="glyphicon glyphicon-envelope"></span><%=user.email%></li>
 							<hr>
@@ -37,7 +46,7 @@
 		<div class="my-window">
 			<div class="my-header">Bài đăng</div>
 			<div class="my-content">
-		
+
 				<ul class="my-list-2">
 					<% @posts.each do |post| %>     
 					<li>
@@ -45,7 +54,7 @@
 							<%=link_to post do%>
 							<h5><%=post.title%></h5>
 							<%end%>
-							 <div class="misc"><span class="posted-time"><%=post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=post.average_rating%>/5)</span></span></div>
+							<div class="misc"><span class="posted-time"><%=post.created_at%></span><span >10 reviews</span><span>điểm đánh giá: <span class="vote-mark">(<%=post.average_rating%>/5)</span></span></div>
 
 
 							<p><%= truncate_html((post.content.html_safe), length: 600, separator: ' ') %>
@@ -80,44 +89,56 @@
 				</ul>
 				
 			</div>
-		</div>
+		</div> 
 	</div>
 	<div class="right-content" style="width: 40%;">
-		<div id="POST-FOLLOW" class="my-window">
-			<div class="my-header">Các hành trình đang theo dõi</div>
+
+		<div class="my-window">
+			<div class="my-header">Các hành trình của bạn</div>
 			<div class="my-content">
 				<ul class="follow-list">
+					<%user.journeys.each do |journey|%>
 					<li>
+						<div class="wrap-icon">
+							<%=link_to new_journey_path do%>
+							<span class="glyphicon glyphicon-pencil"></span>
+							<%end%>
+							<%=link_to journey do%>
+							<span class="glyphicon glyphicon-eye-open"></span>
+							<%end%>
+							<%= link_to journey, method: :delete, data: { confirm: 'Are you sure?' } , :role => 'button' do%>
+							<span class=" glyphicon glyphicon-trash"></span>
+							<%end%>
+						</div>
+						<div class="my-list-2">
+							<%=link_to journey  do%>
+							<h5><%=journey.name%></h5>
+							<%end%>
+						</div>
+						<%= truncate_html((journey.description.html_safe), length: 100, separator: ' ') %>
+						<%=link_to "xem thêm", journey %>
+					</li>
+					<%end%>
+				</ul>
+<!-- 				<a href="#">Xem tất cả</a>
+-->			</div>		
+</div>
+<div id="POST-FOLLOW" class="my-window">
+	<div class="my-header">Các hành trình đang theo dõi</div>
+	<div class="my-content">
+		<ul class="follow-list">
+<!-- 					<li>
 						<div class="wrap-icon">
 							<a href="#"><span class="glyphicon glyphicon-eye-close"></span></a>
 						</div>
 						<h5>Chuyến đi Nha Trang</h5>
 						<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở thành phần đất của Việt Nam, Nha Trang thuộc về Chiêm Thành...
-						<a href="#">xem thêm</a>
+							<a href="#">xem thêm</a>
 						</p>
-					</li>
+					</li> 
 				</ul>
-				<a href="#">Xem tất cả</a>
+				<a href="#">Xem tất cả</a> -->	
 			</div>
 		</div>
-		<div class="my-window">
-			<div class="my-header">Các hành trình của bạn</div>
-			<div class="my-content">
-				<ul class="follow-list">
-					<li>
-						<div class="wrap-icon">
-							<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-							<a href="#"><span class="glyphicon glyphicon-eye-open"></span></a>
-							<a href="#myModal-1" role="button" data-toggle="modal"><span class=" glyphicon glyphicon-trash"></span></a>
-						</div>
-						<h5>Chuyến đi Nha Trang</h5>
-						<p>Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước khi trở thành phần đất của Việt Nam, Nha Trang thuộc về Chiêm Thành...
-						<a href="#">xem thêm</a>
-						</p>
-					</li>
-				</ul>
-				<a href="#">Xem tất cả</a>
-			</div>		
 	</div>
-</div>
 

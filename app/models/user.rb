@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
   validates :name, presence: true
+  validates_length_of :name, :maximum => 25	
+  validates_length_of :email, :maximum => 25
+  validates_length_of :phone_number, :maximum => 25	
 end

@@ -48,7 +48,7 @@
 	<div id="L-0" class="tab-pane fade in active">
 		<strong>total user: <%=User.all.count%></strong><br>
 		<strong>total post: <%=Post.all.count%></strong><br>
-		<strong>total post: <%=Tags.all.count%></strong><br>	
+		<strong>total tag: <%=Post.tag_counts.count%></strong><br>	
 		<strong>total review: <%=Post.all.select {| post| post.user.users_type == 3}.count%></strong><br>
 		<strong>total journey: <%=Journey.all.count%></strong><br>
 		<strong>total journey event: <%=JourneyEvent.all.count%></strong><br>
@@ -133,7 +133,6 @@
 				</tr>
 			</thead>
 			<tbody>
-
 				<%@staffs.each_with_index do |staff, i|%>
 					<%if staff.users_type == 0%>
 						<tr class="danger">
@@ -225,14 +224,17 @@
 				</div>
 			</div>
 		</div>
+		<%if staffs.count != 0%>
 		<div class="alert alert-success">
 			<button class="close" data-dismiss="alert" type="button">×</button>
-			Có n kết quả được tìm thấy
+			Có <%=staffs.count%> kết quả được tìm thấy
 		</div>
+		<%else%>
 		<div class="alert alert-danger">
 			<button class="close" data-dismiss="alert" type="button">×</button>
 			Có 0 kết quả được tìm thấy
 		</div>
+		<%end%>
 		<table class="table table-hover my-table">
 			<thead>
 				<tr>

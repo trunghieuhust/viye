@@ -1,75 +1,80 @@
-<p>
-	<strong>Name:</strong>
-	<%= @journey.name %>
-</p>
+<div id="MY-CONTENT">
+  <div class="left-content" style="width: 100%;">
+    <div id="journey-DETAIL" class="my-window">
+      <div class="my-content">
+        <div class="content-init">
+          <h1><%= @journey.name %></h1>
+          <p>
+            <%=@journey.description.html_safe%>
+          </p>
+          <%if @journey.user == current_user%>
+          <%= link_to 'Sửa ', edit_journey_path(@journey) %> |
+          <%= link_to 'Xóa ', @journey, method: :delete, data: { confirm: 'Hành trình đã xóa sẽ không thể phục hồi lại?' } %> 
+          <%end%>
 
-<p>
-	<strong>Description:</strong>
-	<%= @journey.description %>
-</p>
+          <script>
+          $(document).ready(function() {
+            createStoryJS({
+              type:       'timeline',
+              width:      '1200',
+              height:     '500',
+              source:     '<%= @journey_events %>',
+              embed_id:   'my-timeline'
+            });
+          });
+          </script>
+          <%if @journey_events.count != 0%>
+          <div id="my-timeline"></div>
+          <%else%>
+          Chưa có sự kiện nào, bấm nút tạo mới để tạo sự kiện.<br>
+          <%end%>
+          <%if signed_in?%>
+          <h2> các sự kiện</h2>
+          <div id="journey_events">
+            <%= render :partial => @journey.journeyEvents %>
+          </div>
+          <%if signed_in? && @journey.user == current_user %>
+          <h2>new event</h2>
+          <%= form_for [@journey, JourneyEvent.new] do |f| %>
+          <p>
+            <div class="field">
+              Tiêu đề <br>
+              <%= f.text_field :headline %>
+            </div>
 
-<script>
-$(document).ready(function() {
-	createStoryJS({
-		type:       'timeline',
-		width:      '1200',
-		height:     '500',
-		source:     '<%= @journey_events %>',
-		embed_id:   'my-timeline'
-	});
-});
-</script>
-<%if @journey_events.count != 0%>
-<div id="my-timeline"></div>
-<%else%>
-Chua co event, bam vao nut tao event de tao moi event.<br>
-<%end%>
-<%if signed_in?%>
-<h2>lists event</h2>
-<div id="journey_events">
-	<%= render :partial => @journey.journeyEvents %>
+            <div class="field">
+              ngày bắt đầu  <br>
+              <%= f.datetime_select :startdate %>
+            </div>
+            <div class="field">
+              ngày kết thúc<br>
+              <%= f.datetime_select :enddate %>
+            </div>
+            <div class="field">
+             nội dung<br>
+             <%= f.text_field :content %>
+           </div>
+           <div class="field">
+            ảnh, video (youtube, vimeo)<br>
+            <%= f.text_field :media %>
+          </div>
+          <div class="field">
+           chú thích<br>
+           <%= f.text_field :mediacaption %>
+         </div>
+         <div class="field">
+          người chụp<br>
+          <%= f.text_field :mediacredit %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </p>
+      <%end%>
+      <%end%>
+      <%end%>
+    </div>
+  </div>
 </div>
- <%if signed_in? && @journey.user == current_user %>
-<h2>new event</h2>
- <%= form_for [@journey, JourneyEvent.new] do |f| %>
- <p>
- 	  <div class="field">
-    <%= f.label :headline %><br>
-    <%= f.text_field :headline %>
-  </div>
-
-  <div class="field">
-    <%= f.label :startdate %><br>
-    <%= f.datetime_select :startdate %>
-  </div>
-  <div class="field">
-    <%= f.label :enddate %><br>
-    <%= f.datetime_select :enddate %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :media %><br>
-    <%= f.text_field :media %>
-  </div>
-  <div class="field">
-    <%= f.label :mediacaption %><br>
-    <%= f.text_field :mediacaption %>
-  </div>
-  <div class="field">
-    <%= f.label :mediacredit %><br>
-    <%= f.text_field :mediacredit %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-</p>
-
-
-<%end%>
-<%end%>
-<%= link_to 'Edit', edit_journey_path(@journey) %> |
-<%end%>
-<%= link_to 'Back', journeys_path %>
+</div>
+</div >
